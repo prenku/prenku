@@ -114,21 +114,21 @@ nav{
     justify-items: center;
     align-content: flex-start;
     align-items: center;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
     padding-bottom: 10px;
     padding-top: 10px;
     border-radius: 15px;
     height: 70px;
     background-color: var(--yellow-hover);
-    width: 350px; 
+    max-width: 350px; 
 }
 .orderNow h1{
     font-size: 32px;
 }
 
 .orderNow button{
-    width: 200px;
+     max-width: 200px;
     height: 100%;
     border-radius: 10px;
     font-size: 19px;
@@ -703,7 +703,7 @@ summary::-webkit-details-marker {
   ##Screen = B/w 481px to 767px
 */
 
-@media (min-width: 581px) and (max-width: 767px) {
+@media (min-width: 481px) and (max-width: 767px) {
     .eatingreat{
         grid-column: 1/-1;
         padding-left: 40px;
@@ -722,28 +722,32 @@ summary::-webkit-details-marker {
   ##Screen = B/w 320px to 479px
 */
 
-@media (min-width: 320px) and (max-width: 580px) {
+@media (min-width: 320px) and (max-width: 479px) {
   
     .hero{
         padding: 40px 40px;
+        width: auto;
     }
     .hero h1{
         font-size: 42px;
         line-height: 42px;
+        width: auto;
+    }
+    .hero h3{
+        width: auto;
     }
     .eatingreat{
         /* grid-column: 1/-1; */
-        /* padding-left: 40px; */
-        /* padding-right: 40px; */
         padding: 0;
         margin-bottom: 150px;
         left: 0;
         top: -500px;
-        flex-basis: 100%;
+        flex-basis: 80%;
     }
     .eatingreat .eatingreat-content
     {
         flex-basis: 80%;
+       
     }
 
     .navigation{
@@ -810,6 +814,12 @@ summary::-webkit-details-marker {
           display: block;
           transition: 0.3s;
           position: relative;
+        }
+        .review-title h1{
+            font-size: 32px;
+        }
+        .review-title h3 {
+            font-size: 14px;
         }
         #sp {
             /* font-size: 52px; */
