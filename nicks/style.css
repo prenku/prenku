@@ -23,25 +23,27 @@ a:hover{
 .container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(fit-content, 1fr));
-    grid-template-rows: 80px auto auto .5fr auto 1fr;
+    grid-template-rows: 80px auto .5fr .2fr auto 1fr;
     grid-auto-rows: auto;
     grid-template-areas: 
-    "header header header header"
-    "divider divider divider divider"
-    "hero hero hero hero"
-    "wave wave wave wave"
-    "eatingreat eatingreat eatingreat eatingreat"
-    "delivery delivery delivery delivery "
-    "specials specials specials specials"
-    "explore explore explore explore "
-    "revs revs revs revs"
-    "faqs faqs faqs faqs"
-    "direction direction direction direction"
-    "footer footer footer footer";
+    "header "
+    "divider"
+    "hero "
+    "wave"
+    "eatingreat"
+    "delivery"
+    "explore"
+    "specials"
+    "revs"
+    "faqs"
+    "direction"
+    "footer";
 
 }
 .explore{
     grid-area: explore;
+    display: flex;
+    flex-direction: column;
 }
 nav .logo {
     font-size: 18px;
@@ -83,7 +85,7 @@ nav{
     background-color: var(--yellow);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-content: center;
     align-items: center;
 }
@@ -119,9 +121,10 @@ nav{
     padding-bottom: 10px;
     padding-top: 10px;
     border-radius: 15px;
-    height: 70px;
+    height: 50px;
+    width: 40%;
     background-color: var(--yellow-hover);
-    max-width: 350px; 
+    /* max-width: 350px;  */
 }
 .orderNow h1{
     font-size: 32px;
@@ -144,39 +147,40 @@ nav{
     /* grid-column: 2/4; */
     /* padding:0 350px; */
     /* height: 100%; */
-    top: -200px;
+    top: -50px;
     display: flex;
-    flex-basis: 50%;
+    flex-basis: 75%;
     justify-content: center;
     align-items: center;
     align-content: center;
-    margin-bottom: 100px;
     position: relative;
     z-index: 0;
+    height: 650px;
 }
 .eatingreat .eatingreat-content{
+    margin-bottom: 200px;
     border-radius: 20px;
     /* display: flex; */
+    flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    flex-basis: 40%;
+    flex-basis: 65%;
     align-content: center;
-    padding-left: 50px;
-    padding-right: 50px;
-    max-height: 450px;
+    padding: 40px;
+    /* max-height: 450px; */
     z-index: 9999;
-    background-color: rgba(18, 18, 18, 0.5);
     background-color: #121113;
 }
 .eatingreat iframe{
     flex-basis: 100%;
-    max-height: 350px;
-    background-color: var(--yellow);
+    margin-bottom: 20px;
+    min-height: 350px; 
+    /* background-color: var(--yellow); */
     background-repeat: no-repeat;
     background-size: cover;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-    border-radius: 20px;
+    border-radius: 10px;
     box-shadow: 0 5px 5px -5px #fff;
 }
 
@@ -198,7 +202,6 @@ nav{
     grid-area: delivery;
     display: flex;
     justify-content: center;
-    flex-basis: 50%;
     align-items: center;
     align-content: center;
     background-color: #000000;
@@ -213,12 +216,9 @@ nav{
 }
 .delivery .flash{
     padding: 40px;
-    background-color: #000;
-    background-color: rgba(18, 18, 18, 0.5);
-    background-color: #121113;
     background-color: #FDD231;
-    margin-bottom: 150px;
-    flex-basis: 50%;
+    margin-bottom: 50px;
+    flex-basis: 75%;
     border-radius: 20px;
     color: #000;
 }
@@ -248,7 +248,7 @@ flex-direction: column;
 justify-content: center;
 align-content: center;
 align-items: center;
-color: #121212;
+color: #fff;
 }
 .specials h1 , .menu-taste h1{
     font-size: 45px;
@@ -306,7 +306,7 @@ color: #121212;
 }
 .item-content .item-name{
     font-weight: 700;
-    font-size: 22px;
+    font-size: 19px;
 }
 .item-description{
     font-size: 18px;
@@ -317,6 +317,10 @@ color: #121212;
 }
 .reviews{
     grid-area: revs;
+    background: url("/css/roundish.svg") center;
+    background-repeat: no-repeat;
+    /* background-position: 100%; */
+    background-size: contain;
     display: flex;
     flex-direction: column;
     background-color: #000;
@@ -404,10 +408,13 @@ color: #121212;
     justify-content: center;
     align-items: center;
     align-content: center;
-    /* width: 100%; */
+}
+.menu-taste .items{
+    display: flex;
+    flex-direction: row-reverse;
 }
 .menu-taste .items .item {
-    /* height: 549px; */
+    flex-basis: 100%;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
@@ -416,6 +423,7 @@ color: #121212;
     align-content: center;
     align-items: center;
     /* min-width: 33.33%; */
+    flex-direction: row;
     padding-left:0;
     padding-right: 0;
     background-color: #0E0E0E;
@@ -428,19 +436,18 @@ color: #121212;
     border-top-left-radius: 50px;
     background-size: cover;
     background-blend-mode: screen;
-    background-repeat: no-repeat;
-    
+    background-repeat: no-repeat;    
 }
 .item-big{
-    width: auto;
+    width: 450px;
     height: 380px;
 }
 .item-gib img{
     height: 800px;
 }
 .item-small{
-    width: auto;
-    height: 400px;
+    width: 200px;
+    height: 300px;
     justify-content: center;
     align-items: center;
     justify-items: center;
@@ -636,7 +643,7 @@ summary::-webkit-details-marker {
   ##Screen = 1281px to higher resolution desktops
   */
   
-  .explore , .faqs{
+.faqs{
       display: none;
   }
   @media (min-width: 1281px) {
@@ -659,7 +666,9 @@ summary::-webkit-details-marker {
 */
 
 @media (min-width: 768px) and (max-width: 1024px) {
-
+    .menu-taste, .menu-taste .items{
+        flex-direction: column;
+    }
     .eatingreat{
         grid-column: 1/-1;
         padding-left: 40px;
@@ -682,6 +691,9 @@ summary::-webkit-details-marker {
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   
+    .menu-taste .items{
+        flex-direction: column;
+    }
     .eatingreat{
         grid-column: 1/-1;
         padding-left: 40px;
@@ -705,6 +717,9 @@ summary::-webkit-details-marker {
 
 @media (min-width: 481px) and (max-width: 767px) {
 
+    .menu-taste .items{
+        flex-direction: column;
+    }
     .hero{
         padding: 40px 40px;
         width: auto;
@@ -712,25 +727,33 @@ summary::-webkit-details-marker {
     .hero h1{
         font-size: 42px;
         line-height: 42px;
-        width: auto;
+        /* width: auto; */
+        text-align: center;
     }
     .hero h3{
         width: auto;
+        font-size: 19px;
     }
     .eatingreat{
         /* grid-column: 1/-1; */
         padding: 0;
-        margin-bottom: 150px;
+        margin-bottom: 0px;
         left: 0;
-        top: -500px;
-        flex-basis: 80%;
+        top: -70px;
+        flex-basis: 85%;
     }
     .eatingreat .eatingreat-content
     {
-        flex-basis: 80%;
+        flex-basis: 85%;
+        padding: 0 20px;
        
     }
-
+    .flash h1 {
+        font-size: 27px;
+    }
+     .delivery .flash p {
+         font-size: 18px;
+     }
     .navigation{
         display: block;
     }
@@ -796,11 +819,20 @@ summary::-webkit-details-marker {
           transition: 0.3s;
           position: relative;
         }
-        .review-title h1{
-            font-size: 32px;
+        .since h1, .review-title h1 , .directions h1 , .specials h1{
+            font-size: 27px;
+        }
+        .orderNow {
+            width: 100%;
+            height: 25px;
+            position: relative;
+        }
+        .orderNow h1{
+            font-size: 22px;
         }
         .review-title h3 {
-            font-size: 14px;
+            /* font-size: 14px; */
+            text-align: center;
         }
         #sp {
             /* font-size: 52px; */
@@ -823,7 +855,9 @@ summary::-webkit-details-marker {
 */
 
 @media (min-width: 320px) and (max-width: 479px) {
-  
+    .menu-taste .items{
+        flex-direction: column-reverse;
+    }
     .hero{
         padding: 40px 40px;
         width: auto;
@@ -831,25 +865,33 @@ summary::-webkit-details-marker {
     .hero h1{
         font-size: 42px;
         line-height: 42px;
-        width: auto;
+        /* width: auto; */
+        text-align: center;
     }
     .hero h3{
         width: auto;
+        font-size: 19px;
     }
     .eatingreat{
         /* grid-column: 1/-1; */
         padding: 0;
-        margin-bottom: 150px;
+        margin-bottom: 0px;
         left: 0;
-        top: -500px;
-        flex-basis: 80%;
+        top: -70px;
+        flex-basis: 85%;
     }
     .eatingreat .eatingreat-content
     {
-        flex-basis: 80%;
+        flex-basis: 85%;
+        padding: 0 20px;
        
     }
-
+    .flash h1 {
+        font-size: 27px;
+    }
+     .delivery .flash p {
+         font-size: 18px;
+     }
     .navigation{
         display: block;
     }
@@ -915,11 +957,20 @@ summary::-webkit-details-marker {
           transition: 0.3s;
           position: relative;
         }
-        .review-title h1{
-            font-size: 32px;
+        .since h1, .review-title h1 , .directions h1 , .specials h1{
+            font-size: 27px;
         }
-        .review-title h3 {
-            font-size: 14px;
+        .orderNow {
+            width: 100%;
+            height: 25px;
+            position: relative;
+        }
+        .orderNow h1{
+            font-size: 22px;
+        }
+        .review-title h3 , .specials h3 {
+            /* font-size: 14px; */
+            text-align: center;
         }
         #sp {
             /* font-size: 52px; */
