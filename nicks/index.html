@@ -4,10 +4,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/nisks/Inter/inter.css">
-    <link rel="stylesheet" href="/nicks/style.css">
+    <link rel="stylesheet" href="../nisks/Inter/inter.css">
+    <link rel="stylesheet" href="../nicks/style.css">
     <!-- <link rel="stylesheet" href="/auto.css"> -->
     <title>Nick's House of Pizza</title>
+
+    <script >
+        {
+        "@context": "http://schema.org",
+        "@type": "Menu",
+        "name": "Lunch Menu",
+        "mainEntityOfPage": "https://www.yourwebsite.com/menu/",
+        "inLanguage": "English",
+        "offers": {
+         "@type": "Offer",
+         "availabilityStarts": "T12:00",
+         "availabilityEnds": "T16:00"
+        },
+        "hasMenuSection": [
+        {
+         "@type": "MenuSection",
+         "name": "Nibbles",
+         "description":"Nibbles",
+         "hasMenuItem": [
+         {
+          "@type": "MenuItem",
+          "name": "Summer Rolls",
+          "description": "Rice paper rolls, seaweed, crab meat, green mango, Vietnamese sauce",
+          "offers": {
+     "@type": "Offer",
+                      "price": "160",
+                      "priceCurrency": "THB"
+          }
+         },
+         {
+          "@type": "MenuItem",
+          "name": "Duck Bun",
+          "description": "Steamed Handmade Bao with BBQ sauce",
+            "offers": {
+        "@type": "Offer",
+                      "price": "95",
+                      "priceCurrency": "THB"
+                      }
+                      },
+         {
+          "@type": "MenuItem",
+          "name": "EFC",
+          "description": "Spicy crusted chicken drumsticks, sweet chili sauce",
+            "offers": {
+        "@type": "Offer",
+                      "price": "120",
+                      "priceCurrency": "THB"
+                      }
+                      },
+         {
+          "@type": "MenuItem",
+          "name": "Pork Tacos",
+          "description": "Pork confit, tomato and avocado salsa, corn tortillas",
+            "offers": {
+        "@type": "Offer",
+                      "price": "150",
+                      "priceCurrency": "THB"
+                      }
+                       },
+         {
+          "@type": "MenuItem",
+          "name": "Fish & Chips",
+          "description": "Catch of the day fillet with fries & Thai herb scented mayo",
+            "offers": {
+        "@type": "Offer",
+                      "price": "180",
+                      "priceCurrency": "THB"
+                      }
+           },
+         {
+          "@type": "MenuItem",
+          "name": "Veggie Bags",
+          "description": "Stuffed with vegetables and tofu, sweet n’ sour hibiscus dip",
+            "offers": {
+        "@type": "Offer",
+                      "price": "130",
+                      "priceCurrency": "THB"
+                      }
+         
+        }
+        
+        ]
+         }
+        ]
+     }
+     </script>
 </head>
 
 <body>
@@ -19,7 +105,7 @@
                 <li><a href="">Menu</a></li>
                 <li><a href="">Order Now</a></li>
                 <!-- <li><a href="">About</a></li> -->
-                <li><a href="">Contact</a></li>
+                <li><a href="testimonials.html">Contact</a></li>
             </ul>
 
 
@@ -60,7 +146,6 @@
 
                 <div>
 
-                    <button>Call </button>
                     <button>ChowNow </button>
                 </div>
             </div>
@@ -617,6 +702,6 @@ $(document).ready(function() {
 }); 
 
     </script>
-</body>
+    </body>
 
 </html>
