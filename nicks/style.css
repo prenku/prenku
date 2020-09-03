@@ -150,9 +150,8 @@ nav{
     font-weight: 700;
     border:none;
     color: #000;
-
+    background-color: #fff;
     outline: none;
-    background: url('/nicks/chownow-horizontal-logo.png');
 }
 .orderNow a:hover{
     border: 3px solid #000;
