@@ -141,23 +141,25 @@ nav{
     font-size: 32px;
 }
 
-.orderNow button{
-     max-width: 100%;
-    height: 100%;
+.orderNow a{
+    width: 200px;
+    height: 150%;
     border-radius: 10px;
+    padding:10px;
     font-size: 19px;
     font-weight: 700;
     border:none;
     color: #000;
+
     outline: none;
-    
+    background: url('/nicks/chownow-horizontal-logo.png');
+}
+.orderNow a:hover{
+    border: 3px solid #000;
 }
 .eatingreat{
     grid-area: eatingreat;
     background-color:transparent;
-    /* grid-column: 2/4; */
-    /* padding:0 350px; */
-    /* height: 100%; */
     top: -50px;
     display: flex;
     flex-basis: 75%;
@@ -175,12 +177,13 @@ nav{
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    flex-basis: 65%;
+    flex-basis: 75%;
     align-content: center;
     padding: 40px;
     /* max-height: 450px; */
     z-index: 9999;
     background-color: #121113;
+    box-shadow: 0 5px 5px -5px #fff;
 }
 .eatingreat iframe{
     flex-basis: 100%;
@@ -192,7 +195,6 @@ nav{
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     border-radius: 10px;
-    box-shadow: 0 5px 5px -5px #fff;
 }
 
 .since h1{
@@ -244,6 +246,9 @@ nav{
     font-style: normal;
     line-height: 30px;
     font-weight: 400;
+}
+.since p {
+    font-size: 22px;
 }
 .yellow{
     background-color: var(--yellow);
