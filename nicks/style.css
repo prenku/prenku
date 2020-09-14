@@ -987,7 +987,8 @@ summary::-webkit-details-marker {
         }
         .orderNow {
             width: 100%;
-            height: 25px;
+            /* height: 25px; */
+            margin-bottom: 20%;
             position: relative;
         }
         .orderNow h1{
