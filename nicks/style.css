@@ -726,15 +726,19 @@ summary::-webkit-details-marker {
     .navigation {
         display: none;
     }
+    .orderNow {
+        margin-bottom: 20%;
+        
+    }
 }
 
 /* 
   ##Device = Low Resolution Tablets, Mobiles (Landscape)
   ##Screen = B/w 481px to 767px
-*/
+  */
 
 @media (min-width: 481px) and (max-width: 767px) {
-
+    
     .menu-taste .items{
         flex-direction: column;
     }
@@ -764,17 +768,17 @@ summary::-webkit-details-marker {
     {
         flex-basis: 85%;
         padding: 0 20px;
-       
+        
     }
     .flash h1 {
         font-size: 27px;
     }
      .delivery .flash p {
          font-size: 18px;
-     }
-    .navigation{
-        display: block;
-    }
+        }
+        .navigation{
+            display: block;
+        }
     nav{
         flex-direction: row;
         justify-content: space-between;
@@ -820,7 +824,7 @@ summary::-webkit-details-marker {
           padding-top: 60px;
         }
         .closebtn{
-
+            
             font-size: 32px;
             position: relative;
             left: 80%;
@@ -844,6 +848,9 @@ summary::-webkit-details-marker {
             width: 100%;
             height: 25px;
             position: relative;
+            margin-bottom: 20%;
+            min-height: 50px;
+
         }
         .orderNow h1{
             font-size: 22px;
