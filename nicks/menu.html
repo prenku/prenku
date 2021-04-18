@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../nisks/Inter/inter.css">
+    <link rel="stylesheet" href="../nicks/style.css">
+    <link rel="dns-prefetch" href="http://fonts.google.com">
+
+    <!-- <link rel="stylesheet" href="/auto.css"> -->
+    <title>Nick's House of Pizza - Menu</title>
+
+<style>
+    body{
+        background-color: #FDD231;
+    }
+        .filterDiv {
+          /* float: left; */
+          /* background-color: #FDD231; */
+          /* color: #333; */
+          /* width: 100%; */
+          /* line-height: 100px; */
+          /* text-align: center; */
+          margin: 2px;
+          display: none;
+        
+        }
+        .show {
+          display: block;
+        }
+        
+        .container2 {
+          /* margin-top: 20px; */
+          /* overflow: hidden; */
+          padding-left: 90px;
+          padding-right: 90px;
+        }
+        
+        /* Style the buttons */
+        .btn {
+          border: none;
+          outline: none;
+          padding: 12px 16px;
+          background-color: #f1f1f1;
+          background-color: #666;
+          cursor: pointer;
+          color: #ffffff;
+          margin-bottom: 5px;
+          font-size: 19px;
+          font-weight: 400;
+        }
+        
+        .btn:hover {
+          background-color: #FDD231;
+          color: #333;
+        }
+        
+        .btn.active {
+          background-color: #666;
+          background-color: #FDD231;
+          color: #333;
+
+        }
+        #myBtnContainer{
+            margin-bottom:10px;
+            background-color: #000000;
+            padding: 40px;
+            padding-right: 150px;
+            padding-left: 150px;
+        }
+
+        .SpecialtyWraps{
+            padding-left: 250px;
+            padding-right: 250px;
+        }
+
+        .item{
+            background-color: white;
+        }
+        .item-description{
+            /* border-bottom: 1px solid rgba(18, 18, 18, 0.5); */
+        }
+        /* 
+##Device = Most of the Smartphones Mobiles (Portrait)
+##Screen = B/w 320px to 479px
+*/
+@media (min-width: 481px) and (max-width: 767px){ 
+
+    #myBtnContainer{
+
+        padding: 15px;
+
+    }
+    .SpecialtyWraps{
+            padding-left: 10px;
+            padding-right: 10px;
+            background-color: #ffffff;
+        }
+    
+    .container2{
+        padding: 0;
+    }
+}
+@media (min-width: 320px) and (max-width: 479px) {
+
+    #myBtnContainer{
+
+padding: 15px;
+
+}
+
+    .container2{
+        padding: 0;
+    }
+}
+
+</style>
+        
+</head>
+<body>
+
+    <div class="container">
+        <nav>
+            <a class="logo" href=""> Nicks House Of Pizza</a>
+            <ul class="menu">
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="">Order Now</a></li>
+                <!-- <li><a href="">About</a></li> -->
+                <li><a href="testimonials.html">Contact</a></li>
+            </ul>
+
+
+            <section class="navigation">
+                <nav id="navi">
+                    <span id="sp" onclick="check()">&#9776;</span>
+
+                </nav>
+                <div id="mySidenav" class="sidenav">
+                    <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Menu</a></li>
+                        <li><a href="">Order Now</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                </div>
+            </section>
+        </nav>
+      </div>
+     <div class="hero">
+         <h1 class="hero">Menu</h1>
+     </div>
+
+<div id="myBtnContainer" class="container2">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('PizzaToppings')"> Pizza Toppings</button>
+  <button class="btn" onclick="filterSelection('Pizza')"> Pizza</button>
+  <button class="btn" onclick="filterSelection('SicilianPizza')"> Sicilian Pizza</button>
+  <button class="btn" onclick="filterSelection('ClassicPizza')"> Classic Pizza</button>
+  <button class="btn" onclick="filterSelection('ClassicCombos')"> Classic Combos</button> 
+  <button class="btn" onclick="filterSelection('SpecialityPizza')"> Speciality Pizza</button>
+  <button class="btn" onclick="filterSelection('Calzones')"> Calzones</button>
+  <button class="btn" onclick="filterSelection('Grinders')"> Grinders</button>
+  <button class="btn" onclick="filterSelection('SteakGrinders')"> Steak Grinders</button>
+  <button class="btn" onclick="filterSelection('ChickenGrinders')"> Chicken Grinders</button>
+  <button class="btn" onclick="filterSelection('SpecialtyWraps')"> Specialty Wraps</button>
+  <button class="btn" onclick="filterSelection('Salads')"> Fresh Salads</button>
+  <button class="btn" onclick="filterSelection('Pasta')"> Pasta Dinner</button>
+  <button class="btn" onclick="filterSelection('Dinner')"> Dinner</button>
+  <button class="btn" onclick="filterSelection('Sides')"> Sides</button>
+  <button class="btn" onclick="filterSelection('Desserts')"> Desserts</button>
+
+
+</div>
+
+<div class="container2" >
+  <div class="filterDiv PizzaToppings">
+      <div class="items">
+          <div class="item">
+              <h2 class="item-title">
+                  Pizza Toppings
+            </h2></li>
+                  <div class="item-content"></li>
+                     <ul class="center">
+                         <li>CHEESE</li></li>
+                         <li>EGGPLANT</li></li>
+                      <li>FETA CHEESE</li></li>
+                      <li>    FRESH MOZZARELLA     </li>
+                      <li>    RICOTTA</li>
+                      <li>    PINEAPPLE</li>
+                      <li>    ROASTED PEPPERS</li>
+                      <li>    SUN DRIED TOMATO</li>
+                      <li>    SPINACH</li>
+                      <li>    STEAK TIPS</li>
+                      <li>    ANCHOVY</li>
+                      <li>    BACON</li>
+                      <li>    BBQ CHICKEN</li>
+                      <li>    BUFFALO CHICKEN</li>
+                      <li>    HAMBURG</li>
+                      <li>    HAM</li>
+                      <li>    MARINATED CHICKEN</li>
+                      <li>    PASTRAMI</li>
+                      <li>    PEPPERONI</li>
+                      <li>    SALAMI</li>
+                      <li>    SAUSAGE</li>
+                      <li>    BROCCOLI</li>
+                      <li>    FRESH BASIL</li>
+                      <li>    GARLIC</li>
+                      <li>    GREEN PEPPERS</li>
+                      <li>    MUSHROOM</li>
+                      <li>    ONION</li>
+                      <li>    OLIVES</li>
+                      <li>    PESTO</li>
+                      <li>    HOT PEPPERS</li>
+                      <li>    TOMATO SLICES</li>
+                      <li>    JALAPEÑOS</li>
+                    </ul> 
+                  </div>
+          </div>
+      </div>
+  </div>
+  <div class="filterDiv Pizza">Pizza</div>
+  <div class="filterDiv SicilianPizza">Sicilian Pizza</div>
+  <div class="filterDiv ClassicPizza">Classic Pizza</div>
+  <div class="filterDiv ClassicCombos">Classic Combos</div>
+  <div class="filterDiv SpecialityPizza">Speciality Pizza</div>
+  <div class="filterDiv Calzones">Calzones</div>
+  <div class="filterDiv Grinders">Grinders</div>
+  <div class="filterDiv SteakGrinders">Steak Grinders</div>
+  <div class="filterDiv ChickenGrinders">Chicken Grinders</div>
+  <section class="filterDiv SpecialtyWraps specials">
+      <div class="items">
+
+          <div class="item">
+              <h2 class="item-title">
+                  Wraps
+              </h2>
+              <div class="item-content">
+                  <h3 class="item-name">
+                      GRILLED CHICKEN CAESAR
+                  </h3>
+                  <span class="item-price">
+                      $9.25
+                  </span>
+              </div>
+              <p class="item-description">
+                  Marinated chicken, romaine lettuce, mozzarella & Caesar dressing
+              </p>
+
+              <div class="item-content">
+                  <h3 class="item-name">
+                      GRILLED CHICKEN GREEK WRAP
+                  </h3>
+                  <span class="item-price">
+                      $9.25
+                  </span>
+              </div>
+              <p class="item-description">
+                  Lettuce, tomato, feta, olives & Greek dressing
+              </p>
+
+              <div class="item-content">
+                  <h3 class="item-name">
+                      BUFFALO CHICKEN
+                  </h3>
+                  <span class="item-price">
+                      $9.25
+                  </span>
+              </div>
+              <p class="item-description">
+                  Crispy chicken, buffalo sauce, bleu cheese, lettuce & tomato
+              </p>
+
+
+              <div class="item-content">
+                  <h3 class="item-name">
+                      STEAK TIP WRAP
+                  </h3>
+                  <span class="item-price">
+                      $9.25
+                  </span>
+              </div>
+              <p class="item-description">
+                  Lettuce, tomato, feta, olives & Greek dressing
+              </p>
+
+              <div class="item-content">
+                  <h3 class="item-name">
+                       BLT WRAP
+                  </h3>
+                  <span class="item-price">
+                      $8.75
+                </span>
+            </div>
+            <p class="item-description">
+                Bacon, lettuce,tomato & mayo
+
+              </p>
+
+              <div class="item-content">
+                <h3 class="item-name">
+                    TURKEY CLUB WRAP
+                </h3>
+                <span class="item-price">
+                    $8.99
+                </span>
+            </div>
+            <p class="item-description">
+                Turkey, lettuce, tomato, mayo & bacon
+            </p>
+
+            <div class="item-content">
+                <h3 class="item-name">EL PASO
+                </h3>
+                <span class="item-price">
+                    $9.25
+                </span>
+            </div>
+            <p class="item-description">
+                Grilled chicken, grilled onions, peppers, taco seasoning, jalapeños & American cheese
+            </p>
+    
+          <!-- </div> -->
+      
+      
+      <!-- <div class="item">
+        <h2 class="item-title">
+            Wraps
+        </h2> -->
+        <div class="item-content">
+            <h3 class="item-name">
+                VEGGIE WRAP
+            </h3>
+            <span class="item-price">
+                $8.50
+            </span>
+        </div>
+        <p class="item-description">
+            Grilled peppers, onions, mushrooms, provolone cheese, lettuce, tomato & olives             </p>
+        <div class="item-content">
+            <h3 class="item-name">
+                 CHICKEN PESTO
+            </h3>
+            <span class="item-price">
+                $9.25
+            </span>
+        </div>
+        <p class="item-description">
+            Grilled chicken with pesto sauce, tomato & fresh mozzarella
+
+        </p>
+        <div class="item-content">
+            <h3 class="item-name">
+                Chicken Cordon Bleu </h3>
+            <span class="item-price">
+                $8.99
+            </span>
+        </div>
+        <p class="item-description">
+            Ham, crispy chicken, American cheese & ranch dressing
+        </p>
+
+        <div class="item-content">
+            <h3 class="item-name">GRILLED CHICKEN BRUSCHETTA
+            </h3>
+            <span class="item-price">
+                $9.25
+            </span>
+        </div>
+        <p class="item-description">
+            Marinated chicken, fresh basil, tomato & olive oil
+        </p>
+        <div class="item-content">
+            <h3 class="item-name">HONEY MUSTARD CHICKEN
+            </h3>
+            <span class="item-price">
+                $8.99
+            </span>
+        </div>
+        <p class="item-description">
+            Crispy chicken with honey mustard sauce, lettuce & tomato
+        </p>
+
+        <div class="item-content">
+            <h3 class="item-name">CHICKEN RANCHERO
+            </h3>
+            <span class="item-price">
+                $8.99
+            </span>
+        </div>
+        <p class="item-description">
+            Crispy chicken, lettuce, tomato, ranch dressing & bacon
+        </p>
+        <div class="item-content">
+            <h3 class="item-name">FRESH MOzZARELLA
+            </h3>
+            <span class="item-price">
+                $9.25
+            </span>
+        </div>
+        <p class="item-description">
+            Tomato, basil, olive oil & vinegar and, of course, fresh mozzarella
+        </p>
+    </div>
+
+
+</div>
+  </section>
+  <div class="filterDiv SpecialtyWraps Salads">
+    <div class="items">
+
+        <div class="item">
+            <h2 class="item-title">
+                Fresh Salads
+            </h2>
+                <div class="item-content">
+                <h3 class="item-name">
+                    GARDEN SALAD
+                </h3>
+                <span class="item-price">
+                    $7.25
+                </span>
+            </div>
+            <p class="item-description">
+                 Lettuce,tomatos,onions,cucumbers,radishes & carrots + choice of dressing
+            </p>
+
+            <div class="item-content">
+                <h3 class="item-name">
+                    TUNA SALAD
+                </h3>
+                <span class="item-price">
+                    $9.25
+                </span>
+            </div>
+            <p class="item-description">
+
+                Garden salad topped with tuna + choice of dressing
+            </p>
+
+            <div class="item-content">
+                <h3 class="item-name">
+                    GREEK SALAD
+                </h3>
+                <span class="item-price">
+                    $8.25
+                </span>
+            </div>
+            <p class="item-description">
+            </p>
+
+            <div class="item-content">
+                <h3 class="item-name">
+                    CHICKEN SALAD WITH MAYO
+                </h3>
+                <span class="item-price">
+                    $9.25
+                </span>
+            </div>
+            <p class="item-description">
+            </p>
+
+
+  </div>
+  <div class="filterDiv Pasta">Pasta</div>
+  <div class="filterDiv Dinner">Dinner</div>
+  <div class="filterDiv Sides">Sides</div>
+  <div class="filterDiv Desserts">
+
+    <div class="items">
+
+        <div class="item">
+            <h2 class="item-title">
+                Desserts
+            </h2>
+            <div class="item-content">
+                <h3 class="item-name">
+                    CHOCOLATE CHIP COOKIE
+                </h3>
+                <span class="item-price">
+                    $1.99
+                </span>
+            </div>
+            <p class="item-description">
+            </p>
+  </div>
+
+
+  </div>
+
+</div>
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+</body>
+</html>

@@ -96,6 +96,54 @@
         ]
      }
      </script>
+
+     <style>
+         @import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+svg {
+    display: block;
+    font: 5.8em 'Inter';
+    margin: 0 auto;
+}
+
+.text-copy {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 5px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1){
+	stroke: #4D163D;
+	animation-delay: -1;
+}
+
+.text-copy:nth-child(2){
+	stroke: #840037;
+	animation-delay: -2s;
+}
+
+.text-copy:nth-child(3){
+	stroke: #BD0034;
+	animation-delay: -3s;
+}
+
+.text-copy:nth-child(4){
+	stroke: #BD0034;
+	animation-delay: -4s;
+}
+
+.text-copy:nth-child(5){
+	stroke: #FDB731;
+	animation-delay: -5s;
+}
+
+@keyframes stroke-offset{
+	100% {stroke-dashoffset: -35%;}
+}
+     </style>
 </head>
 
 <body>
@@ -104,10 +152,10 @@
         <nav>
             <a class="logo" href=""> Nicks House Of Pizza</a>
             <ul class="menu">
-                <li><a href="">Menu</a></li>
-                <li><a href="">Order Now</a></li>
-                <!-- <li><a href="">About</a></li> -->
-                <li><a href="testimonials.html">Contact</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="">Order</a></li>
+                <li><a href="">About</a></li>
+                <!-- <li><a href="testimonials.html">Contact</a></li> -->
             </ul>
 
 
@@ -129,28 +177,46 @@
             </section>
         </nav>
 
-        <div class="wrapper">
+        <!-- <div class="wrapper">
 
             <div class="divider"><span></span><span>EST - 1988</span><span></span></div>
-        </div>
+        </div> -->
 
         <section class="hero">
-            <h1> Welcome to Nick's House of Pizza </h1>
-            <h3>Located just steps from <strong>Tufts University in Medford</strong>, Nick&#8217;s House of Pizza has
+            <!-- <h1> Welcome to Nick's House of Pizza</h1> -->
+            <!-- <svg viewBox="0 0 960 300">
+                <symbol id="s-text">
+                    <text text-anchor="middle" x="50%" y="80%">Nick's pizza</text>
+                </symbol>
+            
+                <g class = "g-ants">
+                    <use xlink:href="#s-text" class="text-copy"></use>
+                    <use xlink:href="#s-text" class="text-copy"></use>
+                    <use xlink:href="#s-text" class="text-copy"></use>
+                    <use xlink:href="#s-text" class="text-copy"></use>
+                    <use xlink:href="#s-text" class="text-copy"></use>
+                </g>
+            </svg> -->
+            <h1> The place where pizza lovers eat</h1>
+            <h3>When you find the pizza that's made right, it makes all the difference. <br> 
+             </h3>
+            <!-- <h3>Located just steps from <strong>Tufts University in Medford</strong>, Nick&#8217;s House of Pizza has
                 been
                 serving the local community, college students and residents alike, the freshest and tastiest pizza in
                 the
-                area since 1988. <strong>With over 35 years of experience</strong> in the pizza industry, shop owner
+                area since 1988. 
+                <strong>With over 35 years of experience</strong> in the pizza industry, shop owner
                 Nick
-                Kermanidis keeps his satisfied customers coming back with his hard work, talent and dedication</h3>
+                Kermanidis keeps his satisfied customers coming back with his hard work, talent and dedication</h3> -->
             <div class="orderNow">
-                <h1> Start your order</h1>
+                <!-- <h1> Get yours >>>></h1> -->
 
                 <div>
 
-                    <a href="https://direct.chownow.com/order/1719/locations/2235">ChowNow </a>
+                    <a href="https://direct.chownow.com/order/1719/locations/2235">Order Now </a>
                 </div>
             </div>
+            <h4>P.S -A taste you won't  forget.</h4>
         </section>
                 <div class="isBlack">
                     <img style="z-index: 1;" src="../nicks/wave.svg" alt="">
@@ -171,19 +237,6 @@
 
                     </p>
                 </div>
-
-        </section>
-
-        <section class="delivery">
-            <div class="flash">
-                <h1>Free Delivery</h1>
-                <p>With our fast <strong>online ordering system, </strong>whether you are in the mood for one of our
-                    specialty pizzas like <strong>The Rustic Veggie, The Spartan or The Idaho</strong>, a slice of our
-                    classic <strong>Margarita or Sicilian Style Pie</strong>, or are looking keep it light with a
-                    <strong>Specialty Wrap or Fresh Salad</strong>, we make it quick and simple to satisfy your hunger
-                    in a
-                    flash.</p>
-            </div>
 
         </section>
 
@@ -307,7 +360,7 @@
             </div>
         </section>
 
-        <!-- <section class="explore">
+         <section class="explore">
             <div class="directions">
                 <H1>Explore our menu</H1>
             </div>
@@ -357,18 +410,18 @@
                             alt=""> </div>
                 </div>
             </div>
- -->
+ 
 
-        </section> -->
+        </section> 
 
         <section class="reviews">
             <div class="review-title">
                 <h1>FEEDBACK
-                    <span style="color:var(--yellow);">&starf;</span>
-                    <span style="color:var(--yellow);">&starf;</span>
-                    <span style="color:var(--yellow);">&starf;</span>
-                    <span style="color:var(--yellow);">&starf;</span>
-                    <span style="color:var(--yellow);">&starf;</span>
+                    <span style="">&starf;</span>
+                    <span style="none">&starf;</span>
+                    <span style="none">&starf;</span>
+                    <span style="none">&starf;</span>
+                    <span style="none">&starf;</span>
 
 
                 </h1>
@@ -459,7 +512,7 @@
 
 
 
-        <!-- <section class="faqs">
+         <section class="faqs">
             <div class="directions">
                 <h1>FAQS</h1>
             </div>
@@ -535,7 +588,7 @@
                         </details>
                     </section>
                 </div>
-        </section> -->
+        </section> 
 
 
         <section class="directions">
@@ -565,7 +618,7 @@
         </section>
         <footer class="footer">
             <h1>Made with <span style="color: tomato; opacity: 0.7;"> ❤ & ☕</span> by <strong> <a target="blank"
-                        style="color: white;" href="https://prenku.com">PRENKU.COM</a></strong> </h1>
+                        style="opacity: 0.7;" href="https://prenku.com">PRENKU.COM</a></strong> </h1>
 
         </footer>
     </div>
