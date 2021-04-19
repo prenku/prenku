@@ -22,6 +22,9 @@ a:hover{
     transition: ease-in;
     border-radius:10px;
 }
+nav .logo:hover{
+    background-color: var(--yellow);
+  }
 .container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(fit-content, 1fr));
@@ -52,6 +55,8 @@ nav .logo {
     font-size: 16px;
     /* background-color: rgba(18, 18, 18, 0.5); */
     /* background-color: #695F36; */
+
+    /* background-color: var(--yellow-hover); */
     color: #333;
     font-weight: 300;
     border-radius: 10px;
@@ -59,6 +64,7 @@ nav .logo {
     z-index: 9999;
     text-align: center;
 }
+
 ul li{ 
     list-style: none;
     flex-basis: 80%;
@@ -103,8 +109,9 @@ nav{
   /* height: 100%; */
 }
 .hero h1{
+    padding-top: 50px;
     width: auto;
-    max-width: 590px;
+    /* max-width: 590px; */
     font-size: 64px;
     line-height: 77px;
     font-weight: 700;   
@@ -115,6 +122,7 @@ nav{
     font-size: 22px;
     max-width: 650px;
     font-weight: 400;
+    text-align: right;
 }
 .hero h3{
     line-height: 30px;
@@ -185,7 +193,7 @@ nav{
 .eatingreat{
     grid-area: eatingreat;
     background-color:transparent;
-    top: -150px;
+    top: -50px;
     display: flex;
     flex-basis: 165%;
     justify-content: center;
@@ -831,9 +839,8 @@ summary::-webkit-details-marker {
         flex-direction: column;
     }
     .hero{
-        padding: 140px 40px;
+        padding: 40px 40px;
         width: auto;
-        height: 400px;
     }
     .hero h1{
         font-size: 42px;
@@ -850,7 +857,7 @@ summary::-webkit-details-marker {
         padding: 0;
         margin-bottom: 0px;
         left: 0;
-        top: -370px;
+        top: -170px;
         flex-basis: 85%;
     }
     .eatingreat .eatingreat-content
