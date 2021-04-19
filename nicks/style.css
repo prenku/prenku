@@ -50,12 +50,13 @@ a:hover{
 }
 nav .logo {
     font-size: 16px;
-    background-color: rgba(18, 18, 18, 0.5);
-    background-color: #695F36;
-    color: #fff;
+    /* background-color: rgba(18, 18, 18, 0.5); */
+    /* background-color: #695F36; */
+    color: #333;
     font-weight: 300;
     border-radius: 10px;
     padding: 10px;
+    z-index: 9999;
 }
 ul li{ 
     list-style: none;
