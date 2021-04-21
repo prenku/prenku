@@ -61,6 +61,7 @@ nav .logo {
     font-weight: 300;
     border-radius: 10px;
     padding: 10px;
+    margin-top:20px ;
     z-index: 9999;
     text-align: center;
 }
@@ -111,7 +112,7 @@ nav{
 .hero h1{
     padding-top: 50px;
     width: auto;
-    /* max-width: 590px; */
+    max-width: 790px;
     font-size: 64px;
     line-height: 77px;
     font-weight: 700;   
