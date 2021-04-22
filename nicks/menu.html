@@ -14,6 +14,9 @@
     body{
         background-color: #FDD231;
     }
+    .filterDiv .PizzaToppings{
+        display: none;
+    }
         .filterDiv {
           /* float: left; */
           /* background-color: #FDD231; */
@@ -68,18 +71,14 @@
             padding-right: 150px;
             padding-left: 150px;
         }
-
-        .SpecialtyWraps{
-            padding-left: 250px;
-            padding-right: 250px;
-        }
-
+        
         .item{
             background-color: white;
+            width: 80%;
+       
         }
-        .item-description{
-            /* border-bottom: 1px solid rgba(18, 18, 18, 0.5); */
-        }
+        
+
         /* 
 ##Device = Most of the Smartphones Mobiles (Portrait)
 ##Screen = B/w 320px to 479px
@@ -91,11 +90,12 @@
         padding: 15px;
 
     }
-    .SpecialtyWraps{
+    /* .SpecialtyWraps{
             padding-left: 10px;
             padding-right: 10px;
             background-color: #ffffff;
-        }
+            width: 100%;
+        } */
     
     .container2{
         padding: 0;
@@ -154,8 +154,8 @@ padding: 15px;
 
 <div id="myBtnContainer" class="container2">
   <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-  <button class="btn" onclick="filterSelection('PizzaToppings')"> Pizza Toppings</button>
-  <button class="btn" onclick="filterSelection('Pizza')"> Pizza</button>
+  <!-- <button class="btn" onclick="filterSelection('PizzaToppings')"> Pizza Toppings</button> -->
+  <!-- <button class="btn" onclick="filterSelection('Pizza')"> Pizza</button> -->
   <button class="btn" onclick="filterSelection('SicilianPizza')"> Sicilian Pizza</button>
   <button class="btn" onclick="filterSelection('ClassicPizza')"> Classic Pizza</button>
   <button class="btn" onclick="filterSelection('ClassicCombos')"> Classic Combos</button> 
@@ -175,7 +175,7 @@ padding: 15px;
 </div>
 
 <div class="container2" >
-  <div class="filterDiv PizzaToppings">
+  <!-- <div class="filterDiv PizzaToppings">
       <div class="items">
           <div class="item">
               <h2 class="item-title">
@@ -219,7 +219,7 @@ padding: 15px;
                   </div>
           </div>
       </div>
-  </div>
+  </div> -->
   <div class="filterDiv Pizza">Pizza</div>
   <div class="filterDiv SicilianPizza">Sicilian Pizza</div>
   <div class="filterDiv ClassicPizza">Classic Pizza</div>
@@ -463,9 +463,9 @@ padding: 15px;
 
 
   </div>
-  <div class="filterDiv Pasta">Pasta</div>
+  <!-- <div class="filterDiv Pasta">Pasta</div>
   <div class="filterDiv Dinner">Dinner</div>
-  <div class="filterDiv Sides">Sides</div>
+  <div class="filterDiv Sides">Sides</div> -->
   <div class="filterDiv Desserts">
 
     <div class="items">
