@@ -37,8 +37,8 @@ nav .logo:hover{
     "wave"
     "eatingreat"
     "specials"
+    "delivery"
     "explore"
-    /* "delivery" */
     "revs"
     "faqs"
     "direction"
@@ -55,7 +55,9 @@ nav .logo {
     font-size: 16px;
     /* background-color: rgba(18, 18, 18, 0.5); */
     /* background-color: #695F36; */
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     /* background-color: var(--yellow-hover); */
     color: #333;
     font-weight: 300;
@@ -126,7 +128,7 @@ nav{
 }
 .hero h3{
     line-height: 30px;
-    text-align: center;
+    text-align: start;
 }
 .hero h4{
     font-weight: 600;
@@ -172,7 +174,7 @@ nav{
     font-size: 32px;
 }
 
-.orderNow a{
+.orderNow a , .delivery a{
     /* width: 40%;
     height: 150%;  */
     border-radius: 10px;
