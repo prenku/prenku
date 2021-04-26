@@ -7,6 +7,7 @@ body{
     padding: 0;
     margin: 0;
     background-color: #000000;
+    background-color: #FDB731;
     /* background: rgb(2,0,36); */
 /* background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(253,210,49,1) 35%); */
 }
@@ -23,7 +24,7 @@ a:hover{
     border-radius:10px;
 }
 nav .logo:hover{
-    background-color: var(--yellow);
+    /* background-color: var(--yellow); */
   }
 .container{
     display: grid;
@@ -49,12 +50,13 @@ nav .logo:hover{
     grid-area: explore;
     display: flex;
     flex-direction: column;
-    display: none;
+    /* display: none; */
 }
 nav .logo {
     font-size: 16px;
     /* background-color: rgba(18, 18, 18, 0.5); */
     /* background-color: #695F36; */
+    top: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -88,7 +90,7 @@ nav{
     height: 120px;
 }
 .isBlack{
-    background-color: #000;
+    background-color: #FDB731;
     left: 0;
     bottom: 0;
     padding: 0;
@@ -260,6 +262,10 @@ nav{
     /* max-height: 350px; */
     color: rgba(242, 242, 242, 0.5);
 }
+.eatingreat p {
+    color: rgba(242, 242, 242, 0.5);
+
+}
 
 .delivery{
     grid-area: delivery;
@@ -278,13 +284,17 @@ nav{
 }
 .delivery .flash{
     padding: 40px;
-    background-color: #FDD231;
+    /* background-color: #FDD231; */
+    background-color: #FDB731;
     margin-bottom: 50px;
-    flex-basis: 65%;
+    flex-basis: 80%;
     border-radius: 20px;
     color: #000;
     /* clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%); */
 
+}
+.flash p strong{
+    color: #000000;
 }
 
 .flash h1 {
@@ -477,10 +487,14 @@ background: radial-gradient(circle, rgba(189,159,50,1) 66.6%, rgba(253,210,49,1)
 .reviews .review-title span {
     color: var(--yellow);
 }
-.light{
+.light , .item-description {
     color: rgba(242, 242, 242, 0.5);
 
 }
+.item-price{
+    display: none;
+}
+
 .reviews .items .item{
     display: flex;
     flex-direction: column;
@@ -586,13 +600,19 @@ background: radial-gradient(circle, rgba(189,159,50,1) 66.6%, rgba(253,210,49,1)
     display: flex;
     padding-right: 160px;
     padding-left: 160px;
+    background-image: image('/nicks/');
     
 }
 .faqs .directions{
     justify-self: center;
     padding-left: 50px;
     margin: 0;
-    display: none;
+    /* display: none; */
+}
+.faqs .directions h1{
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 58px;
 }
 .faqs .item{
     min-height: 500px;
@@ -775,7 +795,7 @@ summary::-webkit-details-marker {
   */
   
 .faqs{
-      display: none;
+      /* display: none; */
   }
   @media (min-width: 1281px) {
       
@@ -869,6 +889,10 @@ summary::-webkit-details-marker {
         width: auto;
         font-size: 19px;
     }
+    .faqs .directions h1{
+        font-size: 27px;
+        line-height: 37px;
+    }
     .eatingreat{
         /* grid-column: 1/-1; */
         padding: 0;
@@ -931,7 +955,8 @@ summary::-webkit-details-marker {
           z-index: 999999;
           top: -50px;
           right: 0;
-          background-color: var(--yellow);
+          background-color:#000000;
+          color: #FDB731;
           overflow-x: hidden;
           overflow-y: hidden;
           transition: 0.5s;
@@ -945,15 +970,19 @@ summary::-webkit-details-marker {
             top: 30px;
             text-align: center;
             justify-self: center;
+            color: #FDB731;
         }
         .sidenav a {
           padding: 8px 8px 8px 32px;
           text-decoration: none;
           font-size: 25px;
-          color: #121212;
+          color: #FDB731;
           display: block;
           transition: 0.3s;
           position: relative;
+        }
+        .sidenav a:hover{
+            background-color: #fff;
         }
         .since h1, .review-title h1 , .directions h1 , .specials h1{
             font-size: 27px;
@@ -986,7 +1015,9 @@ summary::-webkit-details-marker {
     .items{
         flex-direction: column;
     }
-
+    .faqs {
+        padding: 0;
+    }
 } 
 
 /* 
@@ -996,7 +1027,7 @@ summary::-webkit-details-marker {
 
 @media (min-width: 320px) and (max-width: 479px) {
     .menu-taste .items{
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
     .hero{
         padding: 40px 40px;
@@ -1123,6 +1154,9 @@ summary::-webkit-details-marker {
           }
 
     .items{
+        flex-direction: column;
+    }
+    .menu-taste .items{
         flex-direction: column;
     }
 }
