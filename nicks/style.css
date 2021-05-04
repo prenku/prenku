@@ -31,6 +31,8 @@ nav .logo:hover{
 .container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(fit-content, 1fr));
+    grid-template-rows: repeat(fit-content, minmax(fit-content, 1fr));
+
     grid-template-rows: 80px auto .5fr .2fr auto 1fr;
     grid-auto-rows: auto;
     grid-template-areas: 
@@ -43,11 +45,11 @@ nav .logo:hover{
     "delivery"
     "explore"
     "revs"
+    "thought"
     "faqs"
     "direction"
     "footer";
-    justify-content: center;
-    align-content: center;
+    
 }
 .explore{
     grid-area: explore;
@@ -462,6 +464,7 @@ background: radial-gradient(circle, rgba(189,159,50,1) 66.6%, rgba(253,210,49,1)
     color: #fff;
     margin-bottom:90px ;
 }
+
 .reviews .review-title
 {
     display: flex;
@@ -1102,8 +1105,8 @@ summary::-webkit-details-marker {
         font-size: 32px;
         cursor: pointer;
           width: 10%;
-          height: 100%;
           margin-right: 20px;
+          justify-self: center;
         }
         .sidenav {
           height: 100%;
