@@ -46,6 +46,8 @@ nav .logo:hover{
     "faqs"
     "direction"
     "footer";
+    justify-content: center;
+    align-content: center;
 }
 .explore{
     grid-area: explore;
@@ -175,6 +177,9 @@ nav{
 }
 .orderNow h1{
     font-size: 32px;
+}
+.hero h4 {
+    color: #FDB731;
 }
 
 .orderNow a , .delivery a{
