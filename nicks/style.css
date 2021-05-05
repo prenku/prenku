@@ -4,14 +4,11 @@
 }
 body{
     font-family: Inter, sans-serif;
-
-    /* font-family: 'Montserrat', sans-serif; */
     padding: 0;
     margin: 0;
     background-color: #000000;
     background-color: #FDB731;
-    /* background: rgb(2,0,36); */
-/* background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(253,210,49,1) 35%); */
+
 }
 a {
     color:#000000;
@@ -25,9 +22,6 @@ a:hover{
     transition: ease-in;
     border-radius:10px;
 }
-nav .logo:hover{
-    /* background-color: var(--yellow); */
-  }
 .container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(fit-content, 1fr));
@@ -45,7 +39,6 @@ nav .logo:hover{
     "delivery"
     "explore"
     "revs"
-    "thought"
     "faqs"
     "direction"
     "footer";
@@ -1028,6 +1021,9 @@ summary::-webkit-details-marker {
     }
     .faqs {
         padding: 0;
+    }
+    body{
+        background-color: black;
     }
 } 
 
