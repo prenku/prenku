@@ -20,7 +20,7 @@ body{
     display: grid;
     grid-template-columns: repeat(fit-content, minmax(fit-content, 1fr));
     grid-template-rows: repeat(fit-content, minmax(fit-content, 1fr));
-    grid-template-rows:1fr auto 1fr 1fr 200px 1fr  1fr 1fr 300px ;
+    grid-template-rows:1fr 1fr 1fr 1fr .04fr .02fr .59fr 1fr 450px 200px;
     grid-auto-rows : auto;
     grid-template-areas: 
     "hero"
@@ -31,6 +31,7 @@ body{
     "revs"
     "delivery"
     "event"
+    "direction"
     "gram"
     "footer";    
 }
@@ -38,6 +39,9 @@ footer{
     grid-area: footer;
     display: flex ;
     justify-content: center;
+    flex-direction: column-reverse;
+    align-content: center;
+    align-items: center;
 }
 .thegram{
     grid-area: gram;
@@ -526,7 +530,7 @@ nav{
     justify-content: center;
     align-content: center;
     justify-items: center;
-    align-items: flex-start;
+    align-items: center;
     padding-left: 100px;
     /* background-color: #89aff5; */
 }
@@ -542,17 +546,17 @@ nav{
     background-color: var(--redColor);
     border: none;;
 }
-.delivery h1 , .event h1{
+.delivery h1 , .event h1 , .directions h1{
     font-size: 77px;
 }
-.delivery p{
+.delivery p {
     width:  50%;
     /* word-spacing: 4px; */
     line-height: 22px;
     padding-bottom: 20px;
     /* color: rgb(153, 124, 119); */
 }
-.delivery h2{
+.delivery h2 {
     color: rgb(153, 124, 119);
 
 }
@@ -583,6 +587,23 @@ nav{
     margin-bottom: 30px;
     width: 250px;
 }
+.directions{
+    grid-area: direction;
+}
+.directions h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+.directions *{
+    text-align: center;
+    color: #e7effd;
+}
+.directions p {
+    text-align: center;
+}
+
 
 @media (min-width: 1281px) {
       
