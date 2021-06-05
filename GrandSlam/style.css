@@ -20,7 +20,7 @@ body{
     display: grid;
     grid-template-columns: repeat(fit-content, minmax(fit-content, 1fr));
     grid-template-rows: repeat(fit-content, minmax(fit-content, 1fr));
-    grid-template-rows:1fr 1fr 1fr 1fr .04fr .02fr .59fr 1fr 450px 200px;
+    grid-template-rows:1fr auto 1fr 1fr .04fr .02fr .59fr 1fr 450px 200px;
     grid-auto-rows : auto;
     grid-template-areas: 
     "hero"
