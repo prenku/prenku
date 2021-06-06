@@ -13,33 +13,116 @@
     <link href='https://css.gg/facebook.css' rel='stylesheet'>
     <link href='https://css.gg/instagram.css' rel='stylesheet'>
     <link href='https://css.gg/mail.css' rel='stylesheet'>
-    <title>Welcome | Grand Slam Pizza & Pub</title>
+    <title>Menu | Grand Slam Pizza & Pub</title>
 
 
     <style>
-        .conntanier {
-            grid-area:
-                "hero"
-                "header"
-                "discover"
-                "thegram"
-                "footer"
-            ;
-            display: flex;
+
+        .logo {
+            color: var(--mainColor);
         }
 
-        #myBtnContainer {
-            flex-direction: row;
-            flex-basis: 100%;
-            justify-content: center;
+        .menu {
+            width: 80%;
+            margin: 0 auto;
+            padding: 50px 0px;
+            color: var(--mainColor);
+        }
+
+        .menu>h1 {
+            text-align: center;
+            font-size: 35px;
+            padding-bottom: 35px;
+            border-bottom: 1px solid #6788c8;
+        }
+
+        .menu-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 35px;
+        }
+
+        .category {
+            padding: 20px 0px;
+            max-width: 50%;
+        }
+
+        .category-header {
+            padding: 15px;
+        }
+
+        .category-header h1 {
+            text-align: center;
+            font-size: 30px;
+        }
+        .products {
+            padding-bottom: 20px;
+            border-bottom: 1px solid #6788c8;
+        }
+        .product {
+            display: flex;
+            padding: 15px;
+        }
+
+        .product-image img {
+            width: 95px;
+            padding: 15px;
+            margin-right: 15px;
         }
 
         .product-image {
             display: none;
         }
+
+        .product-title {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .product-price {
+            font-weight: 500;
+            font-size: 18px;
+        }
+
         .discover-links {
             display: flex;
             flex-direction: row;
+        }
+
+        footer {
+            background-color: var(--mainColor);
+            color: white;
+        }
+
+        .footer-container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        footer .top-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 0px;
+            border-bottom: 1px solid gray
+        }
+
+        footer .social-media {
+            display: flex;
+            align-items: center;
+        }
+
+        footer .social-media h2,
+        footer .social-media a {
+            color: white;
+            margin-right: 15px;
+        }
+
+        footer .middle-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 30px 0px"
+
         }
 
         footer .middle-row div p {
@@ -50,13 +133,25 @@
             color: #cacaca;
             text-decoration: underline;
         }
+
+        footer .bottom-row {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px 0;
+        }
+
+        footer .bottom-row {
+            color: #cacaca;
+            font-size: 14px;
+        }
     </style>
 </head>
 
 <body>
-    <nav class="">
+    <nav>
         <div>
-            <a class="logo" style="color: var(--mainColor);" href="index.html">
+            <a class="logo" href="index.html">
                 <img src="https://images.squarespace-cdn.com/content/5cd08c238dfc8ce05702f287/1558014293279-SHFRHT6ANOD022DBKMMJ/logo.png"
                     alt="">
             </a>
@@ -88,253 +183,285 @@
             </div>
         </section>
     </nav>
-    <div class="menu-container">
-
-        <!-- <section class="hero">
-            <div class="intro" style="background-image: none; height: 250px; ">
-                <h1 style="margin-bottom: 0px; padding-left: 0px; text-align: center;">Menu</h1>
-            </div>
-        </section> -->
-        
-        <section class="menu" style="width: 80%; margin: 0 auto; padding: 50px 0px; color: var(--mainColor);">
-            <h1 style="text-align: center; font-size: 35px; padding-bottom: 35px; border-bottom: 1px solid #6788c8;">Browse Our Menu</h1>
-            <div class="menu-wrapper" style="display: flex; justify-content: space-around; margin-top: 35px;">
-                <div class="menu-left">
-                    <div class="category" style="border-bottom: 1px solid #6788c8; padding: 30px 0px">
-                        <div class="category-header" style="padding: 15px;">
-                            <h1 style="text-align: center; font-size: 30px;">Salads</h1>
-                        </div>
-                        <div class="products">
-                            <div class="product" style="display: flex; padding: 15px;">
-                                <div class="product-image"></div>
-                                <div class="product-content">
-                                    <h3>WHITMANS HOUSE SALAD</h3>
-                                    <p>iceberg lettuce, roasted peppers, red onion, tomato, House Made Vinaigrette</p>
-                                </div>
-                            </div>
-                            <div class="product" style="display: flex; padding: 15px;">
-                                <div class="product-image">
-                                    <img style="width: 95px; padding: 15px; margin-right: 15px;" src="https://images.squarespace-cdn.com/content/v1/5addf0c49d5abbdf63b094c7/1564548988952-M7SAE7C3WV1Q91TOT2FJ/ke17ZwdGBToddI8pDm48kMJf-ZHl8zGCp8rqh1NL_1NZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpzzUjXhBaDfZOfVpVAemJUI_qKhITuOfeFL3qbvcKvGP7wlW3Uqz-6yl9LWr0Nn3Wo/IMG_1171.png?format=300w" alt="">
-                                </div>
-                                <div class="product-content">
-                                    <h3>WEDGE SALAD</h3>
-                                    <p>iceberg lettuce, house-made blue cheese dressing, applewood smoked bacon, croutons</p>
-                                </div>
-                            </div>
-                            <div class="product" style="display: flex; padding: 15px;">
-                                <div class="product-image">
-                                    <img style="width: 95px; padding: 15px; margin-right: 15px;" src="https://images.squarespace-cdn.com/content/v1/5addf0c49d5abbdf63b094c7/1564545673229-2D8GTYDJVBKJUKZ1INMY/ke17ZwdGBToddI8pDm48kNiEM88mrzHRsd1mQ3bxVct7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0topjEaZcWjtmMYdCWL4dkGbxs35J-ZjFa9s1e3LsxrX8g4qcOj2k2AL08mW_Htcgg/Whitmans+by+LO+April+2018-14.png?format=300w" alt="">
-                                </div>
-                                <div class="product-content">
-                                    <h3>WHITMANS COBB SALAD</h3>
-                                    <p>iceberg lettuce, blue cheese, avocado, tomato, crispy applewood smoked bacon, hard-boiled egg wedges, house-made balsamic vinaigrette</p>
-                                </div>
-                            </div>
-                            <div class="product" style="display: flex; padding: 15px;">
-                                <div class="product-image">
-                                    <img style="width: 95px; padding: 15px; margin-right: 15px;" src="https://images.squarespace-cdn.com/content/v1/5addf0c49d5abbdf63b094c7/1564546935641-CNWTDX741GR1JEY0JD9Y/ke17ZwdGBToddI8pDm48kEaTtF2E2-fGGoFnN1sVWIlZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpzPmczz0vWRyI2XFhc2IXV4I-pTfFxGXQGRTYEOjxCzO-vbWP5Hz3vphFPKGCBjQtI/IMG_1274.png?format=300w" alt="">
-                                </div>
-                                <div class="product-content">
-                                    <h3>KALE SALAD</h3>
-                                    <p>kale, golded raisins, shallots, parmesan cheese, lemon dressing, croutons</p>
-                                </div>
-                            </div>
-                            <div class="product" style="display: flex; padding: 15px;">
-                                <div class="product-image">
-                                    <img style="width: 95px; padding: 15px; margin-right: 15px;" src="https://images.squarespace-cdn.com/content/v1/5addf0c49d5abbdf63b094c7/1564544645801-93G4T5NCFB49TDQYY80W/ke17ZwdGBToddI8pDm48kMkcuyisqGRo_PwlrBtE3M9Zw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpwnL0ClN1q-vAoBRErqDKGf5UBZwrGBbS6jKehdnpE3g7qfq5AZWsC9z96QLfdsV1U/IMG_1417.png?format=300w" alt="">
-                                </div>
-                                <div class="product-content">
-                                    <h3>BRUSSELS SPROUT SALAD</h3>
-                                    <p>shredded fresh Brussels sprouts, dried cranberries, feta cheese, shallots, house-made red wine vinaigrette </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="category" style="border-bottom: 1px solid #6788c8; padding: 30px 0px">
-                        <div class="category-header" style="padding: 15px;">
-                            <h1 style="text-align: center; font-size: 30px;">Cheesesteaks & Chicken</h1>
-                        </div>
-                        <div class="products">
-                            <div class="product" style="display: flex; padding: 15px;">
-                                <div class="product-image">
-                                    <img style="width: 95px; padding: 15px; margin-right: 15px;" src="https://images.squarespace-cdn.com/content/v1/5addf0c49d5abbdf63b094c7/1564545352048-NIOE2YAQ1AOS7NJ16DM1/ke17ZwdGBToddI8pDm48kNiEM88mrzHRsd1mQ3bxVct7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0topjEaZcWjtmMYdCWL4dkGbxs35J-ZjFa9s1e3LsxrX8g4qcOj2k2AL08mW_Htcgg/Whitmans+2019+-110.png?format=300w" alt="">
-                                </div>
-                                <div class="product-content">
-                                    <div class="product-title" style="display: flex; justify-content: space-between;">
-                                        <h3>EAST VILLI CHEESE STEAK</h3>
-                                        <p style="font-weight: 500; font-size: 18px;">10.99</p>
-                                    </div>
-                                    <p>chip steak, sautéed onions, melted cheese, on toasted hoagie roll, served with fries</p>
-                                </div>
-                            </div>
-                            <div class="product" style="display: flex; padding: 15px;">
-                                <div class="product-image">
-                                    <img style="width: 95px; padding: 15px; margin-right: 15px;" src="https://images.squarespace-cdn.com/content/v1/5addf0c49d5abbdf63b094c7/1564547979243-MYYOKX6U0FUC978D1IYB/ke17ZwdGBToddI8pDm48kNiEM88mrzHRsd1mQ3bxVct7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0topjEaZcWjtmMYdCWL4dkGbxs35J-ZjFa9s1e3LsxrX8g4qcOj2k2AL08mW_Htcgg/Whitmans+by+LO+Winter+1718-32.png?format=300w" alt="">
-                                </div>
-                                <div class="product-content">
-                                    <div style="display: flex; justify-content: space-between;">
-                                        <h3>GRILLED CHICKEN CLUB</h3>
-                                        <p style="font-weight: 500; font-size: 18px;">12.99</p>
-                                    </div>
-                                    <p>grilled free-range chicken cutlet, applewood smoked bacon, bibb lettuce, tomato, pickles, special sauce, on toasted sesame bun, served with chips or crack kale</p>
-                                </div>
-                            </div>
-                            <div class="product" style="display: flex; padding: 15px;">
-                                <div class="product-image">
-                                    <img style="width: 95px; padding: 15px; margin-right: 15px;" src="https://images.squarespace-cdn.com/content/v1/5addf0c49d5abbdf63b094c7/1564549262015-CWBLY6VQE5ML86XUDHEB/ke17ZwdGBToddI8pDm48kELCdpLkdPPdIQ3Xe4DumxZZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpyXc-hkWpKKg4fmXQutg02SR0z-Yc3kHoN4UU1eo5jDm6HJXejF9C-42VRNkAKmSNI/IMG_0921.png?format=300w" alt="">
-                                </div>
-                                <div class="product-content">
-                                    <h3>CHICKEN ON GREENS</h3>
-                                    <p>grilled free-range chicken breast, served on a bed of sautéed kale or baby arugula, parmesan cheese, lemon-oil dressing</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <section class="menu">
+        <h1>Browse Our Menu</h1>
+        <div class="menu-wrapper">
+            <div class="category">
+                <div class="category-header">
+                    <h1>Salads</h1>
                 </div>
-                <div class="menu-right">
-                    <div class="category" style="border-bottom: 1px solid #6788c8; padding: 30px 0px">
-                        <div class="category-header" style="padding: 15px;">
-                            <h1 style="text-align: center; font-size: 30px;">Burgers</h1>
-                        </div>
-                        <div class="products">
-                            <div class="product" style="display: flex; padding: 15px;">
-                                <div class="product-image">
-                                    <img style="width: 95px; padding: 15px; margin-right: 15px;" src="https://images.squarespace-cdn.com/content/v1/5addf0c49d5abbdf63b094c7/1564546666513-L52HGXLEKMNDOSXI17FD/ke17ZwdGBToddI8pDm48kNiEM88mrzHRsd1mQ3bxVct7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0topjEaZcWjtmMYdCWL4dkGbxs35J-ZjFa9s1e3LsxrX8g4qcOj2k2AL08mW_Htcgg/Whitmans+by+LO+Winter+1718-17+copy.png?format=300w" alt="">
-                                </div>
-                                <div class="product-content">
-                                    <h3>JUICY LUCY</h3>
-                                    <p>beef short rib blend stuffed with pimento cheese, caramelized onion, bibb lettuce, tomato, spicy pickles, special sauce, on sesame bun</p>
-                                </div>
+                <div class="products">
+                    <div class="product">
+                        <div class="product-image"></div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <h3>WHITMANS HOUSE SALAD</h3>
+                                <p class="product-price">10.99</p>
                             </div>
-                            <div class="product" style="display: flex; padding: 15px;">
-                                <div class="product-image">
-                                    <img style="width: 95px; padding: 15px; margin-right: 15px;" src="https://images.squarespace-cdn.com/content/v1/5addf0c49d5abbdf63b094c7/1564544800434-MM1JVCVSEYJWAYIEG0CD/ke17ZwdGBToddI8pDm48kNiEM88mrzHRsd1mQ3bxVct7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0topjEaZcWjtmMYdCWL4dkGbxs35J-ZjFa9s1e3LsxrX8g4qcOj2k2AL08mW_Htcgg/Whitmans+by+LO+Winter+1718-65+copy.png?format=300w" alt="">
-                                </div>
-                                <div class="product-content">
-                                    <h3>BLUICY</h3>
-                                    <p>beef short rib blend stuffed with crumbled blue cheese; red onion, arugula, tomato, pickles, special sauce, on sesame bun</p>
-                                </div>
-                            </div>
-                            <div class="product" style="display: flex; padding: 15px;">
-                                <div class="product-image">
-                                    <img style="width: 95px; padding: 15px; margin-right: 15px;" src="https://images.squarespace-cdn.com/content/v1/5addf0c49d5abbdf63b094c7/1564548357448-KQ5DDY6EAUC98JBM8F4V/ke17ZwdGBToddI8pDm48kFIewt06F93ntyxYzUeYyJFZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpxasqR14h11y0IYwhETBjGYzL14UVjMMn1rm4nkJp9tJ3_QOz4zb_P8tclpPD62Yg4/IMG_0720.png?format=300w" alt="">
-                                </div>
-                                <div class="product-content">
-                                    <h3>SPICY PATTY</h3>
-                                    <p>Short rib & brisket blend patty blended with habanero, jalapeño & serrano peppers, avocado, arugula, pickled red onions on sesame bun</p>
-                                </div>
-                            </div>
+                            <p>iceberg lettuce, roasted peppers, red onion, tomato, House Made Vinaigrette</p>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- <section class="thegram" style="height: 200px;">
-            Follow us :<a href="https://www.instagram.com/grandslampizzaandpub/"> @grandslampizzaandpub</a>
-        </section> -->
-
-        <footer style="background-color: var(--mainColor); color: white;">
-            <div class="footer-container" style="width: 80%; margin: 0 auto;">
-                <div class="top-row" style="display: flex; justify-content: space-between; align-items: center; padding: 30px 0px; border-bottom: 1px solid gray">
-                    <div class="site-logo">
-                        <a class="logo" style="color: var(--mainColor);" href="index.html">
-                            <img src="https://images.squarespace-cdn.com/content/5cd08c238dfc8ce05702f287/1558014293279-SHFRHT6ANOD022DBKMMJ/logo.png"
+                    <div class="product">
+                        <div class="product-image">
+                            <img src="https://images.squarespace-cdn.com/content/v1/5addf0c49d5abbdf63b094c7/1564548988952-M7SAE7C3WV1Q91TOT2FJ/ke17ZwdGBToddI8pDm48kMJf-ZHl8zGCp8rqh1NL_1NZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpzzUjXhBaDfZOfVpVAemJUI_qKhITuOfeFL3qbvcKvGP7wlW3Uqz-6yl9LWr0Nn3Wo/IMG_1171.png?format=300w"
                                 alt="">
-                        </a>
-                    </div>
-                    <div class="social-media" style="display: flex; align-items: center;">
-                        <h2 style="margin-right: 15px;">Follow Us:</h2>
-                        <a href="#" style="color: white; margin-right: 10px;"><i class="gg-facebook"></i></a>
-                        <a href="#" style="color: white; margin-right: 15px;"><i class="gg-instagram"></i></a>
-                        <a href="#" style="color: white; margin-right: 10px;"><i class="gg-mail"></i></a>
-                    </div>
-                </div>
-                <div class="middle-row" style="display: flex; justify-content: space-between; padding: 30px 0px">
-                    <div>
-                        <h1>Directions</h1>
-                        <p>GRAND SLAM PIZZA & PUB</p>
-                        <p>269 North Main Street</p>
-                        <p>West Bridgewater, MA 02379</p>
-                        <a href="#">Get Directions ></a>
-                    </div>
-                    <div>
-                        <h1>Hours</h1>
-                        <div class="hours">
-                            <div>
-                                <h4>Take Out Hours</h4>
-                                <p>Monday Closed</p>
-                                <p>Tuesday-Saturday: 11am-10pm</p>
-                                <p>Sunday: 12pm-9pm</p>
+                        </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <h3>WEDGE SALAD</h3>
+                                <p class="product-price">11.99</p>
                             </div>
-                            <div>
-                                <h4>Restaurant  Hours:</h4>
-                                <p>Monday Closed</p>
-                                <p>Tuesday-Saturday: 12pm-10pm</p>
-                                <p>Sunday: 12pm-9pm</p>
-                            </div>
+                            <p>iceberg lettuce, house-made blue cheese dressing, applewood smoked bacon, croutons
+                            </p>
                         </div>
                     </div>
-                    <div>
-                        <h1>Order Online</h1>
-                        <p>Call for Reservation</p>
-                        <a href="#">Order Online Now!</a>
+                    <div class="product">
+                        <div class="product-image">
+                            <img src="https://images.squarespace-cdn.com/content/v1/5addf0c49d5abbdf63b094c7/1564545673229-2D8GTYDJVBKJUKZ1INMY/ke17ZwdGBToddI8pDm48kNiEM88mrzHRsd1mQ3bxVct7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0topjEaZcWjtmMYdCWL4dkGbxs35J-ZjFa9s1e3LsxrX8g4qcOj2k2AL08mW_Htcgg/Whitmans+by+LO+April+2018-14.png?format=300w"
+                                alt="">
+                        </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <h3>WHITMANS COBB SALAD</h3>
+                                <p class="product-price">12.99</p>
+                            </div>
+                            <p>iceberg lettuce, blue cheese, avocado, tomato, crispy applewood smoked bacon,
+                                hard-boiled egg wedges, house-made balsamic vinaigrette</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-image">
+                            <img src="https://images.squarespace-cdn.com/content/v1/5addf0c49d5abbdf63b094c7/1564546935641-CNWTDX741GR1JEY0JD9Y/ke17ZwdGBToddI8pDm48kEaTtF2E2-fGGoFnN1sVWIlZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpzPmczz0vWRyI2XFhc2IXV4I-pTfFxGXQGRTYEOjxCzO-vbWP5Hz3vphFPKGCBjQtI/IMG_1274.png?format=300w"
+                                alt="">
+                        </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <h3>KALE SALAD</h3>
+                                <p class="product-price">8.99</p>
+                            </div>
+                            <p>kale, golded raisins, shallots, parmesan cheese, lemon dressing, croutons</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-image">
+                            <img src="https://images.squarespace-cdn.com/content/v1/5addf0c49d5abbdf63b094c7/1564544645801-93G4T5NCFB49TDQYY80W/ke17ZwdGBToddI8pDm48kMkcuyisqGRo_PwlrBtE3M9Zw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpwnL0ClN1q-vAoBRErqDKGf5UBZwrGBbS6jKehdnpE3g7qfq5AZWsC9z96QLfdsV1U/IMG_1417.png?format=300w"
+                                alt="">
+                        </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <h3>BRUSSELS SPROUT SALAD</h3>
+                                <p class="product-price">10.50</p>
+                            </div>
+                            <p>shredded fresh Brussels sprouts, dried cranberries, feta cheese, shallots, house-made
+                                red wine vinaigrette </p>
+                        </div>
                     </div>
                 </div>
-                <div class="bottom-row" style="display: flex; flex-direction: column; align-items: center; padding: 30px 0;">
-                    <p style="color: #cacaca; font-size: 14px;">Copyright © 2021 GRAND SLAM PIZZA & PUB</p>
-                    <h1 style="font-size: 25px;">Made with <span style="color: tomato; opacity: 0.7;"> ❤ & ☕</span> by <strong> <a target="blank"
-                        style="opacity: 0.7; color: tomato; font-size: inherit;" href="https://prenku.com">PRENKU.COM</a></strong> </h1>
+            </div>
+            <div class="category">
+                <div class="category-header">
+                    <h1>Burgers</h1>
+                </div>
+                <div class="products">
+                    <div class="product">
+                        <div class="product-image">
+                            <img src="https://images.squarespace-cdn.com/content/v1/5addf0c49d5abbdf63b094c7/1564546666513-L52HGXLEKMNDOSXI17FD/ke17ZwdGBToddI8pDm48kNiEM88mrzHRsd1mQ3bxVct7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0topjEaZcWjtmMYdCWL4dkGbxs35J-ZjFa9s1e3LsxrX8g4qcOj2k2AL08mW_Htcgg/Whitmans+by+LO+Winter+1718-17+copy.png?format=300w"
+                                alt="">
+                        </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <h3>JUICY LUCY</h3>
+                                <p class="product-price">10.99</p>
+                            </div>
+                            <p>beef short rib blend stuffed with pimento cheese, caramelized onion, bibb lettuce,
+                                tomato, spicy pickles, special sauce, on sesame bun</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-image">
+                            <img src="https://images.squarespace-cdn.com/content/v1/5addf0c49d5abbdf63b094c7/1564544800434-MM1JVCVSEYJWAYIEG0CD/ke17ZwdGBToddI8pDm48kNiEM88mrzHRsd1mQ3bxVct7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0topjEaZcWjtmMYdCWL4dkGbxs35J-ZjFa9s1e3LsxrX8g4qcOj2k2AL08mW_Htcgg/Whitmans+by+LO+Winter+1718-65+copy.png?format=300w"
+                                alt="">
+                        </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <h3>BLUICY</h3>
+                                <p class="product-price">9.99</p>
+                            </div>
+                            <p>beef short rib blend stuffed with crumbled blue cheese; red onion, arugula, tomato,
+                                pickles, special sauce, on sesame bun</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-image">
+                            <img src="https://images.squarespace-cdn.com/content/v1/5addf0c49d5abbdf63b094c7/1564548357448-KQ5DDY6EAUC98JBM8F4V/ke17ZwdGBToddI8pDm48kFIewt06F93ntyxYzUeYyJFZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpxasqR14h11y0IYwhETBjGYzL14UVjMMn1rm4nkJp9tJ3_QOz4zb_P8tclpPD62Yg4/IMG_0720.png?format=300w"
+                                alt="">
+                        </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <h3>SPICY PATTY</h3>
+                                <p class="product-price">14.99</p>
+                            </div>
+                            <p>Short rib & brisket blend patty blended with habanero, jalapeño & serrano peppers,
+                                avocado, arugula, pickled red onions on sesame bun</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </footer>
-        <script>
-            filterSelection("all")
-            function filterSelection(c) {
-                var x, i;
-                x = document.getElementsByClassName("filterDiv");
-                if (c == "all") c = "";
-                for (i = 0; i < x.length; i++) {
-                    w3RemoveClass(x[i], "show");
-                    if (x[i].className.indexOf(c) > -1)
-                        w3AddClass(x[i], "show");
+            <div class="category">
+                <div class="category-header">
+                    <h1>Cheesesteaks & Chicken</h1>
+                </div>
+                <div class="products">
+                    <div class="product">
+                        <div class="product-image">
+                            <img src="https://images.squarespace-cdn.com/content/v1/5addf0c49d5abbdf63b094c7/1564545352048-NIOE2YAQ1AOS7NJ16DM1/ke17ZwdGBToddI8pDm48kNiEM88mrzHRsd1mQ3bxVct7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0topjEaZcWjtmMYdCWL4dkGbxs35J-ZjFa9s1e3LsxrX8g4qcOj2k2AL08mW_Htcgg/Whitmans+2019+-110.png?format=300w"
+                                alt="">
+                        </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <h3>EAST VILLI CHEESE STEAK</h3>
+                                <p class="product-price">10.99</p>
+                            </div>
+                            <p>chip steak, sautéed onions, melted cheese, on toasted hoagie roll, served with fries
+                            </p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-image">
+                            <img src="https://images.squarespace-cdn.com/content/v1/5addf0c49d5abbdf63b094c7/1564547979243-MYYOKX6U0FUC978D1IYB/ke17ZwdGBToddI8pDm48kNiEM88mrzHRsd1mQ3bxVct7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0topjEaZcWjtmMYdCWL4dkGbxs35J-ZjFa9s1e3LsxrX8g4qcOj2k2AL08mW_Htcgg/Whitmans+by+LO+Winter+1718-32.png?format=300w"
+                                alt="">
+                        </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <h3>GRILLED CHICKEN CLUB</h3>
+                                <p class="product-price">12.99</p>
+                            </div>
+                            <p>grilled free-range chicken cutlet, applewood smoked bacon, bibb lettuce, tomato,
+                                pickles, special sauce, on toasted sesame bun, served with chips or crack kale</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-image">
+                            <img src="https://images.squarespace-cdn.com/content/v1/5addf0c49d5abbdf63b094c7/1564549262015-CWBLY6VQE5ML86XUDHEB/ke17ZwdGBToddI8pDm48kELCdpLkdPPdIQ3Xe4DumxZZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpyXc-hkWpKKg4fmXQutg02SR0z-Yc3kHoN4UU1eo5jDm6HJXejF9C-42VRNkAKmSNI/IMG_0921.png?format=300w"
+                                alt="">
+                        </div>
+                        <div class="product-content">
+                            <div class="product-title">
+                                <h3>CHICKEN ON GREENS</h3>
+                                <p class="product-price">13.99</p>
+                            </div>
+                            <p>grilled free-range chicken breast, served on a bed of sautéed kale or baby arugula,
+                                parmesan cheese, lemon-oil dressing</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <footer>
+        <div class="footer-container">
+            <div class="top-row">
+                <div class="site-logo">
+                    <a class="logo" href="index.html">
+                        <img src="https://images.squarespace-cdn.com/content/5cd08c238dfc8ce05702f287/1558014293279-SHFRHT6ANOD022DBKMMJ/logo.png"
+                            alt="">
+                    </a>
+                </div>
+                <div class="social-media">
+                    <h2>Follow Us:</h2>
+                    <a href="#"><i class="gg-facebook"></i></a>
+                    <a href="#"><i class="gg-instagram"></i></a>
+                    <a href="#"><i class="gg-mail"></i></a>
+                </div>
+            </div>
+            <div class="middle-row">
+                <div>
+                    <h1>Directions</h1>
+                    <p>GRAND SLAM PIZZA & PUB</p>
+                    <p>269 North Main Street</p>
+                    <p>West Bridgewater, MA 02379</p>
+                    <a href="#">Get Directions ></a>
+                </div>
+                <div>
+                    <h1>Hours</h1>
+                    <div class="hours">
+                        <div>
+                            <h4>Take Out Hours</h4>
+                            <p>Monday Closed</p>
+                            <p>Tuesday-Saturday: 11am-10pm</p>
+                            <p>Sunday: 12pm-9pm</p>
+                        </div>
+                        <div>
+                            <h4>Restaurant Hours:</h4>
+                            <p>Monday Closed</p>
+                            <p>Tuesday-Saturday: 12pm-10pm</p>
+                            <p>Sunday: 12pm-9pm</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h1>Order Online</h1>
+                    <p>Call for Reservation</p>
+                    <a href="#">Order Online Now!</a>
+                </div>
+            </div>
+            <div class="bottom-row">
+                <p>Copyright © 2021 GRAND SLAM PIZZA & PUB</p>
+                <h1 style="font-size: 25px;">Made with <span style="color: tomato; opacity: 0.7;"> ❤ & ☕</span> by
+                    <strong> <a target="blank" style="opacity: 0.7; color: tomato; font-size: inherit;"
+                            href="https://prenku.com">PRENKU.COM</a></strong>
+                </h1>
+            </div>
+        </div>
+    </footer>
+    <script>
+        filterSelection("all")
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("filterDiv");
+            if (c == "all") c = "";
+            for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1)
+                    w3AddClass(x[i], "show");
+
+            }
+        }
+
+        function w3AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) { element.className += " " + arr2[i]; }
+            }
+        }
+
+        function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
                 }
             }
+            element.className = arr1.join(" ");
+        }
 
-            function w3AddClass(element, name) {
-                var i, arr1, arr2;
-                arr1 = element.className.split(" ");
-                arr2 = name.split(" ");
-                for (i = 0; i < arr2.length; i++) {
-                    if (arr1.indexOf(arr2[i]) == -1) { element.className += " " + arr2[i]; }
-                }
-            }
+        // Add active class to the current button (highlight it)
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
 
-            function w3RemoveClass(element, name) {
-                var i, arr1, arr2;
-                arr1 = element.className.split(" ");
-                arr2 = name.split(" ");
-                for (i = 0; i < arr2.length; i++) {
-                    while (arr1.indexOf(arr2[i]) > -1) {
-                        arr1.splice(arr1.indexOf(arr2[i]), 1);
-                    }
-                }
-                element.className = arr1.join(" ");
-            }
-
-            // Add active class to the current button (highlight it)
-            var btnContainer = document.getElementById("myBtnContainer");
-            var btns = btnContainer.getElementsByClassName("btn");
-            for (var i = 0; i < btns.length; i++) {
-                btns[i].addEventListener("click", function () {
-                    var current = document.getElementsByClassName("active");
-                    current[0].className = current[0].className.replace(" active", "");
-                    this.className += " active";
-                });
-            }
-
-        </script>
+    </script>
 </body>
 
 </html>
