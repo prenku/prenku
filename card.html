@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap" rel="stylesheet">
+    <title>card design</title>
+
+    <style> 
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Roboto', sans-serif;
+    }
+    .container{
+        /* margin: 300px; */
+        display: flex;
+        /* flex-direction: column; */
+        justify-content: space-evenly;
+        /* background-image: linear-gradient(to right bottom, #a6f2e4, #91e8d8, #7bddcd, #63d3c1, #47c9b6); */
+        width: auto;
+        height: 100vh;
+        /* justify-content: center; */
+        justify-items: center;
+        align-items: center;
+        background-image: linear-gradient(to right bottom, #a6f2e4, #91e8d8, #7bddcd, #63d3c1, #47c9b6);
+    }
+    .card{
+        width: 400px;
+        display: flex;
+        justify-items:flex-start;
+        height: 260px;
+        border-radius: 15px;
+        background-color: #47C9B6;
+        background-color: #038DE8;
+        box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+        box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
+        background-image: url("/card.jpeg");
+        /* background-color: #DFDBE5; */
+/* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='126' height='84' viewBox='0 0 126 84'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.4'%3E%3Cpath d='M126 83v1H0v-2h40V42H0v-2h40V0h2v40h40V0h2v40h40V0h2v83zm-2-1V42H84v40h40zM82 42H42v40h40V42zm-50-6a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm96 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm-42 0a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm30-12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM20 54a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm12 24a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM8 54a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm24 0a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM8 78a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm12 0a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm54 0a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM50 54a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm24 0a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM50 78a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm54-12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm12 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM92 54a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm24 0a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM92 78a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm24-42a4 4 0 1 1 0-8 4 4 0 0 1 0 8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); */
+        background-position: top left;
+        background-repeat: no-repeat;
+        background-size: cover;
+        /* background-blend-mode: soft-light; */
+        overflow: hidden;
+        /* background-color: #19151f; */
+/* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='88' height='88' viewBox='0 0 88 88'%3E%3Cg fill='%47C9B6' fill-opacity='.73'%3E%3Cpath fill-rule='evenodd' d='M29.42 29.41c.36-.36.58-.85.58-1.4V0h-4v26H0v4h28c.55 0 1.05-.22 1.41-.58h.01zm0 29.18c.36.36.58.86.58 1.4V88h-4V62H0v-4h28c.56 0 1.05.22 1.41.58zm29.16 0c-.36.36-.58.85-.58 1.4V88h4V62h26v-4H60c-.55 0-1.05.22-1.41.58h-.01zM62 26V0h-4v28c0 .55.22 1.05.58 1.41.37.37.86.59 1.41.59H88v-4H62zM18 36c0-1.1.9-2 2-2h10a2 2 0 1 1 0 4H20a2 2 0 0 1-2-2zm0 16c0-1.1.9-2 2-2h10a2 2 0 1 1 0 4H20a2 2 0 0 1-2-2zm16-26a2 2 0 0 1 2-2 2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4zm16 0a2 2 0 0 1 2-2 2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4zM34 58a2 2 0 0 1 2-2 2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4zm16 0a2 2 0 0 1 2-2 2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4zM34 78a2 2 0 0 1 2-2 2 2 0 0 1 2 2v6a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-6zm16 0a2 2 0 0 1 2-2 2 2 0 0 1 2 2v6a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-6zM34 4a2 2 0 0 1 2-2 2 2 0 0 1 2 2v6a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4zm16 0a2 2 0 0 1 2-2 2 2 0 0 1 2 2v6a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4zm-8 82a2 2 0 1 1 4 0v2h-4v-2zm0-68a2 2 0 1 1 4 0v10a2 2 0 1 1-4 0V18zM66 4a2 2 0 1 1 4 0v8a2 2 0 1 1-4 0V4zm0 72a2 2 0 1 1 4 0v8a2 2 0 1 1-4 0v-8zm-48 0a2 2 0 1 1 4 0v8a2 2 0 1 1-4 0v-8zm0-72a2 2 0 1 1 4 0v8a2 2 0 1 1-4 0V4zm24-4h4v2a2 2 0 1 1-4 0V0zm0 60a2 2 0 1 1 4 0v10a2 2 0 1 1-4 0V60zm14-24c0-1.1.9-2 2-2h10a2 2 0 1 1 0 4H58a2 2 0 0 1-2-2zm0 16c0-1.1.9-2 2-2h10a2 2 0 1 1 0 4H58a2 2 0 0 1-2-2zm-28-6a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm8 26a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm16 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM36 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm16 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm-8-8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 68a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm16-34a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm16-12a2 2 0 1 0 0 4 6 6 0 1 1 0 12 2 2 0 1 0 0 4 10 10 0 1 0 0-20zm-64 0a2 2 0 1 1 0 4 6 6 0 1 0 0 12 2 2 0 1 1 0 4 10 10 0 1 1 0-20zm56-12a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 48a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm-48 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0-48a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm24 32a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-4a6 6 0 1 0 0-12 6 6 0 0 0 0 12zm36-36a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-4a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM10 44c0-1.1.9-2 2-2h8a2 2 0 1 1 0 4h-8a2 2 0 0 1-2-2zm56 0c0-1.1.9-2 2-2h8a2 2 0 1 1 0 4h-8a2 2 0 0 1-2-2zm8 24c0-1.1.9-2 2-2h8a2 2 0 1 1 0 4h-8a2 2 0 0 1-2-2zM3 68c0-1.1.9-2 2-2h8a2 2 0 1 1 0 4H5a2 2 0 0 1-2-2zm0-48c0-1.1.9-2 2-2h8a2 2 0 1 1 0 4H5a2 2 0 0 1-2-2zm71 0c0-1.1.9-2 2-2h8a2 2 0 1 1 0 4h-8a2 2 0 0 1-2-2zm6 66a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-4a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM8 86a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-4a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0-68A6 6 0 1 1 8 2a6 6 0 0 1 0 12zm0-4a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm36 36a2 2 0 1 0 0-4 2 2 0 0 0 0 4z'/%3E%3C/g%3E%3C/svg%3E"); */
+
+/* background-color: #010102; */
+/* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='88' height='88' viewBox='0 0 88 88'%3E%3Cg fill='%2347c9b6' fill-opacity='0.4'%3E%3Cpath fill-rule='evenodd' d='M29.42 29.41c.36-.36.58-.85.58-1.4V0h-4v26H0v4h28c.55 0 1.05-.22 1.41-.58h.01zm0 29.18c.36.36.58.86.58 1.4V88h-4V62H0v-4h28c.56 0 1.05.22 1.41.58zm29.16 0c-.36.36-.58.85-.58 1.4V88h4V62h26v-4H60c-.55 0-1.05.22-1.41.58h-.01zM62 26V0h-4v28c0 .55.22 1.05.58 1.41.37.37.86.59 1.41.59H88v-4H62zM18 36c0-1.1.9-2 2-2h10a2 2 0 1 1 0 4H20a2 2 0 0 1-2-2zm0 16c0-1.1.9-2 2-2h10a2 2 0 1 1 0 4H20a2 2 0 0 1-2-2zm16-26a2 2 0 0 1 2-2 2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4zm16 0a2 2 0 0 1 2-2 2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4zM34 58a2 2 0 0 1 2-2 2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4zm16 0a2 2 0 0 1 2-2 2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4zM34 78a2 2 0 0 1 2-2 2 2 0 0 1 2 2v6a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-6zm16 0a2 2 0 0 1 2-2 2 2 0 0 1 2 2v6a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-6zM34 4a2 2 0 0 1 2-2 2 2 0 0 1 2 2v6a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4zm16 0a2 2 0 0 1 2-2 2 2 0 0 1 2 2v6a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4zm-8 82a2 2 0 1 1 4 0v2h-4v-2zm0-68a2 2 0 1 1 4 0v10a2 2 0 1 1-4 0V18zM66 4a2 2 0 1 1 4 0v8a2 2 0 1 1-4 0V4zm0 72a2 2 0 1 1 4 0v8a2 2 0 1 1-4 0v-8zm-48 0a2 2 0 1 1 4 0v8a2 2 0 1 1-4 0v-8zm0-72a2 2 0 1 1 4 0v8a2 2 0 1 1-4 0V4zm24-4h4v2a2 2 0 1 1-4 0V0zm0 60a2 2 0 1 1 4 0v10a2 2 0 1 1-4 0V60zm14-24c0-1.1.9-2 2-2h10a2 2 0 1 1 0 4H58a2 2 0 0 1-2-2zm0 16c0-1.1.9-2 2-2h10a2 2 0 1 1 0 4H58a2 2 0 0 1-2-2zm-28-6a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm8 26a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm16 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM36 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm16 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm-8-8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 68a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm16-34a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm16-12a2 2 0 1 0 0 4 6 6 0 1 1 0 12 2 2 0 1 0 0 4 10 10 0 1 0 0-20zm-64 0a2 2 0 1 1 0 4 6 6 0 1 0 0 12 2 2 0 1 1 0 4 10 10 0 1 1 0-20zm56-12a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 48a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm-48 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0-48a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm24 32a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-4a6 6 0 1 0 0-12 6 6 0 0 0 0 12zm36-36a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-4a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM10 44c0-1.1.9-2 2-2h8a2 2 0 1 1 0 4h-8a2 2 0 0 1-2-2zm56 0c0-1.1.9-2 2-2h8a2 2 0 1 1 0 4h-8a2 2 0 0 1-2-2zm8 24c0-1.1.9-2 2-2h8a2 2 0 1 1 0 4h-8a2 2 0 0 1-2-2zM3 68c0-1.1.9-2 2-2h8a2 2 0 1 1 0 4H5a2 2 0 0 1-2-2zm0-48c0-1.1.9-2 2-2h8a2 2 0 1 1 0 4H5a2 2 0 0 1-2-2zm71 0c0-1.1.9-2 2-2h8a2 2 0 1 1 0 4h-8a2 2 0 0 1-2-2zm6 66a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-4a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM8 86a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-4a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0-68A6 6 0 1 1 8 2a6 6 0 0 1 0 12zm0-4a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm36 36a2 2 0 1 0 0-4 2 2 0 0 0 0 4z'/%3E%3C/g%3E%3C/svg%3E"); */
+    }
+    .card  {
+        /* background-color: #038DE8; */
+    }
+
+    .logo {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        /* justify-items: flex-end;
+        align-items: flex-end;
+        align-content: flex-end; */
+        padding-left: 20px;
+        padding-top: 20px;
+        width: 100%;
+    }
+    .logo h3{
+        font-size: 27px;
+    }
+    .logo h3 , .logo h5{
+        color: #cde0dd;
+        /* color: #333; */
+        font-weight: 500;
+        line-height: 22px;
+    }
+    .logo a {
+        color: #cde0dd;
+        text-decoration: none;
+    }
+    .info{
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+    /* .animated {
+            background-image: url("/card.jpeg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            padding-top:95px;
+            margin-bottom:60px;
+            -webkit-animation-duration: 10s;
+            animation-duration: 5s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            flex-basis: 100%;
+         }
+         @-webkit-keyframes pulse {
+            0% { -webkit-transform: scale(1); }
+            50% { -webkit-transform: scale(1.1); }
+            100% { -webkit-transform: scale(1); }
+         }
+         @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+         }
+         .pulse {
+            -webkit-animation-name: pulse;
+            animation-name: pulse;
+            animation-iteration-count: infinite;
+         } */
+         .card:nth-child(2){
+
+             background-image: none;
+             /* background-image: url("/card.jpeg"); */
+             /* background-repeat: no-repeat;
+             background-size: cover; */
+         }
+         .card:nth-child(2)  div *{
+             /* background-blend-mode: hue; */
+             /* background-color: #038DE8; */
+             /* background-color: #2B5D5C; */
+             font-weight: 400;
+             color: #000000;
+             /* color: azure; */
+             background-color: #038DE8;
+             letter-spacing: 2px;
+         }
+         .card:nth-child(2).info {
+             background-image: none;
+         }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="card">
+
+            <div class="logo">
+                         
+        <h3>Tim Prenku
+        </h3>
+        <h5>Creative Owner</h5>    
+        <a href="tel:7742088486">tim@prenku.com</a>
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="184" height="306" fill="none" viewBox="0 0 584 606">
+            <path fill="#038DE8" fill-rule="evenodd" d="M324 1.247c62.557-5.888 130.981 9.128 176.14 52.817 43.259 41.852 38.362 109.655 52.315 168.206 12.564 52.72 42.927 105.435 25.092 156.612-17.727 50.867-76.492 70.142-116.633 106.064C414.417 526.557 386.395 606.387 324 605.784c-62.51-.604-83.274-88.37-135.005-123.466-54.65-37.075-141.632-27.681-173.25-85.66-31.84-58.385-8.547-133.919 21.022-193.486 27.094-54.579 83.792-83.03 133.641-118.074C219.323 50.711 264.47 6.85 324 1.247z" clip-rule="evenodd"/>
+        </svg> 
+         -->
+    </div>
+    
+    
+    
+    <div class="info">
+        
+            </div>
+        </div>
+        <div class="card">
+
+            <div class="logo">
+                <h3>Tim Prenku
+                    </h3>
+                    <h5>Creative Owner</h5>    
+                    <a href="tel:7742088486">(774) 208 8486</a>
+                </div> 
+                <div class="info">
+                    
+                    <!-- </div>
+                    <div> -->
+        <!-- 
+                      <svg xmlns="http://www.w3.org/2000/svg" width="222" height="406" fill="#038DE8" viewBox="0 0 722 706">
+                        <path fill="#038DE8" fill-rule="evenodd" d="M353.603.014C448.019.8 537.555 38.484 605.39 104.16c69.001 66.805 114.454 155.756 115.846 251.788 1.412 97.35-37.876 192.111-108.437 259.196-68.932 65.538-164.088 91.48-259.196 90.33-93.828-1.135-186.267-30.56-253.001-96.526C33.505 542.624.567 450.293.007 355.949c-.562-94.94 30.667-188.664 97.578-256.018C164.703 32.37 258.373-.779 353.603.014z" clip-rule="evenodd"/>
+                      </svg> -->
+                      <svg xmlns="http://www.w3.org/2000/svg" width="300" height="240" fill="none" viewBox="0 0 500 540">
+                        <path fill="#038DE8" fill-rule="evenodd" d="M231.331 85.631c22.83 4.03 46.028-.148 68.812-4.424 41.512-7.789 87.962-56.773 121.663-31.316 31.641 23.9-22.044 80.919-7.277 117.719 13.167 32.81 67.914 33.987 81.287 66.714 12.292 30.083-6.467 64.135-15.008 95.49-8.594 31.549-3.671 83.69-35.655 90.489-50.942 10.829-103.689-82.296-145.966-51.881-46.145 33.197 35.791 144.688-15.903 168.333-45.269 20.706-40.278-95.09-80.698-124.148-20.585-14.798-48.989 13.374-74.332 12.7-32.315-.859-90.892 14.921-94.606-17.192-5.413-46.804 58.755-73.161 79.25-115.586 6.562-13.583 3.235-30.598-1.752-44.834-8.579-24.489-27.101-43.677-37.574-67.418C49.294 125.243-24.09 64.712 7.974 13.821 34.9-28.913 104.334 39.677 152.42 55.137c27.077 8.705 50.903 25.551 78.912 30.494z" clip-rule="evenodd"/>
+                      </svg>     
+                       <svg xmlns="http://www.w3.org/2000/svg" width="184" height="206" fill="none" viewBox="0 0 584 606">
+                        <path fill="#038DE8" fill-rule="evenodd" d="M324 1.247c62.557-5.888 130.981 9.128 176.14 52.817 43.259 41.852 38.362 109.655 52.315 168.206 12.564 52.72 42.927 105.435 25.092 156.612-17.727 50.867-76.492 70.142-116.633 106.064C414.417 526.557 386.395 606.387 324 605.784c-62.51-.604-83.274-88.37-135.005-123.466-54.65-37.075-141.632-27.681-173.25-85.66-31.84-58.385-8.547-133.919 21.022-193.486 27.094-54.579 83.792-83.03 133.641-118.074C219.323 50.711 264.47 6.85 324 1.247z" clip-rule="evenodd"/>
+                      </svg> 
+                    </div>
+                </div>
+    </div>
+</body>
+</html>
