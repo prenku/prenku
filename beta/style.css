@@ -19,7 +19,25 @@ body{
     /* color: #160647; */
 }
 .container{
-    padding: 0px 200px;
+  display: grid;
+  /* grid-template-rows: repeat(auto-fit, 1fr);
+  grid-template-columns: repeat (auto-fit, 1fr ); */
+
+  grid-template-columns: repeat(auto-fit, minmax(fit-content, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(fit-content, 1fr));
+  grid-template-areas: 
+  "nav"
+  "hero"
+  /* "otro" */
+  /* "work" */
+  "feedback"
+  "revs"
+  "faqs"
+  "contact"
+  
+  ;
+  gap: 80px;
+    /* padding: 0px 200px;/ */
 }
 ul {
     /* display:  flex; */
@@ -44,9 +62,10 @@ a {
 }
 nav{
     display: flex;
+    grid-area: nav;
     justify-content: space-between;
     background-image: var(--main-color);
-    padding-top: 20px;
+    padding: 20px 80px;
 }
 .logo{
     font-weight: 700;
@@ -67,11 +86,12 @@ nav{
     background-repeat: no-repeat;
     min-height: 680px;
     max-height: 700px;
+    grid-area: hero;
     /* background-image: url('https://images.unsplash.com/photo-1527443195645-1133f7f28990?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OTN8fHdlYnNpdGV8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60'); */
 }
 .hero .simple{
     display: flex;
-    width: 100%;
+    width:  100%;
     flex-direction: column;
     justify-content: center;
     justify-items: center;
@@ -94,9 +114,11 @@ nav{
     /* text-align: left; */
     /* width: 50%; */
     max-width: 250px;
+    
   }
 
   .feedback  {
+    grid-area: feedback;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -114,7 +136,7 @@ nav{
     /* max-height: 100%; */
     height: 400px;
     max-width: max-content;
-    width: 100%;
+    /* width: 100%; */
     /* height: auto; */
     margin-left: 160px;
     border-radius: 20px;
@@ -134,8 +156,11 @@ nav{
 
 }
 .work{
-    padding-top: 150px;
-    display: none;
+  grid-area: work;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  /* padding-top: 150px; */
 } 
 .work h1{
     text-align: center;
@@ -145,8 +170,15 @@ nav{
 .work a:nth-child(1), .work a:nth-child(2){
     margin-right: 30px;
 }
+.work .costumer {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 80px;
+  /* max-height: 400px; */
+}
 .contact {
-    width: 100vh;
+  grid-area: contact;
+    width: 80%;
     padding: 280px 0;
     background-color: #160248;
     padding: 50px;
@@ -158,7 +190,7 @@ nav{
     color: #fff;
 }
 .contact h1{
-    font-size: 71px;
+    font-size: 30px;
     color: #F9F871;
     background-color: #160248;
     border-radius: 20px;
@@ -177,6 +209,14 @@ nav{
     background-color: rebeccapurple;
     z-index: -1;
     bottom: 0;
+}
+.card img{
+  width: 300px;
+  border-radius: 20px;
+}
+.card .card-title{
+  /* width: 190px; */
+  font-size: 27px;
 }
 .items{
     display: flex;
@@ -205,6 +245,7 @@ nav{
     color: #fff;
     color: #160248;
     margin-bottom:90px ;
+    display: none;
 }
 
 .reviews .review-title
@@ -269,6 +310,9 @@ nav{
     left: 40%;
     display: none;
 }
+.bs{
+  grid-area: bs;
+}
 
 .reviews .items .review-content p {
     color: rgba(242, 242, 242, 0.5);
@@ -288,8 +332,8 @@ nav{
 }
 
   .blockquote {
-    padding: 60px 80px 40px;
-    position: relative;
+    /* padding: 60px 80px 40px; */
+    /* position: relative; */
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     border-radius: 20px;
     border-left:2px solid #160248 ;
@@ -337,7 +381,7 @@ nav{
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic);
 .otro-blockquote{
-  font-size: 1.2em;
+grid-area: otro;  font-size: 1.2em;
   width:60%;
   margin:50px auto;
   /* font-family:Open Sans; */
@@ -350,6 +394,7 @@ nav{
   /* border-left:2px solid #160248 ; */
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   border-radius: 20px;
+  display: none;
 }
 
 .otro-blockquote::before {
@@ -682,3 +727,69 @@ text-shadow:0px 3px 5px 1px rgba(0,0,0,0.25);
     color:steelblue;
   }
   /* accordion end */
+
+
+
+
+
+
+
+  /* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {  
+
+}
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  
+  
+  
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+   
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+   
+   
+}
+@media (max-width: 319px){
+
+}
