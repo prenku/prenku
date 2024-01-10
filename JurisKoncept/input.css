@@ -93,7 +93,7 @@
     align-items: center;
   }
   .bg-hero-svg {
-    background-image: url("/public/images/hero.jpg");
+    background-image: url("../public/images/hero.jpg");
     /* Other background properties */
   }
   * {
