@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  rel="stylesheet">
+    <link rel="stylesheet" href="/public/style.css">
+    <title>Two Sisters Cleaning Services</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+          .h-165px {
+    height: 175px;
+  }
+ nav ul li:hover{
+    color: #c1913f;
+  } 
+    </style>
+</head>
+    <body class="font-Laila"
+      x-data="{navOpen: false, scrolledFromTop: false}"
+      x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
+      @scroll.window="window.pageYOffset >= 20 ? scrolledFromTop = true : scrolledFromTop = false"
+      :class="{
+      'overflow-hidden': navOpen,
+      'overflow-scroll': !navOpen
+      }"
+   >
+      <header style="background-color: white;"
+         class="
+            border-b-5 
+            border-amber-600
+            w-full
+            h-165px
+            relativea
+            bg-white
+            flex
+            justify-between
+            items-center  
+            transform  
+            transition-all
+            duration-200
+            border-b-4
+            border-b-brand
+         "
+        :class="{'h-34 transform transiton-all duration-200': !scrolledFromTop, ' h-20 transform transition-all duration-200': scrolledFromTop}" 
+         >
+<div class="flex justify-between w-full":cass="{'h-34 transform  transition-all duration-200': !scrolledFromTop, 'h-20 transform trasition-all duration-200': scrolledFromTop}">
+  <!-- Logo on the left -->
+  <div class="flex items-center":cass="{'h-34 transform  transition-all duration-200': !scrolledFromTop, 'h-20 transform trasition-all duration-200': scrolledFromTop}">
+    <!-- Your logo goes here --> 
+         <a  href="#":cass="{'h-34 transform  transition-all duration-200': !scrolledFromTop, 'h-20 transform trasition-all duration-200': scrolledFromTop}">
+<svg :cass="{'h-34 transform  transition-all duration-200': !scrolledFromTop, 'h-20 transform trasition-all duration-200': scrolledFromTop}" width="516" height="133" viewBox="0 0 516 133" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<path d="M0 0H516V133H0V0Z" fill="url(#pattern0)"/>
+<defs>
+<pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_322_18" transform="scale(0.00106 0.00405)"/>
+</pattern>
+<image id="image0_322_18" width="946" height="247" xlink:href="data:image/png;base64,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"/>
+</defs>
+</svg>
+
+    <!-- <img src="your-logo.png" alt="Logo" class="h-10 w-auto"> -->
+  </div>
+
+  <!-- Navigation -->
+  <div class="flex flex-col justify-between items-end bottom-2">
+    <!-- Top Bar -->
+    <div class="md:block bg-lightPink h-54 rounded-bl-2xl px-4 py-2 mb-2">
+      <!-- Content for top bar --> 
+
+    <a class="bg-lightPink pl-4 pr-24 text-2xl text-darkBlue rounded-bl-lg w-full" href="tel:3831231234">Konsultohuni  <strong style="font-size:34px ;"> 383 123 1234 </strong> </a>
+      <!-- Example: Links or elements -->
+    </div>
+    <!-- Bottom Menu -->
+    <div class="px-4 py-4 ">
+      <!-- Content for bottom menu -->
+               <nav style="margin-top: 60px; " class="align-bottom pr-24 items-end">
+                  <button class="md:hidden" @click="navOpen = !navOpen">
+                     <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-7 w-7 text-brand"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                     >
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                     </svg>
+                  </button>
+                  <!-- top-[-1] -->
+                  <ul 
+                     class="
+                        fixed
+                        left-0
+                        top-[-1]
+                        px-4
+                        pt-12
+                        flex
+                        flex-col
+                        md:flex-row
+                        justify-start
+                        items-center
+                        gap-2
+                        space-y-1
+                        bg-white
+                        text-darkBlue
+                        text-[24px]
+                        transform
+                        transition
+                        duration-300
+                        translate-x-full
+                        md:items-center md:relative md:flex  md:space-x-10 md:min-h-0 md:px-0 md:py-0 md:space-y-0 md:translate-x-0
+                     "
+                     :class="{'translate-x-full': !navOpen}"
+                     :class="{'translate-x-0': navOpen}"
+                  >
+                     <li class="">
+                        <a class="text-brand" href="#" @click="navOpen = false">Reth nesh</a>
+                     </li>
+                     <li class="">
+                        <a href="#features" @click="navOpen = false">Praktika</a>
+                     </li>
+                     <li>
+                        <a href="#about" @click="navOpen = false">Sherbimet</a>
+                     </li>
+                     <li>
+                        <a href="#contact" @click="navOpen = false">Kontakto</a>
+                     </li>
+                     <!-- <button class="hidden md:block p-2 bg-lightBlue text-black
+                     font-semibold text-xl rounded-xl">Get Started</button> -->
+                  </ul>
+               </nav>
+    </div>
+  </div>
+</div>
+</header>
+      <!-- <div class="relative"> -->
+        <section class="relative bg-hero-svg z-10 animate slide delay-15  pb-16 px-8 md:px-1">
+         <div class="max-w-7xl mx-auto md:flex md:top-32 md:items-center h-[700px] md:justify-center">
+            <div class="md:flex-1 justify-center items-center md:mr-6">
+               <h1 class="font-bold text-lightGrey md:text-[70px] text-white leading-tight">
+                 Kur bëhet fjalë për <br>Të drejten Familjare </br>
+               </h1>
+               <p class="my-4 text-lg text-lightGrey">
+                Save your time increase your productivity and improve your house appearance with the convinence of our superior cleaning services               </p>
+                <button class="p-6 bg-purple  text-lightGrey
+                font-semibold text-3xl rounded-2xl ">Telefono tani</button>
+                <p class="text-lightGrey/70 text-[18px] py-3">Thirrni per tu konsultuar</p>
+            </div>
+            <div class="md:flex-1">
+               <img
+                  src="/public/images/hero-img.jpg"
+                  alt="Best House Cleaning in Boston"
+               />
+            </div>
+        </div>
+      </section>
+<section class="mt-[-20px] w-full">
+  <div style="color: #ffffff;" class="relative z-20 top[-20px] h-[500px] items-center flex flex-row text-white px-16 py-9 bg-brand border-t-50 border-solid border-gray-500 rounded-tl-3xl rounded-tr-3xl">
+    <!-- Top Bar -->
+    <div class="px-4 w-[55%] py-2">
+      <!-- Content for top bar -->
+      <!-- Example: Links or elements -->
+
+      <h1 style="font-size: 40px; line-height: 48px;">
+        Çdo familje përballet me <br> pjesën e saj të <span class="text-darkBlue">vështirësive</span> <br> dhe <span class="text-darkBlue">stresit</span> .
+      </h1>
+      <p style="font-size: 18px; line-height: 32px;">
+        Ne tek Firma Juris Concept , jemi të përkushtuar t'ju udhëzojmë hap pas hapi në këto kohë të vështira. Avokatët tanë të ligjit familjar në Prishtinë janë të përkushtuar që të avokojnë për ju dhe të sigurojnë të ardhmen tuaj dhe të ardhmen e të dashurve tuaj..
+      </p>
+    </div>
+
+    <!-- Bottom Menu -->
+    <div class="px-4 py-2 w-1/2">
+      <!-- Content for bottom menu -->
+      <!-- Example: Links or elements -->
+      <p style="font-size: 18px; line-height: 32px;">
+        Nëse jeni duke u përballur me një ndarje, divorc, betejë për kujdestarinë, mosmarrëveshje shtëpiake ose çështje të tjera të lidhura me ligjin familjar, keni nevojë për një firmë ligjore që vepron me pjesë të barabarta dhembshurie dhe avokatie. Ne e kuptojmë se problemet e çdo klienti janë reale dhe meritojnë qasjen tonë  të plotë dhe të lidhur me praktikën e ligjit familjar. Ekipi ligjor në Juris Concept e kupton këtë luftë dhe do të punojë pa u lodhur qe të zbardh emrin tuaj dhe për të ofruar rezultate pozitive, që ndryshojnë jetën tuaj.
+      </p>
+    </div>
+  </div>
+</section>
+</div>
+
+<section class="mt-[-20px] w-full">
+  <div style="color: #ffffff;" class="relative z-20  min-h-[800px] items-center flex flex-row text-white px-16 py-9 bg-darkBlue border-t-50 border-solid border-gray-500 rounded-tl-3xl rounded-tr-3xl">
+    <div class="px-4 w-[55%] py-2">
+        <h1 class="text-[52px] leading-[48px] mb-10">
+            Shërbime ligjore të veçuara
+        </h1>
+          <img class="rounded-3xl"
+                src="/public/images/sherbimet.jpg"
+                alt="Best House Cleaning in Boston"
+            />
+    </div>
+
+    <div class="px-4 py-2 w-full">
+   
+         <ul class="grid grid-flow-col space-x-2 text-center text-gray-50 rounded-lg p-1 mb-12">
+            <li>
+                <a href="#page1" class="flex justify-center bg-brand text-darkBlue rounded-full py-2">Pilot Training</a>
+            </li>
+            <li>
+                <a href="#page1" class="flex justify-center bg-lightGrey text-darkBlue rounded-full py-2">Pilot Training</a>
+            </li>
+            <li>
+                <a href="#page1" class="flex justify-center bg-lightGrey text-darkBlue rounded-full py-2">Pilot Training</a>
+            </li>
+            <li>
+                <a href="#page1" class="flex justify-center bg-lightGrey text-darkBlue rounded-full py-2">Pilot Training</a>
+            </li>
+            
+        </ul> 
+        <h1 class="text-brand leading-8 text-[40px]">
+            Kontesti Civil
+        </h1>
+        <p class="leading-8 text-[18px] text-lightGrey/60 mb-5">
+         Kur lindin mosmarrëveshje ligjore, është e rëndësishme që të keni një ekip me përvojë gjyqësore civile në anën tuaj. Në firmën ligjore Juris Concept, ne jemi të përkushtuar të mbrojmë të drejtat dhe interesat tuaja në një sërë çështjesh gjyqësore civile, duke përfshirë mosmarrëveshjet e kontratave, çështjet gjyqësore të biznesit, pretendimet për dëmtime personale dhe shumë më tepër. Avokatët tanë kanë një histori të provuar suksesi dhe do të luftojnë pa u lodhur për të siguruar rezultatin më të mirë të mundshëm për çështjen tuaj.       
+         </p>
+         <ul class="grid grid-flow-row font-bold space-x text-brand  rounded-lg p-1 mb-12 list-disc list-inside">
+            <li>
+                <a href="#page1" class="text-brand   font-bold py-2">Pilot Training</a>
+            </li>
+            <li>
+                <a href="#page1" class="text-lightGrey  font-bold py-2">Pilot Training</a>
+            </li>
+            <li> 
+                <a href="#page1" class="text-lightGrey  font-bold py-2">Pilot Training</a>
+           </li>
+            <li>      
+               <a href="#page1" class="text-lightGrey  font-bold py-2">Pilot Training</a>
+            </li>
+        </ul> 
+        <a href="">Të gjitha Shërbimet e Kontestit Civil <span class="text-brand font-bold ">Juris Concept</span> </a>
+    </div>
+  </div>
+</section>
+
+<section class="mt-[-20px] w-full">
+  <div style="color: #ffffff;" class="relative z-20 top[-20px] items-center flex flex-row text-white px-16 py-9 bg-black brand border-t-50 border-solid border-gray-500 rounded-tl-3xl rounded-tr-3xl">
+    <div class="px-4 w-[100%] more py-2">
+      
+          <h1 class=" text-start w-full h1-border relative py-4 font-bold">Ekipa</h1>
+          <h3 class=" text-start w-full mb-10"> Treshja me e persosur ne Prishtinë
+         </h3>
+         <div class="flex justify-between gap-8">
+            <div class="w-1/3">
+                <div class="bg-black rounded-lg p-4 shadow-md">
+                <img src="/public/images/profile.jpg" alt="image" class="w-full h-[475px] object-cover rounded-t-lg">
+                <div class="mt-4">
+                    <h2 class="text-2xl font-bold mb-2 ">Kushtrim Prenku</h2>
+                    <p class="text-white/50 font-bold mb-4">"Avokat i sapo licencuar i përkushtuar ndaj ofrimit të ekselencës ligjore: i apasionuar pas avokimit për të drejtat e klientëve dhe ofrimit të zgjidhjeve strategjike ligjore. I përkushtuar ndaj profesionalizmit, integritetit dhe arritjes së drejtësisë."</p>
+                    <button class="bg-purple text-white text-[34px] font-bold px-4 py-2 rounded-md">Shiko Profilin</button>
+                </div>
+                </div>
+            </div>
+
+            <div class="w-1/3">
+                <div class="bg-black rounded-lg p-4 shadow-md">
+                <img src="/public/images/profile.jpg" alt="image" class="w-full h-[475px] object-cover rounded-t-lg">
+                <div class="mt-4">
+                    <h2 class="text-2xl font-bold mb-2">Bledar Gashi</h2>
+                    <p class="text-white/50 font-bold mb-4">"Avokat i sapo licencuar i përkushtuar ndaj ofrimit të ekselencës ligjore: i apasionuar pas avokimit për të drejtat e klientëve dhe ofrimit të zgjidhjeve strategjike ligjore. I përkushtuar ndaj profesionalizmit, integritetit dhe arritjes së drejtësisë."</p>
+                    <button class="bg-purple text-white text-[34px] font-bold px-4 py-2 rounded-md">Shiko Profilin</button>
+                </div>
+                </div>
+            </div>
+            <div class="w-1/3">
+                <div class="bg-black rounded-lg p-4 shadow-md">
+                <img src="/public/images/profile.jpg" alt="image" class="w-full h-[475px] object-cover rounded-t-lg">
+                <div class="mt-4">
+                    <h2 class="text-2xl font-bold mb-2">Adnan Thaqi</h2>
+                    <p class="text-white/50 font-bold mb-6">"Avokat i sapo licencuar i përkushtuar ndaj ofrimit të ekselencës ligjore: i apasionuar pas avokimit për të drejtat e klientëve dhe ofrimit të zgjidhjeve strategjike ligjore. I përkushtuar ndaj profesionalizmit, integritetit dhe arritjes së drejtësisë."</p>
+                    <button class="bg-purple text-white text-[34px] font-bold px-4 py-2 rounded-md">Shiko Profilin</button>
+                </div>
+                </div>
+            </div>
+  <!-- Repeat the above structure for the other two cards -->
+  <!-- ... -->
+</div>
+</div>
+
+    <!-- Bottom Menu -->
+   
+  </div>
+</section>
+<section class="mt-[-20px] w-full">
+   <div class="book relativerelative z-20 top[-20px] flex justify-between itmes-center px-16 py-12">
+        <h1 class="book-left flex  gap-x-3">
+            Lajme
+        </h1>
+        <button class="get-started self-center rounded-xl p-2 font-semibold  bg-yellowgood h-auto text-2xl text-brand">Shiko te gjitha lajmet</button>
+    </div>
+ <div class="flex h-screen px-16 py-4 gap-10">
+   <div class="w-[564px] bg-white">
+        <div class="bg-black rounded-lg p-4 shadow-md">
+            <img src="/public/images/profile.jpg" alt="image" class="w-full h-[330px] object-cover rounded-t-lg">
+                <div class="mt-4">
+                    <button class="bg-brand text-white text-[14px] font-bold px-4 py-2 rounded-md">Shiko Profilin</button>
+                    <p class="text-white/50 font-bold mb-4">"Avokat i sapo licencuar i përkushtuar ndaj ofrimit të ekselencës ligjore: i apasionuar pas avokimit për të drejtat e klientëve dhe ofrimit të zgjidhjeve strategjike ligjore. I përkushtuar ndaj profesionalizmit, integritetit dhe arritjes së drejtësisë."</p>
+             </div>
+         </div>
+    </div>
+
+  <!-- Other three cards sharing the remaining width -->
+  <div class="flex-1">
+    <!-- Each card content -->
+<div class="flex">
+  <!-- First card taking 45% width -->
+  <div class="w-45">
+    <!-- Card content -->
+                <img src="/public/images/profile.jpg" alt="image" class="w-full h-[175px] object-cover rounded-t-lg">
+  </div>
+
+  <!-- Other three cards sharing the remaining width -->
+  <div class="flex-1 border border-solid border-black">
+    <!-- Each card content -->
+    <div class="bg-white rounded-lg p-4 ">
+      <!-- Card 2 content -->
+      <button class="bg-brand text-white text-[14px] font-bold px-4 py-2 rounded-md">Shiko Profilin</button>
+      <p class="text-black mb-4">"Avokat i sapo licencuar i përkushtuar ndaj ofrimit të ekselencës ligjore: i apasionuar pas avokimit për të drejtat e klientëve dhe ofrimit të zgjidhjeve strategjike ligjore. I përkushtuar ndaj profesionalizmit, integritetit dhe arritjes së drejtësisë."</p>
+    </div>
+  </div>
+</div>
+<div class="flex">
+  <!-- First card taking 45% width -->
+  <div class="w-45">
+    <!-- Card content -->
+                <img src="/public/images/profile.jpg" alt="image" class="w-full h-[175px] object-cover rounded-t-lg">
+  </div>
+
+  <!-- Other three cards sharing the remaining width -->
+  <div class="flex-1 border border-solid border-black">
+    <!-- Each card content -->
+    <div class="bg-white rounded-lg p-4 ">
+      <!-- Card 2 content -->
+      <button class="bg-brand text-white text-[14px] font-bold px-4 py-2 rounded-md">Shiko Profilin</button>
+      <p class="text-black mb-4">"Avokat i sapo licencuar i përkushtuar ndaj ofrimit të ekselencës ligjore: i apasionuar pas avokimit për të drejtat e klientëve dhe ofrimit të zgjidhjeve strategjike ligjore. I përkushtuar ndaj profesionalizmit, integritetit dhe arritjes së drejtësisë."</p>
+    </div>
+  </div>
+</div>
+<div class="flex">
+  <!-- First card taking 45% width -->
+  <div class="w-45">
+    <!-- Card content -->
+                <img src="/public/images/profile.jpg" alt="image" class="w-full h-[175px] object-cover rounded-t-lg">
+  </div>
+
+  <!-- Other three cards sharing the remaining width -->
+  <div class="flex-1 border border-solid border-black">
+    <!-- Each card content -->
+    <div class="bg-white rounded-lg p-4">
+      <!-- Card 2 content -->
+      <button class="bg-brand text-white text-[14px] font-bold px-4 py-2 rounded-md">Shiko Profilin</button>
+      <p class="text-black mb-4">"Avokat i sapo licencuar i përkushtuar ndaj ofrimit të ekselencës ligjore: i apasionuar pas avokimit për të drejtat e klientëve dhe ofrimit të zgjidhjeve strategjike ligjore. I përkushtuar ndaj profesionalizmit, integritetit dhe arritjes së drejtësisë."</p>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+</section>
+<!-- <section class="mt-[-20px] more w-full text-lightGrey bg-black"> 
+          <h1 class=" text-start w-full py-4">Why Choose Two Sisters Cleaning</h1>
+          <h3 class=" text-start w-full"> Your trust, security, and statisfaction are our priority.</br>
+            Here is why Bostonians choose Two Sisters Cleaning
+         </h3>
+         <div class="more-cards flex flex-wrap gap-5 min-w-fit p-8 justify-center content-center">
+             <div class="more-card">
+                 <div class="more-top">
+                     <span class="material-symbols-outlined">
+                         more_time
+                         </span>
+                     <h4>More free time</h4>
+                 </div>
+                 <div class="more-bottom">
+                     <p>Cleaning your home can be a time-consuming task, especially if you have a large house or a busy schedule. By hiring a house cleaning service, you can free up some of your time to focus on other things that matter to you, such as spending time with family or pursuing hobbies.</p>
+                 </div>
+             </div>
+             <div class="more-card">
+                 <div class="more-top">
+                     <span class="material-symbols-outlined">
+                         paid
+                         </span>
+                     <h4>Improved indoor air quality</h4>
+                 </div>
+                 <div class="more-bottom">
+                     <p>Dust, dirt, and other particles can accumulate in your home over time, which can lead to poor indoor air quality. A house cleaning service can help remove these particles, improving the air quality in your home and reducing the risk of respiratory problems. </p>
+                 </div>
+             </div>
+             <div class="more-card">
+                 <div class="more-top">
+                     <span class="material-symbols-outlined">
+                         paid
+                         </span>
+                     <h4>Reduced stress</h4>
+                 </div>
+                 <div class="more-bottom">
+                     <p>Cleaning can be stressful, especially if you have a lot on your plate already. By outsourcing this task to a professional, you can reduce your stress levels and enjoy a cleaner home without having to worry about the details.</p>
+                 </div>
+             </div>
+         <div class="more-card">
+             <div class="more-top">
+                 <span class="material-symbols-outlined">
+                     lock_open
+                     </span>
+                 <h4>No Lock-in Contracts</h4>
+             </div>
+             <div class="more-bottom">
+                 <p>No lock-in contrancts means you are free to join or leave the service at anytime </p>
+             </div>
+         </div>
+      
+         <div class="more-card">
+             <div class="more-top">
+                 <span class="material-symbols-outlined">
+                     paid
+                     </span>
+                 <h4>Transparent Pricing</h4>
+             </div>
+             <div class="more-bottom">
+                 <p>The price we give you is the price you pay.
+                     No hidden fees, no up-sells, no surprises </p>
+             </div>
+         </div>
+       
+         <div class="more-card">
+             <div class="more-top">
+                 <span class="material-symbols-outlined">
+                     important_devices
+                     </span>
+                 <h4>Online Booking 24/7</h4>
+             </div>
+             <div class="more-bottom">
+                 <p> Book your appointment online from your computer or your phone from anywhere</p>
+             </div>
+         </div>
+     </div>
+ 
+     </section>
+            <section class="flex  flex-wrap justify-center content-start min-h-screen bg-lightGrey">
+             <div class="flex-full w-full text-center py-8">
+                <h1 class="flex-full w-full text-center text-4xl pt-4 m-0 font-bold">FEEDBACK
+                      <span class="text-yellowgood">&starf;</span>
+                      <span class="text-yellowgood">&starf;</span>
+                      <span class="text-yellowgood">&starf;</span>
+                      <span class="text-yellowgood">&starf;</span>
+                      <span class="text-yellowgood">&starf;</span>
+      
+      
+                  </h1>
+                  <h3 class="flex-full w-full text-center">Take our word for it or see what others are saying:</h3>
+   
+             </div>
+
+               <div class="testimonial bg-lightBlue shadow-md">
+                 <p>"I have been using Two Sisters cleaning service for over 10 years now. They are dependable, punctual, and most importantly - great at what they do! They do an amazing job, many times I don’t even realize that they are there (they are that efficient!). They are very flexible and accommodated me several times with last minute changes. They always leaves the house smelling fresh and clean. I will never ever go to another service for cleaning. Don’t walk, but run to get your next cleaning scheduled with Two Sisters!"</p>
+                 <span><strong>Farah, Medford MA
+                </strong></span>
+               </div>
+             
+               <div class="testimonial bg-lightBlue shadow-md">
+                 <p>"“Jaice is the absolute best! She’s taken care of our house for more than a decade and we are so thankful. We trust her completely. Her work ethic is truly amazing-she really care about the details. (She actually looks for things to clean in my house that I would never think of!)
+                    We have a home full of art and other collections so it’s definitely not easy to look after, but she shows great care with each and every object. She’s motivated, hardworking, professional and easy to communicate with. And she’s a lovely person. We couldn’t survive without her.”
+                    
+                    "</p>
+                 <span><strong>Ferreira, Kingston MA</strong></span>
+               </div>
+               <div class="testimonial bg-lightBlue shadow-md">
+                 <p>"We have been using Two Sisters Cleaning Services for over 8 years now. The team does an absolute pristine job cleaning my house in Middleton for weekly upkeep and monthly deep cleaning sessions. Everything is put back neatly or more organized than before. They always exceed my expectations, are very thorough and take pride in their work. It’s refreshing to come home and have our home look and smell beyond clean!
+
+                    They communicate in advance, are responsive and trustworthy. As a mom balancing work, family and 3 dogs I’m so grateful I found Two Sisters Cleaning Services and highly recommended their services."</p>
+                 <span><strong>- Krystina, Middleton MA</strong></span>
+               </div>
+               
+               <div class="testimonial bg-lightBlue shadow-md">
+                  <p>"I have been fortunate to receive services by Two Sisters Cleaning Services for the past 5 years. Throughout this time the service has been flexible, exceptional, reliable, dependable and professional. Each employee I’ve encountered has been friendly and a diligent worker. The quality of cleaning is excellent. I can always count on Two Sisters for a thorough job. I highly recommend booking services now!
+                    "</p>
+                  <span><strong> Sonia,
+                    Everett MA </strong></span>
+                </div>
+                <div class="testimonial bg-lightBlue shadow-md">
+                    <p>I give Two Sisters Cleaning Services my highest recommendation! They are extremely thorough, pay attention to every detail and are extremely reliable and professional - a total pleasure to deal with!! Their prices are also extremely reasonable which is a bonus! I have used them for years and always come home happy to an immaculate house.</p>
+                    <span><strong> Alia, Medford MA
+                   </strong></span>
+                  </div>
+                  <div class="testimonial bg-lightBlue shadow-md">
+                    <p>“I’ve been using Two Sisters Cleaning Services for years now and they have always been reliable, consistent and professional. They do an excellent job!”
+                       "</p>
+                    <span><strong>Joy, Duxbury MA</strong></span>
+                  </div>
+            </section>
+
+            </section>
+        <div class="book flex justify-between itmes-center px-32 pb-12">
+            <div class="book-left flex  gap-x-3">
+
+                <span class="material-symbols-outlined text-9xl">
+                    maps_home_work
+                </span>
+                <div class="book-content flex flex-col justify-center items-start">
+                    <h1 class="mb-1">Ready to book a home cleaning?</h1>
+                    <h3>Select the date time and two of our cleaner will come to your place</h3>
+                </div>
+            </div>
+            <button class="get-started self-center rounded-xl p-2 font-semibold  bg-yellowgood h-auto text-2xl text-brand">Get Started</button>
+        </div>
+        <section class="faqs bg-lightGrey ">
+            <h1 class="flex-full w-full text-center">Frequently Asked Questions</h1>
+            <div class="more-cards flex flex-wrap gap-5 min-w-fit p-8 justify-center content-center">
+                <div class="more-card">
+                <div class="more-top">
+                    <h4>Do I need to provide any cleaning supplies</h4>
+                </div>
+                <div class="more-bottom">
+                    <p>No, we provide all cleaning supplies and equipment, including vaccum and commercial steam cleaner. </p>
+                </div>
+            </div>
+            <div class="more-card">
+                <div class="more-top">
+                   <h4>How many claners do you send</h4>
+                </div>
+                <div class="more-bottom">
+                    <p>We work on teams of two so we can clean your home faster, more thoroghly and leave you with more free time.</p>
+                </div>
+            </div>
+            <div class="more-card">
+                <div class="more-top">
+                    <h4>Do I have to be home for the cleaning </h4>
+                </div>
+                <div class="more-bottom">
+                    <p>This is completly up to you, However many people, like having their home serviced while they are at work or away for awhile. We can be given a key and or alarm code in order to get in. </p> </p>
+                </div>
+            </div>
+            <div class="more-card">
+                <div class="more-top">
+                    <h4>I need more help</h4>
+                </div>
+                <div class="more-bottom">
+                    <p>Have another question? <br>
+                    jaice@twosisterscleaning.com</p>
+                </div>
+            </div>
+            </div>
+        </section>
+        <footer class="footer w-screen flex justify-between px-32 pb-10">
+            <div class="left-footer flex flex-col gap-3">
+
+                <a  class="logo" href="/index.html"> 
+                    <svg width="200" height="86" viewBox="0 0 200 86" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M45.8898 21.9779C59.4237 16.9073 73.3475 15.9827 84.5136 18.6027C71.7946 13.7837 54.1938 14.0506 37.1746 20.4254C10.1827 30.5405 -5.11274 52.1604 3.00899 68.7219C8.99614 80.9286 26.0368 86.969 45.3972 85.2524C21.6703 80.5538 16.2301 71.4625 14.0433 66.9874C6.46836 51.5526 20.7287 31.3958 45.8898 21.9779Z" fill="#0071A8"/>
+                        <path d="M103.436 33.6595C101.956 30.5143 99.5678 27.8506 96.5046 25.7147C86.4227 18.6737 68.9839 17.3544 52.1092 23.3596C39.7196 27.7704 30.2816 35.193 25.5453 43.2533C31.1803 37.037 39.4563 31.5646 49.5688 27.9664C70.7546 20.4258 92.7786 23.6208 102.06 34.8167C103.138 36.119 104.06 37.528 104.772 39.0431C104.858 39.2218 104.922 39.4066 105.001 39.5852C104.842 37.5569 104.339 35.5734 103.436 33.6595Z" fill="#62C7E3"/>
+                        <mask id="mask0_0_1" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="102" y="10" width="16" height="15">
+                        <path d="M102.928 10.8874L117.753 11.0151L117.707 24.0272L102.882 23.8996L102.928 10.8874Z" fill="white"/>
+                        </mask>
+                        <g mask="url(#mask0_0_1)">
+                        <path d="M117.657 17.6952C112.451 18.4891 111.67 19.1622 110.694 23.7159C109.75 19.1457 108.978 18.4592 103.777 17.5757C108.984 16.7787 109.761 16.1055 110.737 11.5551C111.68 16.1284 112.457 16.8149 117.657 17.6952Z" fill="#14BBE2"/>
+                        </g>
+                        <mask id="mask1_0_1" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="91" y="0" width="11" height="8">
+                        <path d="M91.8427 0L101.113 0.0798295L101.086 7.61838L91.8159 7.53855L91.8427 0Z" fill="white"/>
+                        </mask>
+                        <g mask="url(#mask1_0_1)">
+                        <path d="M100.402 3.52381C97.8102 4.15276 97.2036 4.67808 96.4532 6.93992C95.7189 4.66529 95.1161 4.12956 92.5293 3.45602C95.1207 2.82707 95.7273 2.30175 96.4777 0.0399121C97.212 2.31454 97.8149 2.85027 100.402 3.52381Z" fill="#62C7E3"/>
+                        </g>
+                        <path d="M110.757 5.9226C109.463 6.23867 109.158 6.50291 108.781 7.63381C108.409 6.49645 108.109 6.22701 106.814 5.88864C108.111 5.57259 108.413 5.30833 108.793 4.17745C109.162 5.31478 109.466 5.58425 110.757 5.9226Z" fill="#0071A8"/>
+                        <path d="M32.78 54.1615L32.7922 50.7433L46.4801 50.8611L46.468 54.2794L41.8474 54.2396L41.7988 67.8998L37.352 67.8615L37.4006 54.2013L32.78 54.1615Z" fill="#0071A8"/>
+                        <path d="M63.2611 68.6829L60.0241 59.1265L57.0327 68.7312L52.0934 68.7696L46.3414 51.7354L51.2662 51.6971L54.7478 63.3864L54.8637 63.3855L58.2478 51.6429L61.6082 51.6168L65.2927 63.3045L65.4085 63.3036L68.5898 51.5626L73.5001 51.5244L68.1714 68.6447L63.2611 68.6829Z" fill="#0071A8"/>
+                        <path d="M73.7727 60.0491C73.7411 57.584 74.674 55.4896 76.5749 53.7625C78.4722 52.0386 80.7751 51.163 83.4801 51.1419C86.2032 51.1208 88.5245 51.9542 90.451 53.642C92.374 55.3299 93.3532 57.4158 93.385 59.8967C93.417 62.3967 92.5061 64.5037 90.6557 66.2209C88.8018 67.9381 86.4879 68.8074 83.7069 68.829C80.857 68.8512 78.4961 68.0276 76.6204 66.3553C74.7519 64.6765 73.8051 62.5744 73.7727 60.0491ZM78.5672 60.0118C78.5787 60.9108 78.7412 61.726 79.0621 62.4605C79.3902 63.195 79.9487 63.8197 80.7375 64.3282C81.5334 64.8303 82.5071 65.0769 83.6587 65.068C85.3099 65.0552 86.5492 64.5499 87.3766 63.5523C88.204 62.5484 88.6086 61.3412 88.5905 59.934C88.5728 58.5458 88.1265 57.3548 87.2555 56.3608C86.3916 55.3605 85.1503 54.865 83.528 54.8776C81.9238 54.89 80.6883 55.4048 79.8248 56.4185C78.9686 57.4259 78.5494 58.6237 78.5672 60.0118Z" fill="#0071A8"/>
+                        <path d="M108.835 50.945C109.886 50.9369 110.916 51.0655 111.926 51.3277C112.943 51.5835 113.693 51.8413 114.181 52.098L114.896 52.5118L113.14 55.6261C113.001 55.5446 112.804 55.4381 112.542 55.313C112.287 55.1816 111.814 55.0074 111.116 54.7904C110.425 54.5766 109.782 54.4704 109.185 54.475C108.45 54.4807 107.883 54.6249 107.481 54.9076C107.079 55.1839 106.881 55.5572 106.887 56.0305C106.89 56.2592 106.987 56.4744 107.185 56.6762C107.38 56.878 107.705 57.0915 108.164 57.3167C108.619 57.5356 109.024 57.7135 109.373 57.8537C109.722 57.9876 110.261 58.1899 110.989 58.4639C112.248 58.9211 113.328 59.5512 114.229 60.3575C115.127 61.1575 115.584 62.0625 115.597 63.079C115.609 64.0638 115.417 64.9198 115.021 65.6504C114.632 66.3841 114.089 66.9602 113.392 67.3786C112.702 67.8001 111.931 68.1111 111.086 68.3114C110.238 68.5213 109.316 68.6302 108.323 68.6379C107.472 68.6445 106.635 68.5747 105.815 68.4286C105.002 68.292 104.319 68.1098 103.765 67.8854C103.212 67.661 102.709 67.4425 102.265 67.2235C101.827 67.0077 101.506 66.8228 101.301 66.6719L100.98 66.4457L103.168 63.1501C103.351 63.2948 103.611 63.4707 103.943 63.6778C104.283 63.888 104.876 64.1725 105.721 64.5281C106.566 64.8774 107.311 65.0495 107.959 65.0445C109.831 65.0299 110.762 64.4636 110.747 63.3454C110.744 63.1104 110.673 62.8949 110.536 62.699C110.396 62.4967 110.158 62.3016 109.819 62.1073C109.476 61.9066 109.177 61.7501 108.914 61.6314C108.652 61.5159 108.223 61.3414 107.633 61.1077C107.04 60.8677 106.603 60.6836 106.322 60.5587C105.128 60.0597 104.2 59.4315 103.546 58.6742C102.898 57.9104 102.569 57.0869 102.558 56.2039C102.538 54.6728 103.163 53.4162 104.436 52.4406C105.717 51.4585 107.184 50.9579 108.835 50.945Z" fill="#0071A8"/>
+                        <path d="M121.951 51.1482L122.17 68.2254L117.737 68.2598L117.518 51.1826L121.951 51.1482Z" fill="#0071A8"/>
+                        <path d="M131.948 50.7655C132.999 50.7574 134.029 50.886 135.039 51.1482C136.056 51.404 136.806 51.6618 137.294 51.9185L138.009 52.3323L136.253 55.4466C136.114 55.3651 135.917 55.2586 135.655 55.1335C135.4 55.0021 134.927 54.8279 134.229 54.6109C133.538 54.3971 132.895 54.2909 132.298 54.2955C131.563 54.3012 130.996 54.4454 130.594 54.7281C130.192 55.0044 129.994 55.3777 130 55.851C130.003 56.0797 130.1 56.2949 130.298 56.4967C130.493 56.6985 130.818 56.912 131.277 57.1372C131.732 57.3561 132.137 57.534 132.486 57.6742C132.836 57.8081 133.374 58.0104 134.102 58.2844C135.361 58.7416 136.441 59.3717 137.342 60.178C138.24 60.978 138.697 61.883 138.71 62.8995C138.722 63.8843 138.531 64.7403 138.134 65.4709C137.745 66.2046 137.202 66.7807 136.505 67.1991C135.815 67.6206 135.044 67.9316 134.199 68.1319C133.351 68.3418 132.429 68.4507 131.437 68.4584C130.586 68.465 129.748 68.3952 128.928 68.2491C128.115 68.1125 127.432 67.9303 126.878 67.7059C126.325 67.4815 125.822 67.263 125.378 67.044C124.94 66.8282 124.619 66.6433 124.415 66.4924L124.093 66.2662L126.282 62.9706C126.464 63.1153 126.724 63.2912 127.056 63.4983C127.396 63.7085 127.99 63.993 128.834 64.3486C129.679 64.6979 130.424 64.87 131.072 64.865C132.944 64.8504 133.875 64.2841 133.86 63.1659C133.857 62.9309 133.786 62.7154 133.649 62.5195C133.509 62.3172 133.271 62.1221 132.932 61.9278C132.589 61.7271 132.29 61.5706 132.028 61.4519C131.765 61.3364 131.336 61.1619 130.746 60.9282C130.153 60.6882 129.716 60.5041 129.435 60.3792C128.241 59.8802 127.313 59.252 126.659 58.4947C126.012 57.7309 125.682 56.9074 125.671 56.0244C125.651 54.4933 126.276 53.2367 127.549 52.2611C128.83 51.279 130.297 50.7784 131.948 50.7655Z" fill="#0071A8"/>
+                        <path d="M139.444 54.4306L139.4 51.0127L153.088 50.9063L153.132 54.3243L148.511 54.3602L148.687 68.0194L144.24 68.054L144.065 54.3947L139.444 54.4306Z" fill="#0071A8"/>
+                        <path d="M165.827 50.8074L165.87 54.2254L159.164 54.2775L159.207 57.67L165.624 57.6202L165.668 61.0382L159.251 61.088L159.295 64.5187L166.002 64.4666L166.046 67.8846L154.907 67.9711L154.688 50.8939L165.827 50.8074Z" fill="#0071A8"/>
+                        <path d="M168.367 50.7877L175.32 50.7337C177.192 50.7192 178.722 51.1489 179.914 52.0196C181.102 52.884 181.708 54.1278 181.729 55.7542C181.745 57.009 181.4 58.0664 180.698 58.9264C179.992 59.7801 179.029 60.3848 177.809 60.7406L184.606 67.7405L178.957 67.7843L172.932 61.0834L173.018 67.8305L168.586 67.8649L168.367 50.7877ZM172.896 58.3262L173.418 58.3221C173.823 58.319 174.164 58.3132 174.446 58.3014C174.736 58.2833 175.057 58.23 175.415 58.1414C175.779 58.056 176.068 57.9394 176.279 57.7916C176.498 57.6374 176.684 57.4168 176.836 57.1265C176.995 56.8298 177.074 56.4734 177.068 56.0573C177.063 55.6443 176.975 55.2924 176.809 55.0046C176.649 54.7199 176.458 54.499 176.235 54.3482C176.02 54.1974 175.728 54.0853 175.362 54.0119C175.002 53.9321 174.679 53.8838 174.389 53.867C174.107 53.8533 173.766 53.8464 173.361 53.8495L172.839 53.8536L172.896 58.3262Z" fill="#0071A8"/>
+                        <path d="M192.42 50.2959C193.47 50.2877 194.5 50.4163 195.51 50.6785C196.527 50.9343 197.277 51.1922 197.765 51.4489L198.481 51.8627L196.724 54.977C196.585 54.8954 196.389 54.7889 196.126 54.6639C195.871 54.5325 195.398 54.3582 194.7 54.1413C194.009 53.9274 193.367 53.8212 192.769 53.8259C192.034 53.8316 191.467 53.9758 191.065 54.2585C190.663 54.5348 190.465 54.908 190.471 55.3813C190.474 55.61 190.571 55.8253 190.769 56.0271C190.964 56.2289 191.289 56.4424 191.748 56.6676C192.204 56.8864 192.608 57.0644 192.957 57.2046C193.307 57.3385 193.845 57.5408 194.573 57.8147C195.832 58.272 196.912 58.9021 197.813 59.7084C198.711 60.5084 199.168 61.4134 199.181 62.4299C199.194 63.4146 199.002 64.2707 198.605 65.0013C198.217 65.735 197.673 66.311 196.976 66.7294C196.286 67.151 195.515 67.4619 194.67 67.6623C193.822 67.8722 192.9 67.981 191.908 67.9887C191.057 67.9953 190.219 67.9256 189.399 67.7795C188.586 67.6428 187.903 67.4607 187.349 67.2363C186.796 67.0118 186.294 66.7933 185.849 66.5744C185.412 66.3586 185.09 66.1737 184.886 66.0228L184.564 65.7965L186.753 62.501C186.936 62.6457 187.195 62.8216 187.527 63.0287C187.867 63.2389 188.461 63.5234 189.306 63.879C190.15 64.2282 190.895 64.4004 191.543 64.3953C193.415 64.3808 194.346 63.8144 194.332 62.6963C194.328 62.4612 194.257 62.2457 194.12 62.0498C193.98 61.8476 193.742 61.6525 193.403 61.4582C193.06 61.2575 192.761 61.101 192.499 60.9823C192.237 60.8668 191.807 60.6922 191.217 60.4585C190.624 60.2185 190.187 60.0345 189.906 59.9096C188.712 59.4106 187.784 58.7824 187.13 58.025C186.483 57.2612 186.154 56.4378 186.142 55.5547C186.123 54.0236 186.747 52.7671 188.021 51.7914C189.301 50.8094 190.768 50.3087 192.42 50.2959Z" fill="#0071A8"/>
+                        <path d="M59.4518 78.4145L58.0033 78.4258C57.9411 78.0958 57.7785 77.8398 57.5154 77.6544C57.2523 77.4722 56.9216 77.3794 56.5268 77.3825C55.9945 77.3866 55.5731 77.5615 55.2587 77.9006C54.9444 78.243 54.7912 78.7239 54.7991 79.3402C54.8073 79.9755 54.9729 80.4634 55.2959 80.7977C55.626 81.1255 56.0482 81.2874 56.5624 81.2834C56.9462 81.2804 57.271 81.189 57.5294 81.0091C57.7951 80.8291 57.9621 80.58 58.0268 80.2555L59.4754 80.2569C59.4294 80.6226 59.2853 80.9668 59.0396 81.2896C58.8011 81.6155 58.4713 81.8786 58.0502 82.0852C57.6363 82.2853 57.1342 82.3845 56.5476 82.3891C55.9465 82.3938 55.4054 82.2804 54.9207 82.0459C54.4433 81.8145 54.0623 81.468 53.7776 81.0128C53.5001 80.5575 53.359 80.0058 53.3507 79.3514C53.3423 78.7002 53.4692 78.1433 53.7349 77.6837C54.0079 77.2242 54.38 76.875 54.8513 76.6331C55.3299 76.3943 55.8679 76.2694 56.4691 76.2647C56.9978 76.2606 57.4732 76.3427 57.8918 76.5078C58.3177 76.676 58.6685 76.9179 58.9442 77.2367C59.2163 77.5586 59.3879 77.9512 59.4518 78.4145Z" fill="#62C7E3"/>
+                        <path d="M62.6177 82.2657L62.5411 76.2938L63.9751 76.2826L64.0383 81.2127L66.9642 81.1899L66.9776 82.2318L62.6177 82.2657Z" fill="#62C7E3"/>
+                        <path d="M70.0033 82.2083L69.9267 76.2364L74.5039 76.2009L74.5172 77.2428L71.374 77.2672L71.3923 78.6903L74.3037 78.6677L74.3171 79.7096L71.4056 79.7322L71.4239 81.1553L74.5815 81.1308L74.5949 82.1727L70.0033 82.2083Z" fill="#62C7E3"/>
+                        <path d="M78.984 82.1386L77.4341 82.1506L79.7186 76.1604L81.5726 76.146L83.9957 82.0997L82.4458 82.1117L81.9214 80.7561L79.4735 80.7751L78.984 82.1386ZM79.8229 79.7812L81.5466 79.7678L80.6777 77.5253L80.6342 77.5257L79.8229 79.7812Z" fill="#62C7E3"/>
+                        <path d="M92.4997 76.0611L92.5762 82.033L91.3305 82.0427L88.3275 78.3046L88.2695 78.3051L88.3177 82.0661L86.8837 82.0773L86.8072 76.1053L88.0674 76.0955L91.056 79.8337L91.1139 79.8333L91.0657 76.0722L92.4997 76.0611Z" fill="#62C7E3"/>
+                        <path d="M97.1946 76.0246L97.2712 81.9966L95.8372 82.0077L95.7606 76.0358L97.1946 76.0246Z" fill="#62C7E3"/>
+                        <path d="M106.155 75.9551L106.231 81.927L104.986 81.9367L101.983 78.1986L101.925 78.199L101.973 81.9601L100.539 81.9712L100.462 75.9993L101.723 75.9895L104.711 79.7277L104.769 79.7272L104.721 75.9662L106.155 75.9551Z" fill="#62C7E3"/>
+                        <path d="M113.945 77.8261C113.855 77.5472 113.682 77.3326 113.43 77.182C113.185 77.0251 112.88 76.9448 112.514 76.9477C111.993 76.9517 111.568 77.1266 111.246 77.4658C110.932 77.7987 110.779 78.2796 110.787 78.9054C110.795 79.5248 110.96 80.0064 111.283 80.3502C111.606 80.6876 112.036 80.8526 112.579 80.8484C113.05 80.8447 113.421 80.7338 113.69 80.5094C113.966 80.288 114.107 79.9915 114.113 79.6166L112.65 79.6279L112.638 78.6877L115.492 78.6655L115.501 79.4152C115.508 79.9329 115.383 80.3819 115.127 80.7651C114.879 81.1482 114.535 81.4432 114.096 81.6499C113.664 81.8502 113.158 81.9494 112.579 81.9539C111.941 81.9589 111.378 81.8425 110.894 81.5985C110.405 81.3577 110.024 81.008 109.75 80.5527C109.484 80.0973 109.346 79.5583 109.338 78.9293C109.33 78.2781 109.46 77.7211 109.737 77.2615C110.01 76.8019 110.382 76.4528 110.854 76.2108C111.332 75.9625 111.87 75.8344 112.471 75.8298C112.993 75.8257 113.461 75.9079 113.879 76.073C114.294 76.2413 114.638 76.4737 114.902 76.7767C115.174 77.0732 115.345 77.4181 115.408 77.8147L113.945 77.8261Z" fill="#62C7E3"/>
+                        <path d="M126.571 77.512C126.539 77.2835 126.421 77.1065 126.216 76.9811C126.012 76.8492 125.736 76.7815 125.388 76.7842C125.04 76.7869 124.77 76.8525 124.579 76.9811C124.396 77.1096 124.308 77.2691 124.31 77.4533C124.302 77.6758 124.406 77.8402 124.621 77.9465C124.843 78.0465 125.101 78.1302 125.392 78.1947L126.002 78.317C126.397 78.3902 126.75 78.5018 127.063 78.6519C127.373 78.7956 127.618 78.9843 127.795 79.218C127.972 79.4454 128.062 79.7243 128.066 80.0546C128.073 80.5978 127.847 81.0348 127.388 81.3688C126.929 81.6964 126.282 81.8602 125.453 81.8667C124.62 81.8731 123.959 81.7131 123.462 81.3865C122.973 81.0599 122.717 80.5727 122.69 79.9185L124.081 79.9077C124.103 80.2125 124.236 80.4402 124.481 80.5908C124.732 80.7349 125.048 80.8024 125.425 80.7995C125.791 80.7966 126.08 80.7277 126.291 80.5894C126.511 80.4543 126.621 80.2787 126.618 80.0659C126.615 79.8626 126.512 79.7077 126.308 79.5981C126.111 79.4916 125.827 79.3985 125.45 79.3252L124.709 79.1658C124.135 79.0527 123.68 78.8656 123.34 78.6045C123.007 78.3466 122.839 77.9953 122.834 77.5538C122.829 77.1916 122.934 76.8731 123.155 76.5982C123.372 76.3265 123.674 76.1176 124.059 75.9685C124.452 75.813 124.896 75.7333 125.389 75.7294C125.889 75.7256 126.331 75.7984 126.71 75.9479C127.096 76.0974 127.395 76.3079 127.602 76.5764C127.815 76.8384 127.931 77.1456 127.947 77.5013L126.571 77.512Z" fill="#62C7E3"/>
+                        <path d="M131.134 81.7336L131.058 75.7617L135.635 75.7261L135.648 76.768L132.505 76.7924L132.523 78.2155L135.435 78.1929L135.448 79.2348L132.537 79.2574L132.555 80.6805L135.713 80.656L135.726 81.6979L131.134 81.7336Z" fill="#62C7E3"/>
+                        <path d="M138.942 81.673L138.865 75.701L141.545 75.6802C142.316 75.6742 142.916 75.8475 143.348 76.1999C143.787 76.5523 144.01 77.0271 144.018 77.618C144.023 78.0246 143.919 78.3748 143.713 78.6623C143.514 78.953 143.219 79.1713 142.837 79.3172L144.301 81.6313L142.722 81.6436L141.406 79.5317L140.349 79.5399L140.376 81.6618L138.942 81.673ZM140.336 78.5361L141.321 78.5284C142.132 78.5221 142.534 78.2236 142.526 77.6295C142.518 77.0133 142.101 76.7052 141.283 76.7116L140.313 76.7191L140.336 78.5361Z" fill="#62C7E3"/>
+                        <path d="M148.313 75.6277L150.007 80.1511L150.08 80.1505L151.659 75.6017L153.266 75.5892L150.996 81.5793L149.142 81.5937L146.705 75.6401L148.313 75.6277Z" fill="#62C7E3"/>
+                        <path d="M157.588 75.5556L157.665 81.5276L156.231 81.5387L156.154 75.5668L157.588 75.5556Z" fill="#62C7E3"/>
+                        <path d="M166.88 77.5802L165.431 77.5915C165.369 77.2615 165.206 77.0055 164.943 76.8201C164.68 76.6379 164.349 76.5451 163.955 76.5482C163.422 76.5523 163.001 76.7272 162.687 77.0663C162.372 77.4087 162.219 77.8896 162.227 78.5059C162.235 79.1412 162.401 79.6291 162.724 79.9634C163.054 80.2912 163.476 80.4531 163.99 80.4491C164.374 80.4461 164.699 80.3547 164.957 80.1748C165.223 79.9948 165.39 79.7457 165.455 79.4212L166.903 79.4226C166.857 79.7883 166.713 80.1325 166.467 80.4553C166.229 80.7812 165.899 81.0443 165.478 81.2508C165.064 81.451 164.562 81.5502 163.975 81.5548C163.374 81.5595 162.833 81.4461 162.349 81.2116C161.871 80.9802 161.49 80.6337 161.205 80.1785C160.928 79.7232 160.787 79.1715 160.779 78.5171C160.77 77.8659 160.897 77.309 161.163 76.8494C161.436 76.3899 161.808 76.0407 162.279 75.7988C162.758 75.56 163.296 75.4351 163.897 75.4304C164.426 75.4263 164.901 75.5084 165.32 75.6735C165.746 75.8417 166.096 76.0836 166.372 76.4023C166.644 76.7243 166.816 77.1169 166.88 77.5802Z" fill="#62C7E3"/>
+                        <path d="M170.046 81.4314L169.969 75.4595L174.546 75.4239L174.56 76.4658L171.416 76.4902L171.435 77.9133L174.346 77.8907L174.359 78.9326L171.448 78.9552L171.466 80.3783L174.624 80.3538L174.637 81.3957L170.046 81.4314Z" fill="#62C7E3"/>
+                        <path d="M181.492 77.0855C181.46 76.857 181.342 76.68 181.138 76.5545C180.933 76.4227 180.657 76.3549 180.309 76.3576C179.962 76.3603 179.691 76.426 179.501 76.5545C179.318 76.683 179.229 76.8426 179.232 77.0268C179.223 77.2492 179.327 77.4136 179.542 77.52C179.764 77.6199 180.022 77.7037 180.313 77.7681L180.923 77.8905C181.319 77.9637 181.671 78.0753 181.985 78.2253C182.294 78.3691 182.539 78.5578 182.716 78.7915C182.893 79.0189 182.984 79.2977 182.988 79.6281C182.995 80.1713 182.769 80.6083 182.309 80.9422C181.85 81.2698 181.204 81.4337 180.375 81.4401C179.542 81.4466 178.88 81.2865 178.384 80.96C177.894 80.6334 177.638 80.1462 177.612 79.4919L179.002 79.4811C179.024 79.7859 179.158 80.0136 179.402 80.1642C179.654 80.3084 179.97 80.3759 180.346 80.3729C180.712 80.3701 181.001 80.3011 181.213 80.1629C181.432 80.0277 181.542 79.8522 181.539 79.6393C181.537 79.436 181.433 79.2812 181.229 79.1716C181.032 79.0651 180.749 78.972 180.371 78.8987L179.63 78.7392C179.056 78.6261 178.601 78.4391 178.261 78.178C177.928 77.9201 177.761 77.5688 177.755 77.1272C177.751 76.7651 177.855 76.4466 178.076 76.1717C178.294 75.8999 178.595 75.6911 178.981 75.542C179.373 75.3864 179.818 75.3067 180.31 75.3029C180.81 75.299 181.253 75.3718 181.631 75.5214C182.017 75.6709 182.317 75.8814 182.523 76.1498C182.737 76.4119 182.853 76.7191 182.868 77.0748L181.492 77.0855Z" fill="#62C7E3"/>
+                        </svg>
+                       
+                </a>
+                <p class="p-10">We value our clients trust and work hard to earn it every day
+                </p>
+            </div>
+            <div class="middle-footer self-center mt-10">
+                <h3 class="pb-4">Company</h3>
+             <ul class="flex flex-col gap-2">
+                <li><a href="">Home</a></li>
+                <!-- <li><a href="">Services</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+             </ul>
+             
+            </div>
+            <div class="right-footer self-center mt-10">
+               <h3 class="pb-4">Contact us</h3>
+               <ul class="flex flex-col gap-2">
+                <li><a href="">Tel</a></li>
+                <li><a href="">Email</a></li>
+                <li><a href="">Mon -Fri 9am - 6pm</a></li>
+               </ul>
+            </div>
+        </footer> -->
+        <a class="bg-brand flex justify-center text-center text-yellowgood" href="http://naxiadesign.com">Website Design By NAXIA Design </a>
+     <!-- <section id="contact" class="min-h-screen bg-yellowgood"></section> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.4.0/cdn.js"></script>
+    <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script> </body>
+</html>
