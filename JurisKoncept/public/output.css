@@ -560,19 +560,6 @@ ul li a {
   /* Change to your desired border color */
 }
 
-.testimonial {
-  /* min-width: 12.5rem; */
-  /* @apply max-w-sm m-4 p-7 bg-lightGrey rounded-xl; */
-  height: -moz-fit-content;
-  height: fit-content;
-  margin: 1rem;
-  width: 24rem;
-  border-radius: 0.75rem;
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-  padding: 1.75rem;
-}
-
 .more .more-card {
   width: 24rem;
   --tw-bg-opacity: 1;
@@ -583,54 +570,14 @@ ul li a {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.faqs .more-card {
-  width: 50%;
-}
-
-.more-top {
-  display: flex;
-  gap: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
-.more-top h4 {
-  font-size: 18px;
-  font-weight: 700;
-}
-
 .more h1 {
   margin-bottom: 0.25rem;
   font-size: 42px;
   font-weight: 700;
 }
 
-.work {
-  /* background: url("/public/images/wave.svg") top no-repeat; */
-  /* background: url("/images/wave.svg") top no-repeat; */
-  background-color: #011228;
-}
-
-.faqs {
-  grid-area: faqs1;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  justify-content: flex-start;
-  align-items: center;
-  color: var(--main);
-  height: 550px;
-}
-
-.faqs .more-cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  align-items: center;
-}
-
 .bg-hero-svg {
-  background-image: url("../public/images/hero.jpg");
+  background-image: url("/public/images/hero.jpg");
   /* Other background properties */
 }
 
@@ -930,10 +877,6 @@ html {
   position: fixed;
 }
 
-.absolute {
-  position: absolute;
-}
-
 .relative {
   position: relative;
 }
@@ -958,10 +901,6 @@ html {
   z-index: 20;
 }
 
-.m-0 {
-  margin: 0px;
-}
-
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -970,10 +909,6 @@ html {
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
-}
-
-.mb-1 {
-  margin-bottom: 0.25rem;
 }
 
 .mb-10 {
@@ -1000,12 +935,12 @@ html {
   margin-bottom: 1.5rem;
 }
 
-.mt-10 {
-  margin-top: 2.5rem;
-}
-
 .mt-4 {
   margin-top: 1rem;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
 }
 
 .mt-\[-20px\] {
@@ -1068,10 +1003,6 @@ html {
   min-height: 800px;
 }
 
-.min-h-screen {
-  min-height: 100vh;
-}
-
 .w-1\/2 {
   width: 50%;
 }
@@ -1088,6 +1019,14 @@ html {
   width: 100%;
 }
 
+.w-\[15\%\] {
+  width: 15%;
+}
+
+.w-\[35\%\] {
+  width: 35%;
+}
+
 .w-\[55\%\] {
   width: 55%;
 }
@@ -1102,15 +1041,6 @@ html {
 
 .w-full {
   width: 100%;
-}
-
-.w-screen {
-  width: 100vw;
-}
-
-.min-w-fit {
-  min-width: -moz-fit-content;
-  min-width: fit-content;
 }
 
 .max-w-7xl {
@@ -1159,18 +1089,6 @@ html {
   flex-direction: column;
 }
 
-.flex-wrap {
-  flex-wrap: wrap;
-}
-
-.content-center {
-  align-content: center;
-}
-
-.content-start {
-  align-content: flex-start;
-}
-
 .items-start {
   align-items: flex-start;
 }
@@ -1203,12 +1121,8 @@ html {
   gap: 0.5rem;
 }
 
-.gap-3 {
-  gap: 0.75rem;
-}
-
-.gap-5 {
-  gap: 1.25rem;
+.gap-4 {
+  gap: 1rem;
 }
 
 .gap-8 {
@@ -1365,10 +1279,6 @@ html {
   padding: 0.25rem;
 }
 
-.p-10 {
-  padding: 2.5rem;
-}
-
 .p-2 {
   padding: 0.5rem;
 }
@@ -1381,18 +1291,9 @@ html {
   padding: 1.5rem;
 }
 
-.p-8 {
-  padding: 2rem;
-}
-
 .px-16 {
   padding-left: 4rem;
   padding-right: 4rem;
-}
-
-.px-32 {
-  padding-left: 8rem;
-  padding-right: 8rem;
 }
 
 .px-4 {
@@ -1403,6 +1304,11 @@ html {
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 
 .py-12 {
@@ -1425,30 +1331,13 @@ html {
   padding-bottom: 1rem;
 }
 
-.py-8 {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-
 .py-9 {
   padding-top: 2.25rem;
   padding-bottom: 2.25rem;
 }
 
-.pb-10 {
-  padding-bottom: 2.5rem;
-}
-
-.pb-12 {
-  padding-bottom: 3rem;
-}
-
 .pb-16 {
   padding-bottom: 4rem;
-}
-
-.pb-4 {
-  padding-bottom: 1rem;
 }
 
 .pl-4 {
@@ -1463,8 +1352,12 @@ html {
   padding-top: 3rem;
 }
 
-.pt-4 {
-  padding-top: 1rem;
+.pt-3 {
+  padding-top: 0.75rem;
+}
+
+.pt-\[135px\] {
+  padding-top: 135px;
 }
 
 .text-center {
@@ -1489,16 +1382,6 @@ html {
   line-height: 2.25rem;
 }
 
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
-
-.text-9xl {
-  font-size: 8rem;
-  line-height: 1;
-}
-
 .text-\[14px\] {
   font-size: 14px;
 }
@@ -1509,6 +1392,10 @@ html {
 
 .text-\[24px\] {
   font-size: 24px;
+}
+
+.text-\[28px\] {
+  font-size: 28px;
 }
 
 .text-\[34px\] {
