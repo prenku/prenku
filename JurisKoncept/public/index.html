@@ -1,278 +1,461 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-  rel="stylesheet">
-    <link rel="stylesheet" href="../public/output.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="../public/output.css" />
     <title>Juris Koncept</title>
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
-          .h-165px {
-    height: 175px;
-  }
- nav ul li:hover{
-    color: #c1913f;
-  } 
+      * {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      .h-165px {
+        height: 175px;
+      }
+      nav ul li:hover {
+        color: #c1913f;
+      }
     </style>
-</head>
-    <body class="font-Laila"
-      x-data="{navOpen: false, scrolledFromTop: false}"
-      x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
-      @scroll.window="window.pageYOffset >= 20 ? scrolledFromTop = true : scrolledFromTop = false"
-      :class="{
+  </head>
+  <body
+    class="font-Laila"
+    x-data="{navOpen: false, scrolledFromTop: false}"
+    x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
+    @scroll.window="window.pageYOffset >= 20 ? scrolledFromTop = true : scrolledFromTop = false"
+    :class="{
       'overflow-hidden': navOpen,
       'overflow-scroll': !navOpen
       }"
-   >
-      <header style="background-color: white;"
-         class="
-            border-b-5 
-            border-amber-600
-            w-full
-            h-165px
-            relativea
-            bg-white
-            flex
-            justify-between
-            items-center  
-            transform  
-            transition-all
-            duration-200
-            border-b-4
-            border-b-brand
-         "
-        :class="{'h-34 transform transiton-all duration-200': !scrolledFromTop, ' h-20 transform transition-all duration-200': scrolledFromTop}" 
-         >
-<div class="flex justify-between w-full":cass="{'h-34 transform  transition-all duration-200': !scrolledFromTop, 'h-20 transform trasition-all duration-200': scrolledFromTop}">
-  <!-- Logo on the left -->
-  <div class="flex items-center":cass="{'h-34 transform  transition-all duration-200': !scrolledFromTop, 'h-20 transform trasition-all duration-200': scrolledFromTop}">
-    <!-- Your logo goes here --> 
-         <a  href="#":cass="{'h-34 transform  transition-all duration-200': !scrolledFromTop, 'h-20 transform trasition-all duration-200': scrolledFromTop}">
-        <a href="/"></a> 
-          <img src="../public/images/top-logo.svg" alt="" srcset="">
-        </a>
+  >
+    <header
+      style="background-color: white"
+      class="border-b-5 border-amber-600 w-full h-165px relativea bg-white flex justify-between items-center transform transition-all duration-200 border-b-4 border-b-brand"
+      :class="{'h-34 transform transiton-all duration-200': !scrolledFromTop, ' h-20 transform transition-all duration-200': scrolledFromTop}"
+    >
+      <div
+        class="flex justify-between w-full"
+        :cass="{'h-34 transform  transition-all duration-200': !scrolledFromTop, 'h-20 transform trasition-all duration-200': scrolledFromTop}"
+      >
+        <!-- Logo on the left -->
+        <div
+          class="flex items-center"
+          :cass="{'h-34 transform  transition-all duration-200': !scrolledFromTop, 'h-20 transform trasition-all duration-200': scrolledFromTop}"
+        >
+          <!-- Your logo goes here -->
+          <a
+            href="#"
+            :cass="{'h-34 transform  transition-all duration-200': !scrolledFromTop, 'h-20 transform trasition-all duration-200': scrolledFromTop}"
+          >
+            <a href="/"></a>
+            <img src="../public/images/top-logo.svg" alt="" srcset="" />
+          </a>
 
-    <!-- <img src="your-logo.png" alt="Logo" class="h-10 w-auto"> -->
-  </div>
-
-  <!-- Navigation -->
-  <div class="flex flex-col justify-between items-end bottom-2">
-    <!-- Top Bar -->
-    <div class="md:block bg-lightPink h-54 rounded-bl-2xl px-4 py-2 mb-2">
-      <!-- Content for top bar --> 
-
-    <a class="md:block bg-lightPink pl-4 pr-24 text-2xl text-darkBlue rounded-bl-lg w-full" href="tel:3831231234">Konsultohuni  <strong style="font-size:34px ;"> 383 123 1234 </strong> </a>
-      <!-- Example: Links or elements -->
-    </div>
-    <!-- Bottom Menu -->
-    <div class="px-4 py-4 ">
-      <!-- Content for bottom menu -->
-               <nav style="margin-top: 60px; " class="align-bottom pr-24 items-end">
-                  <button class="md:hidden" @click="navOpen = !navOpen">
-                     <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-7 w-7 text-brand"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                     >
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                     </svg>
-                  </button>
-                  <!-- top-[-1] -->
-                  <ul 
-                     class="
-                        fixed
-                        left-0
-                        top-[-1]
-                        px-4
-                        pt-12
-                        flex
-                        flex-col
-                        md:flex-row
-                        justify-start
-                        items-center
-                        gap-2
-                        space-y-1
-                        bg-white
-                        text-darkBlue
-                        text-[24px]
-                        transform
-                        transition
-                        duration-300
-                        translate-x-full
-                        md:items-center md:relative md:flex  md:space-x-10 md:min-h-0 md:px-0 md:py-0 md:space-y-0 md:translate-x-0
-                     "
-                     :class="{'translate-x-full': !navOpen}"
-                     :class="{'translate-x-0': navOpen}"
-                  >
-                     <li class="">
-                        <a class="text-brand" href="#" @click="navOpen = false">Reth nesh</a>
-                     </li>
-                     <li class="">
-                        <a href="#features" @click="navOpen = false">Praktika</a>
-                     </li>
-                     <li>
-                        <a href="#about" @click="navOpen = false">Sherbimet</a>
-                     </li>
-                     <li>
-                        <a href="#contact" @click="navOpen = false">Kontakto</a>
-                     </li>
-                  </ul>
-               </nav>
-    </div>
-  </div>
-</div>
-</header>
-        <section class="relative bg-hero-svg z-10 animate slide delay-15  pb-16 px-8 md:px-1">
-         <div class="max-w-7xl mx-auto md:flex md:top-32 md:items-center h-[700px] md:justify-center">
-            <div class="md:flex-1 justify-center items-center md:mr-6">
-               <h1 class="font-bold  md:text-[70px] text-white leading-tight">
-                 Kur bëhet fjalë për <br>Të drejten Familjare </br>
-               </h1>
-               <p class="my-4 text-lg text-white">
-                Save your time increase your productivity and improve your house appearance with the convinence of our superior cleaning services               </p>
-                <button class="p-6 bg-purple  text-white
-                font-semibold text-3xl rounded-2xl ">Telefono tani</button>
-                <p class="text-white/70 text-[18px] py-3">Thirrni per tu konsultuar</p>
-            </div>
-            <div class="md:flex-1">
-               <img
-                  src="../public/images/hero-img.jpg"
-                  alt="Best House Cleaning in Boston"
-               />
-            </div>
+          <!-- <img src="your-logo.png" alt="Logo" class="h-10 w-auto"> -->
         </div>
-      </section>
-<section class="mt-[-20px] w-full">
-  <div class="relative z-20 top[-20px] h-[500px] items-center flex flex-row text-white px-16 py-9 bg-brand border-t-50 border-solid border-gray-500 rounded-tl-3xl rounded-tr-3xl">
-    <div class="px-4 w-[55%] py-2">
-      <h1 style="font-size: 40px; line-height: 48px;">
-        Çdo familje përballet me <br> pjesën e saj të <span class="text-darkBlue">vështirësive</span> <br> dhe <span class="text-darkBlue">stresit</span> .
-      </h1>
-      <p style="font-size: 18px; line-height: 32px;">
-        Ne tek Firma Juris Concept , jemi të përkushtuar t'ju udhëzojmë hap pas hapi në këto kohë të vështira. Avokatët tanë të ligjit familjar në Prishtinë janë të përkushtuar që të avokojnë për ju dhe të sigurojnë të ardhmen tuaj dhe të ardhmen e të dashurve tuaj..
-      </p>
-    </div>
-    <div class="px-4 py-2 w-1/2">
-      <p style="font-size: 18px; line-height: 32px;">
-        Nëse jeni duke u përballur me një ndarje, divorc, betejë për kujdestarinë, mosmarrëveshje shtëpiake ose çështje të tjera të lidhura me ligjin familjar, keni nevojë për një firmë ligjore që vepron me pjesë të barabarta dhembshurie dhe avokatie. Ne e kuptojmë se problemet e çdo klienti janë reale dhe meritojnë qasjen tonë  të plotë dhe të lidhur me praktikën e ligjit familjar. Ekipi ligjor në Juris Concept e kupton këtë luftë dhe do të punojë pa u lodhur qe të zbardh emrin tuaj dhe për të ofruar rezultate pozitive, që ndryshojnë jetën tuaj.
-      </p>
-    </div>
-  </div>
-</section>
-</div>
 
-<section class="mt-[-20px] w-full">
-  <div class="relative z-20  min-h-[800px] items-center flex flex-row text-white px-16 py-9 bg-darkBlue border-t-50 border-solid border-gray-500 rounded-tl-3xl rounded-tr-3xl">
-    <div class="px-4 w-[55%] py-2">
-        <h1 class="text-[52px] leading-[48px] mb-10">
-            Shërbime ligjore të veçuara
-        </h1>
-          <img class="rounded-3xl"
-                src="../public/images/sherbimet.jpg"
-                alt="Best House Cleaning in Boston"
-            />
-    </div>
+        <!-- Navigation -->
+        <div class="flex flex-col justify-between items-end bottom-2">
+          <!-- Top Bar -->
+          <div class="sm:hidden md:block bg-lightPink h-54 rounded-bl-2xl px-4 py-2 mb-2">
+            <!-- Content for top bar -->
 
-    <div class="px-4 py-2 w-full">
-   
-         <ul class="grid grid-flow-col space-x-2 text-center text-gray-50 rounded-lg p-1 mb-12">
-            <li>
-                <a href="#page1" class="flex justify-center bg-brand text-darkBlue rounded-full py-2">Pilot Training</a>
-            </li>
-            <li>
-                <a href="#page1" class="flex justify-center bg-white text-darkBlue rounded-full py-2">Pilot Training</a>
-            </li>
-            <li>
-                <a href="#page1" class="flex justify-center bg-white text-darkBlue rounded-full py-2">Pilot Training</a>
-            </li>
-            <li>
-                <a href="#page1" class="flex justify-center bg-white text-darkBlue rounded-full py-2">Pilot Training</a>
-            </li>
-            
-        </ul> 
-        <h1 class="text-brand leading-8 text-[40px]">
-            Kontesti Civil
-        </h1>
-        <p class="leading-8 text-[18px] text-white-/60 mb-5">
-         Kur lindin mosmarrëveshje ligjore, është e rëndësishme që të keni një ekip me përvojë gjyqësore civile në anën tuaj. Në firmën ligjore Juris Concept, ne jemi të përkushtuar të mbrojmë të drejtat dhe interesat tuaja në një sërë çështjesh gjyqësore civile, duke përfshirë mosmarrëveshjet e kontratave, çështjet gjyqësore të biznesit, pretendimet për dëmtime personale dhe shumë më tepër. Avokatët tanë kanë një histori të provuar suksesi dhe do të luftojnë pa u lodhur për të siguruar rezultatin më të mirë të mundshëm për çështjen tuaj.       
-         </p>
-         <ul class="grid grid-flow-row font-bold space-x text-brand  rounded-lg p-1 mb-12 list-disc list-inside">
-            <li>
-                <a href="#page1" class="text-brand   font-bold py-2">Pilot Training</a>
-            </li>
-            <li>
-                <a href="#page1" class="text-white  font-bold py-2">Pilot Training</a>
-            </li>
-            <li> 
-                <a href="#page1" class="text-white  font-bold py-2">Pilot Training</a>
-           </li>
-            <li>      
-               <a href="#page1" class="text-white  font-bold py-2">Pilot Training</a>
-            </li>
-        </ul> 
-        <a href="">Të gjitha Shërbimet e Kontestit Civil <span class="text-brand font-bold ">Juris Concept</span> </a>
-    </div>
-  </div>
-</section>
+            <a
+              class="md:block bg-lightPink pl-4 pr-24 text-2xl text-darkBlue rounded-bl-lg w-full"
+              href="tel:3831231234"
+              >Konsultohuni <strong style="font-size: 34px"> 383 123 1234 </strong>
+            </a>
+            <!-- Example: Links or elements -->
+          </div>
+          <!-- Bottom Menu -->
+          <div class="px-4 py-4">
+            <!-- Content for bottom menu -->
+            <nav style="margin-top: 60px" class="align-bottom pr-24 items-end">
+              <button class="md:hidden" @click="navOpen = !navOpen">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-7 w-7 text-brand"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+              </button>
 
-<section class="mt-[-20px] w-full">
-<div  class="relative z-20 top[-20px] min-h-screen items-center flex flex-row text-white px-16 py-16 bg-black brand border-t-50 border-solid border-gray-500 rounded-tl-3xl rounded-tr-3xl">
-    <div class="px-4 w-full  ">
-          <h1 class=" text-start w-full  text-[70px] py-4 font-bold">
-            Ekipa 
+              <ul
+                class="fixed left-0 top-[-1] px-4 pt-12 flex flex-col md:flex-row justify-start items-center gap-2 space-y-1 bg-white text-darkBlue text-[24px] transform transition duration-300 translate-x-full md:items-center md:relative md:flex md:space-x-10 md:min-h-0 md:px-0 md:py-0 md:space-y-0 md:translate-x-0"
+                :class="{'translate-x-full': !navOpen}"
+                :class="{'translate-x-0': navOpen}"
+              >
+                <li class="">
+                  <a class="text-brand" href="#" @click="navOpen = false">Reth nesh</a>
+                </li>
+                <li class="">
+                  <a href="#features" @click="navOpen = false">Praktika</a>
+                </li>
+                <li>
+                  <a href="#about" @click="navOpen = false">Sherbimet</a>
+                </li>
+                <li>
+                  <a href="#contact" @click="navOpen = false">Kontakto</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="relative bg-hero-svg z-10 animate slide delay-15 pb-16 px-8">
+      <div class="max-w-7xl mx-auto md:flex md:top-32 md:items-center h-[700px] md:justify-center">
+        <div class="md:flex-1 justify-center items-center md:mr-6">
+          <h1 class="font-bold md:text-[70px] text-white leading-tight">
+            Kur bëhet fjalë për Të drejten Familjare
           </h1>
-          <h3 class=" text-start text-white/50 w-full mb-10"> Treshja me e persosur ne Prishtinë
-         </h3>
-         <div class="flex justify-between gap-8">
+          <p class="my-4 text-lg text-white">
+            Save your time increase your productivity and improve your house appearance with the
+            convinence of our superior cleaning services
+          </p>
+          <button class="p-6 bg-purple text-white font-semibold text-3xl rounded-2xl">
+            Telefono tani
+          </button>
+          <p class="text-white/70 text-[18px] py-3">Thirrni per tu konsultuar</p>
+        </div>
+        <div class="md:flex-1">
+          <img src="../public/images/hero-img.jpg" alt="Best House Cleaning in Boston" />
+        </div>
+      </div>
+    </section>
+    <section class="mt-[-20px] w-full">
+      <div
+        class="relative grid grid-cols-1 md:grid-cols-2 z-20 top[-20px] text-white px-16 py-9 bg-brand border-t-50 border-solid border-gray-500 rounded-tl-3xl rounded-tr-3xl"
+      >
+        <div class="col-start-1 md:col-end-2 py-2">
+          <h1 style="font-size: 40px; line-height: 48px">
+            Çdo familje përballet me <br />
+            pjesën e saj të <span class="text-darkBlue">vështirësive</span> <br />
+            dhe <span class="text-darkBlue">stresit</span>.
+          </h1>
+          <p style="font-size: 18px; line-height: 32px">
+            Ne tek Firma Juris Concept , jemi të përkushtuar t'ju udhëzojmë hap pas hapi në këto
+            kohë të vështira. Avokatët tanë të ligjit familjar në Prishtinë janë të përkushtuar që
+            të avokojnë për ju dhe të sigurojnë të ardhmen tuaj dhe të ardhmen e të dashurve tuaj..
+          </p>
+        </div>
+        <div class="col-start-1 md:col-start-2 md:px-4 py-2">
+          <p style="font-size: 18px; line-height: 32px">
+            Nëse jeni duke u përballur me një ndarje, divorc, betejë për kujdestarinë,
+            mosmarrëveshje shtëpiake ose çështje të tjera të lidhura me ligjin familjar, keni nevojë
+            për një firmë ligjore që vepron me pjesë të barabarta dhembshurie dhe avokatie. Ne e
+            kuptojmë se problemet e çdo klienti janë reale dhe meritojnë qasjen tonë të plotë dhe të
+            lidhur me praktikën e ligjit familjar. Ekipi ligjor në Juris Concept e kupton këtë luftë
+            dhe do të punojë pa u lodhur qe të zbardh emrin tuaj dhe për të ofruar rezultate
+            pozitive, që ndryshojnë jetën tuaj.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-[-20px] w-full">
+      <div
+        class="grid grid-cols-1 px-4 md:grid-cols-3 relative z-20 min-h-[800px] items-center flex flex-row text-white md:px-16 py-9 bg-darkBlue border-t-50 border-solid border-gray-500 rounded-tl-3xl rounded-tr-3xl"
+      >
+        <div class="col-start-1 col-end-4 md:col-end-2 px-4 md:w-[55%] py-2">
+          <h1 class="text-[52px] leading-[48px] mb-10">Shërbime ligjore të veçuara</h1>
+          <img
+            class="rounded-3xl"
+            src="../public/images/sherbimet.jpg"
+            alt="Best House Cleaning in Boston"
+          />
+        </div>
+
+        <div class="px-4 py-2 w-full">
+          <ul class="grid grid-flow-col space-x-2 text-center text-gray-50 rounded-lg p-1 mb-12">
+            <li>
+              <a href="#page1" class="flex justify-center bg-brand text-darkBlue rounded-full py-2"
+                >Pilot Training</a
+              >
+            </li>
+            <li>
+              <a href="#page1" class="flex justify-center bg-white text-darkBlue rounded-full py-2"
+                >Pilot Training</a
+              >
+            </li>
+            <li>
+              <a href="#page1" class="flex justify-center bg-white text-darkBlue rounded-full py-2"
+                >Pilot Training</a
+              >
+            </li>
+            <li>
+              <a href="#page1" class="flex justify-center bg-white text-darkBlue rounded-full py-2"
+                >Pilot Training</a
+              >
+            </li>
+          </ul>
+          <h1 class="text-brand leading-8 text-[40px]">Kontesti Civil</h1>
+          <p class="leading-8 text-[18px] text-white-/60 mb-5">
+            Kur lindin mosmarrëveshje ligjore, është e rëndësishme që të keni një ekip me përvojë
+            gjyqësore civile në anën tuaj. Në firmën ligjore Juris Concept, ne jemi të përkushtuar
+            të mbrojmë të drejtat dhe interesat tuaja në një sërë çështjesh gjyqësore civile, duke
+            përfshirë mosmarrëveshjet e kontratave, çështjet gjyqësore të biznesit, pretendimet për
+            dëmtime personale dhe shumë më tepër. Avokatët tanë kanë një histori të provuar suksesi
+            dhe do të luftojnë pa u lodhur për të siguruar rezultatin më të mirë të mundshëm për
+            çështjen tuaj.
+          </p>
+          <ul
+            class="grid grid-flow-row font-bold space-x text-brand rounded-lg p-1 mb-12 list-disc list-inside"
+          >
+            <li>
+              <a href="#page1" class="text-brand font-bold py-2">Pilot Training</a>
+            </li>
+            <li>
+              <a href="#page1" class="text-white font-bold py-2">Pilot Training</a>
+            </li>
+            <li>
+              <a href="#page1" class="text-white font-bold py-2">Pilot Training</a>
+            </li>
+            <li>
+              <a href="#page1" class="text-white font-bold py-2">Pilot Training</a>
+            </li>
+          </ul>
+          <a href=""
+            >Të gjitha Shërbimet e Kontestit Civil
+            <span class="text-brand font-bold">Juris Concept</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="mt-[-20px] w-full relative z-20 top[-20px] px-4 md:px-16 py-9 bg-white border-t-50 border-solid border-gray-500 rounded-tl-3xl rounded-tr-3xl"
+    >
+      <div class="flex flex-row md:flex-row justify-between items-center mb-4">
+        <h1 class="text-darkBlue text-[48px] font-bold mb-2 md:mb-0">Lajme</h1>
+        <button
+          class="get-started self-center rounded-xl p-2 font-semibold bg-yellowgood text-white bg-brand"
+        >
+          Shiko te gjitha lajmet
+        </button>
+      </div>
+
+      <div class="grid grid-cols-2 gap-4 md:gap-8">
+        <div class="col-start-1 col-end-3 md:col-end-2">
+          <!-- Content in the first column of the outer grid -->
+          <div class="bg-white border border-solid rounded-lg overflow-hidden mb-4">
+            <img
+              src="../public/images/blog-sample.jpg"
+              alt="image"
+              class="w-full md:h-[80%] object-cover rounded-t-lg"
+            />
+            <div class="p-4">
+              <button class="bg-brand text-white text-sm px-2 py-1 rounded-md">
+                10 nentor 2023
+              </button>
+              <p class="text-black my-2">
+                Betohen 52 avokatë të rinjë dhe 48 praktikantë para kryetarit të Odës, z. Behar
+                Ejupi
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-start-1 md:col-start-2 col-end-3 grid gap-4 bg-white">
+          <!-- Content in the second column of the outer grid -->
+
+          <div class="grid grid-cols-1 md:grid-cols-4 max-h-[218px]">
+            <div class="col-start-1 col-end-3 md:col-end-2 flex">
+              <div class="flex flex-col">
+                <img
+                  src="../public/images/blog-sample-1.jpg"
+                  alt="image"
+                  class="w-full object-cover rounded-t-lg"
+                />
+              </div>
+            </div>
+            <div class="col-start-1 md:col-start-2 border border-solid border-black col-end-5 flex">
+              <div class="flex flex-col w-full">
+                <div class="p-4">
+                  <button class="bg-brand text-white text-[14px] px-4 py-1 rounded-md">
+                    10 nentor 2023
+                  </button>
+                  <p class="text-black mb-4">
+                    Betohen 52 avokatë të rinjë dhe të Odës, z. Behar Ejupi
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-4 max-h-[218px]">
+            <div class="col-start-1 col-end-3 md:col-end-2 flex">
+              <div class="flex flex-col">
+                <img
+                  src="../public/images/blog-sample-1.jpg"
+                  alt="image"
+                  class="w-full object-cover rounded-t-lg"
+                />
+              </div>
+            </div>
+            <div class="col-start-1 md:col-start-2 border border-solid border-black col-end-5 flex">
+              <div class="flex flex-col w-full">
+                <div class="p-4">
+                  <button class="bg-brand text-white text-[14px] px-4 py-1 rounded-md">
+                    10 nentor 2023
+                  </button>
+                  <p class="text-black mb-4">
+                    Betohen 52 avokatë të rinjë dhe të Odës, z. Behar Ejupi
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-4 max-h-[218px]">
+            <div class="col-start-1 col-end-3 md:col-end-2 flex">
+              <div class="flex flex-col">
+                <img
+                  src="../public/images/blog-sample.jpg"
+                  alt="image"
+                  class="w-full object-cover rounded-t-lg"
+                />
+              </div>
+            </div>
+            <div class="col-start-1 md:col-start-2 border border-solid border-black col-end-5 flex">
+              <div class="flex flex-col w-full">
+                <div class="p-4">
+                  <button class="bg-brand text-white text-[14px] px-4 py-1 rounded-md">
+                    10 nentor 2023
+                  </button>
+                  <p class="text-black mb-4">
+                    Betohen 52 avokatë të rinjë dhe të Odës, z. Behar Ejupi
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-4 max-h-[218px]">
+            <div class="col-start-1 col-end-3 md:col-end-2 flex flex-col">
+              <img
+                src="../public/images/blog-sample-1.jpg"
+                alt="image"
+                class="w-full h-[142px] object-cover rounded-t-lg"
+              />
+            </div>
+            <div
+              class="col-start-1 md:col-start-2 border border-solid border-black col-end-5 flex flex-col"
+            >
+              <div class="flex-grow">
+                <div class="p-4">
+                  <button class="bg-brand text-white text-[14px] px-4 py-1 rounded-md">
+                    10 nentor 2023
+                  </button>
+                  <p class="text-black mb-4">
+                    Betohen 52 avokatë të rinjë dhe të Odës, z. Behar Ejupi
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-[-20px] w-full">
+      <div
+        class="relative z-20 top[-20px] min-h-screen items-center flex flex-row text-white px-16 py-16 bg-black brand border-t-50 border-solid border-gray-500 rounded-tl-3xl rounded-tr-3xl"
+      >
+        <div class="px-4 w-full">
+          <h1 class="text-start w-full text-[70px] py-4 font-bold">Ekipa</h1>
+          <h3 class="text-start text-white/50 w-full mb-10">Treshja me e persosur ne Prishtinë</h3>
+
+          <div class="flex justify-between gap-8">
             <div class="w-1/3">
-                <div class="bg-black rounded-lg shadow-md">
-                <img src="../public/images/profile.jpg" alt="image" class="w-full h-[475px] object-cover rounded-t-lg">
+              <div class="bg-black rounded-lg shadow-md h-[218]">
+                <img
+                  src="../public/images/profile.jpg"
+                  alt="image"
+                  class="w-full h-[475px] object-cover rounded-t-lg"
+                />
                 <div class="mt-4">
-                    <h2 class="text-2xl font-bold mb-2 ">Kushtrim Prenku</h2>
-                    <p class="text-white/50 font-bold mb-4">"Avokat i sapo licencuar i përkushtuar ndaj ofrimit të ekselencës ligjore: i apasionuar pas avokimit për të drejtat e klientëve dhe ofrimit të zgjidhjeve strategjike ligjore. I përkushtuar ndaj profesionalizmit, integritetit dhe arritjes së drejtësisë."</p>
-                    <button class="bg-purple text-white text-[34px] font-bold px-4 py-2 rounded-md">Shiko Profilin</button>
+                  <h2 class="text-2xl font-bold mb-2">Kushtrim Prenku</h2>
+                  <p class="text-white/50 font-bold mb-4">
+                    "Avokat i sapo licencuar i përkushtuar ndaj ofrimit të ekselencës ligjore: i
+                    apasionuar pas avokimit për të drejtat e klientëve dhe ofrimit të zgjidhjeve
+                    strategjike ligjore. I përkushtuar ndaj profesionalizmit, integritetit dhe
+                    arritjes së drejtësisë."
+                  </p>
+                  <button class="bg-purple text-white text-[34px] font-bold px-4 py-2 rounded-md">
+                    Shiko Profilin
+                  </button>
                 </div>
-                </div>
+              </div>
             </div>
             <div class="w-1/3">
-                <div class="bg-black rounded-lg  shadow-md">
-                <img src="../public/images/profile.jpg" alt="image" class="w-full h-[475px] object-cover rounded-t-lg">
+              <div class="bg-black rounded-lg shadow-md">
+                <img
+                  src="../public/images/profile.jpg"
+                  alt="image"
+                  class="w-full h-[475px] object-cover rounded-t-lg"
+                />
                 <div class="mt-4">
-                    <h2 class="text-2xl font-bold mb-2">Bledar Gashi</h2>
-                    <p class="text-white/50 font-bold mb-4">"Avokat i sapo licencuar i përkushtuar ndaj ofrimit të ekselencës ligjore: i apasionuar pas avokimit për të drejtat e klientëve dhe ofrimit të zgjidhjeve strategjike ligjore. I përkushtuar ndaj profesionalizmit, integritetit dhe arritjes së drejtësisë."</p>
-                    <button class="bg-purple text-white text-[34px] font-bold px-4 py-2 rounded-md">Shiko Profilin</button>
+                  <h2 class="text-2xl font-bold mb-2">Bledar Gashi</h2>
+                  <p class="text-white/50 font-bold mb-4">
+                    "Avokat i sapo licencuar i përkushtuar ndaj ofrimit të ekselencës ligjore: i
+                    apasionuar pas avokimit për të drejtat e klientëve dhe ofrimit të zgjidhjeve
+                    strategjike ligjore. I përkushtuar ndaj profesionalizmit, integritetit dhe
+                    arritjes së drejtësisë."
+                  </p>
+                  <button class="bg-purple text-white text-[34px] font-bold px-4 py-2 rounded-md">
+                    Shiko Profilin
+                  </button>
                 </div>
-                </div>
+              </div>
             </div>
             <div class="w-1/3">
-                <div class="bg-black rounded-lg shadow-md">
-                <img src="../public/images/profile.jpg" alt="image" class="w-full h-[475px] object-cover rounded-t-lg">
+              <div class="bg-black rounded-lg shadow-md">
+                <img
+                  src="../public/images/profile.jpg"
+                  alt="image"
+                  class="w-full h-[475px] object-cover rounded-t-lg"
+                />
                 <div class="mt-4">
-                    <h2 class="text-2xl font-bold mb-2">Adnan Thaqi</h2>
-                    <p class="text-white/50 font-bold mb-6">"Avokat i sapo licencuar i përkushtuar ndaj ofrimit të ekselencës ligjore: i apasionuar pas avokimit për të drejtat e klientëve dhe ofrimit të zgjidhjeve strategjike ligjore. I përkushtuar ndaj profesionalizmit, integritetit dhe arritjes së drejtësisë."</p>
-                    <button class="bg-purple text-white text-[34px] font-bold px-4 py-2 rounded-md">Shiko Profilin</button>
+                  <h2 class="text-2xl font-bold mb-2">Adnan Thaqi</h2>
+                  <p class="text-white/50 font-bold mb-6">
+                    "Avokat i sapo licencuar i përkushtuar ndaj ofrimit të ekselencës ligjore: i
+                    apasionuar pas avokimit për të drejtat e klientëve dhe ofrimit të zgjidhjeve
+                    strategjike ligjore. I përkushtuar ndaj profesionalizmit, integritetit dhe
+                    arritjes së drejtësisë."
+                  </p>
+                  <button class="bg-purple text-white text-[34px] font-bold px-4 py-2 rounded-md">
+                    Shiko Profilin
+                  </button>
                 </div>
-                </div>
+              </div>
             </div>
-    </div>
-  </div>
-</div>
-</section>
-<section class="mt-[-20px] w-full">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="mt-[-20px] w-full">
   <div class="relative z-20 top[-20px] text-black px-16 py-9 bg-white border-t-50 border-solid border-gray-500 rounded-tl-3xl rounded-tr-3xl">
  <div>
 
@@ -297,24 +480,24 @@
 
   <div class="flex-1 flex justify-start gap-4 flex-col">
         <div class="flex mb-2">
-              <div class="w-45">
+              <div class="w-45 max-h-[220px]">
                   <img src="../public/images/blog-sample-1.jpg" alt="image" class="w-full  object-cover rounded-t-lg">
               </div>
               <div class="flex-1 border border-solid border-black">
                 <div class="bg-white rounded-lg p-4 ">
                     <button class="bg-brand text-white text-[14px] px-4 py-1 rounded-md">10 nentor 2023</button>
-                    <p class="text-black` mb-4">Betohen 52 avokatë të rinjë dhe 48 praktikantë para kryetarit të Odës, z. Behar Ejupi</p>
+                    <p class="text-black` mb-4">Betohen 52 avokatë të  para kryetarit të Odës</p>
                 </div>
               </div>
         </div>
-        <div class="flex mb-2">
+        <div class="flex max-h-[220px] mb-2">
             <div class="w-45">
                 <img src="../public/images/blog-sample-2.jpg" alt="image" class="w-full  object-cover rounded-t-lg">
             </div>
             <div class="flex-1 border border-solid border-black">
               <div class="bg-white rounded-lg p-4 ">
                 <button class="bg-brand text-white text-[14px] px-4 py-1 rounded-md">10 nentor 2023</button>
-                <p class="text-black mb-4">Betohen 52 avokatë të rinjë dhe 48 praktikantë para kryetarit të Odës, z. Behar Ejupi</p>
+                <p class="text-black mb-4">Betohen 52 ara kryetarit të Odës, z. Behar Ejupi</p>
               </div>
             </div>
         </div>
@@ -329,58 +512,50 @@
               </div>
             </div>
         </div>
-  </div> </div> 
+  </div>
+</div> 
 
 </div>
-</section>
-<section class="mt-[-20px] w-full">
-  <div style="color: #ffffff;" class="relative z-20 top[-20px] pt-[135px] flex justify-between items-start flex-row text-white px-16 py-9 bg-darkBlue border-t-50 border-solid border-gray-500 rounded-tl-3xl rounded-tr-3xl">
-    
-    <div class="px-4 flex-1 py-2">
-      <h1 style="font-size: 40px; line-height: 48px;">
-          Office
-      </h1>
-      <p style="font-size: 18px; line-height: 32px;">
-          <span class="text-brand text-[28px] font-bold"> Juris Concept </span>
-          <br>
-          <span class="text-white/50"> 
-            Rruga Garibaldi  Hyrja 51 K-II  /5 <br> 10000 Prishtine
-          </span>
-      </p>
-        <div class="mt-4" >
-          <h4 class="font-bold pt-3" style="font-size: 18px; ">
-            Orari Punes  
-          </h4>
-        <span class="text-white/50"> 
-          E Hene - E Premte 8:30AM - 4:00PM 
-        </span>
+</section> -->
+    <section class="mt-[-20px] w-full">
+      <div
+        style="color: #ffffff"
+        class="relative z-20 top[-20px] pt-[135px] flex justify-between items-start flex-row text-white px-16 py-9 bg-darkBlue border-t-50 border-solid border-gray-500 rounded-tl-3xl rounded-tr-3xl"
+      >
+        <div class="px-4 flex-1 py-2">
+          <h1 style="font-size: 40px; line-height: 48px">Office</h1>
+          <p style="font-size: 18px; line-height: 32px">
+            <span class="text-brand text-[28px] font-bold"> Juris Concept </span>
+            <span class="text-white/50"> Rruga Garibaldi Hyrja 51 K-II /5 10000 Prishtine </span>
+          </p>
+          <div class="mt-4">
+            <h4 class="font-bold pt-3" style="font-size: 18px">Orari Punes</h4>
+            <span class="text-white/50"> E Hene - E Premte 8:30AM - 4:00PM </span>
           </div>
-    </div>
+        </div>
 
-    <div class="px-4 py-2 flex-2">
-          <img src="../public/images/juris-logo-footer.svg" alt="image" class="w-full h-[175px] object-cover rounded-t-lg">
-    </div>
+        <div class="px-4 py-2 flex-2">
+          <img
+            src="../public/images/juris-logo-footer.svg"
+            alt="image"
+            class="w-full h-[175px] object-cover rounded-t-lg"
+          />
+        </div>
 
-    <div class="px-4 flex-1 py-2">
-      <h1 style="font-size: 40px; line-height: 48px;">
-      Phone    
-      </h1>
-      <p style="font-size: 18px; line-height: 32px;">
-          <span class="text-brand text-[28px] font-bold"> +383 123 1234 </span>
-          <br>
-        </p>
-    </div>
-  
-  </div>
-               
-</section>
+        <div class="px-4 flex-1 py-2">
+          <h1 style="font-size: 40px; line-height: 48px">Phone</h1>
+          <p style="font-size: 18px; line-height: 32px">
+            <span class="text-brand text-[28px] font-bold"> +383 123 1234 </span>
+            <br />
+          </p>
+        </div>
+      </div>
+    </section>
 
-
-
-
-
-
-<a class="bg-brand flex justify-center text-center text-darkBlue" href="http://naxiadesign.com">Website Design By NAXIA Design </a>
+    <a class="bg-brand flex justify-center text-center text-darkBlue" href="http://naxiadesign.com"
+      >Website Design By NAXIA Design
+    </a>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.4.0/cdn.js"></script>
-    <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script> </body>
+    <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  </body>
 </html>
