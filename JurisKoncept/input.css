@@ -100,7 +100,7 @@
     /* Other background properties */
   }
   .top-logo-svg {
-    background-image: url("../public/images/top-logo.svg");
+    background-image: url("/public/images/top-logo.svg");
     /* Other background properties */
   }
   .footer-logo-svg {
