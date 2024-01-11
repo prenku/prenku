@@ -29,17 +29,20 @@
   }
   .h1-border {
     font-size: 70px;
+    position: relative;
+    margin-bottom: 10px; /* Adjust this value for the desired space between text and border */
   }
+
   .h1-border::after {
     content: "";
     position: absolute;
-    bottom: 0;
-    color: #c1913f;
+    bottom: -200px; /* Adjust this value for the desired space between text and border */
     left: 0;
     width: 65px;
     height: 7px; /* Height of the bottom border */
     background-color: #c1913f; /* Change to your desired border color */
   }
+
   .testimonial {
     /* min-width: 12.5rem; */
     /* @apply max-w-sm m-4 p-7 bg-lightGrey rounded-xl; */
@@ -94,6 +97,10 @@
   }
   .bg-hero-svg {
     background-image: url("/public/images/hero.jpg");
+    /* Other background properties */
+  }
+  .top-logo-svg {
+    background-image: url("/public/images/top-logo.svg");
     /* Other background properties */
   }
   .footer-logo-svg {
