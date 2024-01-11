@@ -96,15 +96,15 @@
     align-items: center;
   }
   .bg-hero-svg {
-    background-image: url("/public/images/hero.jpg");
+    background-image: url("../public/images/hero.jpg");
     /* Other background properties */
   }
   .top-logo-svg {
-    background-image: url("/public/images/top-logo.svg");
+    background-image: url("../public/images/top-logo.svg");
     /* Other background properties */
   }
   .footer-logo-svg {
-    background-image: url("/public/images/juris-logo-footer.svg");
+    background-image: url("../public/images/juris-logo-footer.svg");
     /* Other background properties */
   }
   * {
