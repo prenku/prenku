@@ -5,15 +5,15 @@
 @layer base {
   @font-face {
     font-family: LailaBold;
-    src: url("/fonts/Laila-Bold.ttf");
+    src: url('/fonts/Laila-Bold.ttf');
   }
   @font-face {
     font-family: LailaMedium;
-    src: url("/fonts/Laila-Medium.ttf");
+    src: url('/fonts/Laila-Medium.ttf');
   }
   @font-face {
     font-family: LailaLight;
-    src: url("/fonts/Laila-Light.ttf");
+    src: url('/fonts/Laila-Light.ttf');
   }
 }
 @layer components {
@@ -34,7 +34,7 @@
   }
 
   .h1-border::after {
-    content: "";
+    content: '';
     position: absolute;
     bottom: -200px; /* Adjust this value for the desired space between text and border */
     left: 0;
@@ -95,16 +95,43 @@
     justify-content: center;
     align-items: center;
   }
+  * {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  .h-165px {
+    height: 175px;
+  }
+  nav ul li:hover {
+    color: #c1913f;
+  }
+  .mobile-menu {
+    left: -200%;
+    transition: 0.5s;
+  }
+
+  .mobile-menu.active {
+    left: 0;
+  }
+
+  .mobile-menu ul li ul {
+    display: none;
+  }
+
+  .mobile-menu ul li:hover ul {
+    display: block;
+  }
   .bg-hero-svg {
-    background-image: url("../public/images/hero.jpg");
+    background-image: url('../public/images/hero.jpg');
     /* Other background properties */
   }
   .top-logo-svg {
-    background-image: url("../public/images/top-logo.svg");
+    background-image: url('../public/images/top-logo.svg');
     /* Other background properties */
   }
   .footer-logo-svg {
-    background-image: url("../public/images/juris-logo-footer.svg");
+    background-image: url('../public/images/juris-logo-footer.svg');
     /* Other background properties */
   }
   * {
