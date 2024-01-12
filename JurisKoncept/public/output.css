@@ -586,6 +586,28 @@ nav ul li:hover {
   overflow: hidden;
 }
 
+/* Air */
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
 html {
   scroll-behavior: smooth;
   overflow: scroll;
@@ -954,6 +976,11 @@ html {
   margin-bottom: 1rem;
 }
 
+.my-9 {
+  margin-top: 2.25rem;
+  margin-bottom: 2.25rem;
+}
+
 .mb-10 {
   margin-bottom: 2.5rem;
 }
@@ -1090,10 +1117,6 @@ html {
 
 .grid-flow-row {
   grid-auto-flow: row;
-}
-
-.grid-flow-col {
-  grid-auto-flow: column;
 }
 
 .grid-cols-1 {
@@ -1531,6 +1554,15 @@ html {
   transition-duration: 300ms;
 }
 
+.hover\:px-3:hover {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.hover\:underline:hover {
+  text-decoration-line: underline;
+}
+
 @media (min-width: 768px) {
   .md\:relative {
     position: relative;
@@ -1554,10 +1586,6 @@ html {
 
   .md\:col-end-4 {
     grid-column-end: 4;
-  }
-
-  .md\:mb-0 {
-    margin-bottom: 0px;
   }
 
   .md\:mr-6 {
