@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -24,7 +24,7 @@
   >
     <header
       style="background-color: white"
-      class="border-b-5 border-amber-600 w-full relative bg-white flex justify-between items-center transform transition-all duration-200 border-b-4 border-b-brand"
+      class="fixed border-b-5 border-amber-600 w-full relative bg-white flex justify-between items-center transform transition-all duration-200 border-b-4 border-b-brand"
       :class="{'h-34 transform transiton-all duration-200': !scrolledFromTop, ' h-20 transform transition-all duration-200': scrolledFromTop}"
     >
       <div
@@ -40,11 +40,6 @@
             href="#"
             :cass="{'h-34 transform  transition-all duration-200': !scrolledFromTop, 'h-20 transform trasition-all duration-200': scrolledFromTop}"
           >
-            <a href="/">
-
-
-
-</a>
             <img src="../public/images/top-logo.svg" class=" " alt="" srcset="" />
           </a>
         </div>
@@ -55,14 +50,14 @@
           <div class="hidden md:block bg-lightPink h-54 rounded-bl-2xl px-4 py-2 mb-2">
             <a
               class="md:block bg-lightPink pl-4 pr-24 text-2xl text-darkBlue rounded-bl-lg w-full"
-              href="tel:3831231234"
-              >Konsultohuni <strong style="font-size: 34px"> 383 123 1234 </strong>
+              href="tel:+38349225567"
+              >Konsultohuni <strong style="font-size: 34px"> +383 49 225 567 </strong>
             </a>
           </div>
           <!-- Bottom Menu -->
           <div class="px-4 py-4">
             <!-- Content for bottom menu -->
-            <nav style="margin-top: 60px" class="align-bottom pr-24 items-end">
+            <nav class="mt-[20px] z-40 align-bottom pr-1 items-end">
               <button class="md:hidden" @click="navOpen = !navOpen">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -80,7 +75,7 @@
                 </svg>
               </button>
               <ul
-                class="fixed left-0 top-[-1] px-4 pt-12 flex flex-col md:flex-row justify-start items-center gap-2 space-y-1 bg-white text-darkBlue text-[24px] transform transition duration-300 translate-x-full md:items-center md:relative md:flex md:space-x-10 md:min-h-0 md:px-0 md:py-0 md:space-y-0 md:translate-x-0"
+                class="fixed left-0 top-[-1] px-4 pt-12 flex flex-col hidden md:flex-row justify-start items-center gap-2 space-y-1 bg-white text-darkBlue text-[24px] transform transition duration-300 translate-x-full md:items-center md:relative md:flex md:space-x-10 md:min-h-0 md:px-0 md:py-0 md:space-y-0 md:translate-x-0"
                 :class="{'translate-x-full': !navOpen}"
                 :class="{'translate-x-0': navOpen}"
               >
@@ -116,7 +111,9 @@
             Save your time increase your productivity and improve your house appearance with the
             convinence of our superior cleaning services
           </p>
-          <button class="p-3 md:p-6 bg-purple text-white text-[26px] font-semibold md:text-3xl rounded-2xl">
+          <button
+            class="p-3 md:p-6 bg-purple text-white text-[26px] font-semibold md:text-3xl rounded-2xl"
+          >
             Telefono tani
           </button>
           <p class="text-white/70 md:text-[18px] py-3">Thirrni per tu konsultuar</p>
@@ -255,7 +252,9 @@
                     strategjike ligjore. I përkushtuar ndaj profesionalizmit, integritetit dhe
                     arritjes së drejtësisë."
                   </p>
-                  <button class="bg-purple text-white text-[26px] md:text-[34px] font-bold px-4 py-2 rounded-md">
+                  <button
+                    class="bg-purple text-white text-[26px] md:text-[34px] font-bold px-4 py-2 rounded-md"
+                  >
                     Shiko Profilin
                   </button>
                 </div>
@@ -276,7 +275,9 @@
                     strategjike ligjore. I përkushtuar ndaj profesionalizmit, integritetit dhe
                     arritjes së drejtësisë."
                   </p>
-                  <button class="bg-purple text-white text-[26px] md:text-[34px] font-bold px-4 py-2 rounded-md">
+                  <button
+                    class="bg-purple text-white text-[26px] md:text-[34px] font-bold px-4 py-2 rounded-md"
+                  >
                     Shiko Profilin
                   </button>
                 </div>
@@ -297,7 +298,9 @@
                     strategjike ligjore. I përkushtuar ndaj profesionalizmit, integritetit dhe
                     arritjes së drejtësisë."
                   </p>
-                  <button class="bg-purple text-white text-[26px] md:text-[34px] font-bold px-4 py-2 rounded-md">
+                  <button
+                    class="bg-purple text-white text-[26px] md:text-[34px] font-bold px-4 py-2 rounded-md"
+                  >
                     Shiko Profilin
                   </button>
                 </div>
@@ -345,7 +348,6 @@
         </div>
         <div class="col-start-1 md:col-start-2 col-end-3 grid gap-4 bg-white">
           <!-- Content in the second column of the outer grid -->
-
 
           <div class="grid grid-cols-1 md:grid-cols-4 max-h-[218px]">
             <div class="col-start-1 col-end-3 md:col-end-2 flex flex-col">
@@ -472,8 +474,9 @@
         <div class="px-4 flex-1 order-3 py-2">
           <h1 style="font-size: 40px; line-height: 48px">Phone</h1>
           <p style="font-size: 18px; line-height: 32px">
-            <span class="text-brand text-[28px] font-bold"> +383 123 1234 </span>
-            <br />
+            <a href="tel:+38349225567" class="text-brand text-[28px] font-bold">
+              +383 49 225 567
+            </a>
           </p>
         </div>
       </div>
@@ -506,6 +509,10 @@
     <a class="bg-brand flex justify-center text-center text-darkBlue" href="http://naxiadesign.com"
       >Website Design By NAXIA Design
     </a>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.4.0/cdn.js"></script>
+    <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script> -->
+
     <script src="https://unpkg.com/split-type"></script>
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>

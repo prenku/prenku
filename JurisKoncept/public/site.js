@@ -1,14 +1,15 @@
-const mobile_icon = document.getElementById('mobile-icon')
-const mobile_menu = document.getElementById('mobile-menu')
-const hamburger_icon = document.querySelector('#mobile-icon i')
+const initApp = () => {
+  const hamburgerBtn = document.getElementById('hamburger-button')
+  const mobileMenu = document.getElementById('mobile-menu')
 
-function openCloseMenu() {
-  mobile_menu.classList.toggle('block')
-  mobile_menu.classList.toggle('active')
+  const toggleMenu = () => {
+    mobileMenu.classList.toggle('hidden')
+    mobileMenu.classList.toggle('flex')
+    hamburgerBtn.classList.toggle('toggle-btn')
+  }
+
+  hamburgerBtn.addEventListener('click', toggleMenu)
+  mobileMenu.addEventListener('click', toggleMenu)
 }
 
-function changeIcon(icon) {
-  icon.classList.toggle('fa-xmark')
-}
-
-mobile_icon.addEventListener('click', openCloseMenu)
+document.addEventListener('DOMContentLoaded', initApp)

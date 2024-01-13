@@ -1,7 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@layer utilities {
+  .toggle-btn {
+    @apply [&>div::before]:translate-y-0 [&>div::before]:rotate-45 [&>div::after]:translate-y-0 [&>div::after]:-rotate-45 [&>div]:bg-transparent [&>div]:rotate-[720deg];
+  }
+}
 @layer base {
   @font-face {
     font-family: LailaBold;
@@ -133,73 +137,6 @@
   .footer-logo-svg {
     background-image: url('../public/images/juris-logo-footer.svg');
     /* Other background properties */
-  }
-  .mega-menu {
-    opacity: 0;
-    visibility: hidden;
-    z-index: -900;
-    left: 0;
-    position: absolute;
-    text-align: left;
-    width: 100%;
-    transition: all 0.15s linear 0s;
-  }
-
-  /* #hoverable Class Styles */
-  .hoverable {
-    position: static;
-  }
-
-  .hoverable > a:after {
-    content: '\25BC';
-    font-size: 10px;
-    padding-left: 6px;
-    position: relative;
-    top: -1px;
-  }
-
-  .hoverable:hover .mega-menu {
-    opacity: 1;
-    visibility: visible;
-    z-index: 900;
-  }
-
-  /* #toggle Class Styles */
-
-  .toggleable > label:after {
-    content: '\25BC';
-    font-size: 10px;
-    padding-left: 6px;
-    position: relative;
-    top: -1px;
-  }
-
-  .toggle-input {
-    display: none;
-  }
-  .toggle-input:not(checked) ~ .mega-menu {
-    opacity: 0;
-    visibility: hidden;
-    z-index: -900;
-  }
-
-  .toggle-input:checked ~ .mega-menu {
-    opacity: 1;
-    visibility: visible;
-    z-index: 900;
-  }
-
-  .toggle-input:checked + label {
-    color: white;
-    background: rgb(3, 102, 114); /*@apply bg-teal-700 */
-  }
-
-  .toggle-input:checked ~ label:after {
-    content: '\25B2';
-    font-size: 10px;
-    padding-left: 6px;
-    position: relative;
-    top: -1px;
   }
 
   * {
