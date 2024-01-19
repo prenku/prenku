@@ -10,8 +10,8 @@
   </head>
 
   <body class="min-h-screen bg-slate-50 dark:bg-black dark:text-white">
-    <header
-      class="top-0 z-30 bg-white text-white md:relative md:flex md:justify-between md:items-center md:transform md:transition-all md:duration-200 border-b-4 border-b-brand"
+  <header
+      class="top-0 z-30 bg-white text-darkBlue md:relative md:flex md:justify-between md:items-center md:transform md:transition-all md:duration-200 border-b-4 border-b-brand"
     >
       <div
         class="hidden md:flex md:justify-between md:w-full"
@@ -70,22 +70,18 @@
                 :class="{'translate-x-0': navOpen}"
               >
                 <li class="">
-                  <a class="text-brand hover:text-brand" href="/index.html">
+                  <a class="hover:text-brand" href="index.html">
                     Ballina</a
                   >
                 </li>
-                <li class="">
+                 <li class="">
                   <a href="praktika.html" class="hover:text-brand">Praktika</a>
+                </li> 
+                <li class="">
+                  <a href="ekipa.html" class="hover:text-brand">Ekipa</a>
                 </li>
                 <li>
-                  <a href="/sherbimet" class="hover:text-brand">Sherbimet</a>
-                </li>
-                <li>
-                  <a href="/rreth-nesh" class="hover:text-brand">Rreth Nesh</a>
-                </li>
-
-                <li>
-                  <a href="kontakto.html" class="hover:text-brand">Kontakto</a>
+                  <a href="kontakto.html" class="text-brand hover:text-brand">Kontakto</a>
                 </li>
               </ul>
             </nav>
@@ -125,27 +121,25 @@
           class="flex min-h-screen text-white flex-col items-center py-8"
           aria-label="mobile"
         >
-          <a href="index.html" class="w-full py-6 text-center hover:text-brand"
-            >Ballina</a
-          >
-          <a href="#rockets" class="w-full py-6 text-center hover:text-brand"
-            >Praktika
-          </a>
+	  <a href="index.html" class="w-full py-6 text-center hover:text-brand"
+	    >Ballina</a
+	  >
           <a
-            href="#testimonials"
+            href="praktika.html"
             class="w-full py-6 text-center hover:text-brand"
-            >Sherbimet</a
+            >Praktika</a
           >
-          <a href="#contact" class="w-full py-6 text-center hover:text-brand"
-            >Rreth Nesh</a
+	 <a
+            href="ekipa.html"
+            class="w-full py-6 text-center hover:text-brand"
+            >Ekipa</a
           >
-          <a href="#footer" class="w-full py-6 text-center hover:text-brand"
+         <a href="kontakto.html" class="w-full py-6 text-center hover:text-brand"
             >Kontakto</a
           >
         </nav>
       </section>
-    </header>
-
+    </header>  
     <section
       class="relative z-10 overflow-hidden bg-navyBlue dark:bg-dark py-20 lg:py-[120px]"
     >
@@ -1119,7 +1113,7 @@
       </div>
     </section>
     <!-- ====== Contact Section End -->
-    <section class="mt-[-20px] w-full">
+     <section class="mt-[-20px] w-full">
       <div
         style="color: #ffffff"
         class="relative z-20 top[-20px] pt-[135px] flex justify-between items-start flex-col md:flex-row text-white px-16 py-9 bg-darkBlue border-t-50 border-solid border-gray-500 rounded-tl-3xl rounded-tr-3xl"
@@ -1141,20 +1135,6 @@
             </span>
           </div>
         </div>
-
-        <div class="px-4 py-2 order-1 md:order-2 flex-2">
-          <img
-            src="public/images/new-footer-logo.svg"
-            alt="image"
-            class="hidden md:flex md:w-full h-[175px] object-cover"
-          />
-          <img
-            src="public/images/new-footer-logo.svg"
-            alt="image"
-            class="md:hidden object-cover"
-          />
-        </div>
-
         <div class="px-4 flex-1 order-3 py-2">
           <h1 class="text-[40px] font-bold leading-[48px]">Phone</h1>
           <p style="font-size: 18px; line-height: 32px">
@@ -1165,38 +1145,31 @@
         </div>
       </div>
       <div
-        class="entry flex px-16 py-9 text-center bg-darkBlue flex-col md:flex-row items-start justify-between"
+        class="flex px-16 py-9 text-center bg-darkBlue flex-col md:flex-row items-start justify-between"
       >
-        <h5 class="entry__meta text-white mt-6">© 2024 Juris Concept</h5>
+        <h5 class="text-white mt-6">© 2024 Juris Concept</h5>
         <ul
           class="hidden flex-col md:flex md:flex-row justify-start md:justify-end gap-10 items-start md:items-end space-x-1 text-center text-gray-50 bg-darkBlue text-[24px]"
         >
           <li>
             <a
-              href="#page1"
+              href="index.html"
               class="flex justify-center text-brand rounded-full py-2"
               >Ballina</a
             >
           </li>
           <li>
             <a
-              href="#page1"
-              class="flex justify-center text-white hover:text-brand rounded-full py-2"
-              >Sherbimet</a
-            >
-          </li>
-          <li>
-            <a
-              href="#page1"
+              href="praktika.html"
               class="flex justify-center text-white hover:text-brand rounded-full py-2"
               >Praktika</a
             >
           </li>
           <li>
             <a
-              href="#page1"
+              href="ekipa.html"
               class="flex justify-center text-white hover:text-brand rounded-full py-2"
-              >Rreth Nesh
+              >Ekipa 
             </a>
           </li>
           <li>
@@ -1209,7 +1182,7 @@
           </li>
         </ul>
       </div>
-    </section>
+    </section> 
 
     <a
       class="bg-brand flex justify-center text-center text-darkBlue"
