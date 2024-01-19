@@ -11,7 +11,7 @@
 
   <body class="min-h-screen bg-slate-50 dark:bg-black dark:text-white">
     <header
-      class="top-0 z-30 bg-darkBlue text-white md:relative md:flex md:justify-between md:items-center md:transform md:transition-all md:duration-200 border-b-4 border-b-brand"
+      class="top-0 z-30 bg-white text-darkBlue md:relative md:flex md:justify-between md:items-center md:transform md:transition-all md:duration-200 border-b-4 border-b-brand"
     >
       <div
         class="hidden md:flex md:justify-between md:w-full"
@@ -27,12 +27,7 @@
             href="#"
             :cLass="{'h-34 transform  transition-all duration-200': !scrolledFromTop, 'h-20 transform trasition-all duration-200': scrolledFromTop}"
           >
-            <img
-              src="public/images/new-top-logo.svg"
-              class=" "
-              alt=""
-              srcset=""
-            />
+            <img src="public/images/top-logo.svg" class=" " alt="" srcset="" />
           </a>
         </div>
 
@@ -70,7 +65,7 @@
                 </svg>
               </button>
               <ul
-                class="fixed left-0 top-[-1] px-4 pt-12 flex flex-col hidden md:flex-row justify-start items-center gap-2 space-y-1 bg-darkBlue text-white text-[24px] transform transition duration-300 translate-x-full md:items-center md:relative md:flex md:space-x-10 md:min-h-0 md:px-0 md:py-0 md:space-y-0 md:translate-x-0"
+                class="fixed left-0 top-[-1] px-4 pt-12 flex flex-col hidden md:flex-row justify-start items-center gap-2 space-y-1 bg-white text-darkBlue text-[24px] transform transition duration-300 translate-x-full md:items-center md:relative md:flex md:space-x-10 md:min-h-0 md:px-0 md:py-0 md:space-y-0 md:translate-x-0"
                 :class="{'translate-x-full': !navOpen}"
                 :class="{'translate-x-0': navOpen}"
               >
@@ -104,7 +99,7 @@
             :cass="{'h-34 transform md:hidden transition-all duration-200': !scrolledFromTop, 'h-20 transform trasition-all duration-200': scrolledFromTop}"
           >
             <img
-              src="public/images/new-top-logo.svg"
+              src="public/images/top-logo.svg"
               class="md:hidden"
               alt=""
               srcset=""
@@ -450,7 +445,9 @@
         <div class="col-start-1 md:col-start-2 col-end-3 grid gap-4 bg-white">
           <!-- Content in the second column of the outer grid -->
 
-          <div class="grid grid-cols-1 md:grid-cols-4 max-h-[218px]">
+          <div
+            class="grid grid-cols-1 mb-10 md:mb-0 md:grid-cols-4 max-h-[218px]"
+          >
             <div class="col-start-1 col-end-3 md:col-end-2 flex flex-col">
               <img
                 src="public/images/blog-sample-1.jpg"
@@ -476,7 +473,9 @@
             </div>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-4 max-h-[218px]">
+          <div
+            class="grid grid-cols-1 mb-10 md:mb-0 md:grid-cols-4 max-h-[218px]"
+          >
             <div class="col-start-1 col-end-3 md:col-end-2 flex flex-col">
               <img
                 src="public/images/blog-sample-1.jpg"
@@ -501,7 +500,9 @@
               </div>
             </div>
           </div>
-          <div class="grid grid-cols-1 md:grid-cols-4 max-h-[218px]">
+          <div
+            class="grid grid-cols-1 mb-10 md:mb-0 md:grid-cols-4 max-h-[218px]"
+          >
             <div class="col-start-1 col-end-3 md:col-end-2 flex flex-col">
               <img
                 src="public/images/blog-sample-1.jpg"
@@ -526,7 +527,9 @@
               </div>
             </div>
           </div>
-          <div class="grid grid-cols-1 md:grid-cols-4 max-h-[218px]">
+          <div
+            class="grid grid-cols-1 mb-10 md:mb-0 md:grid-cols-4 max-h-[218px]"
+          >
             <div class="col-start-1 col-end-3 md:col-end-2 flex flex-col">
               <img
                 src="public/images/blog-sample-1.jpg"
@@ -577,7 +580,7 @@
           </div>
         </div>
 
-        <div class="px-4 py-2 order-1 md:order-2 flex-2">
+        <!-- <div class="px-4 py-2 order-1 md:order-2 flex-2">
           <img
             src="public/images/new-footer-logo.svg"
             alt="image"
@@ -586,9 +589,9 @@
           <img
             src="public/images/new-footer-logo.svg"
             alt="image"
-            class="md:hidden object-cover"
+            class="hidden object-cover"
           />
-        </div>
+        </div> -->
 
         <div class="px-4 flex-1 order-3 py-2">
           <h1 class="text-[40px] font-bold leading-[48px]">Phone</h1>
@@ -600,11 +603,11 @@
         </div>
       </div>
       <div
-        class="entry flex px-16 py-9 text-center bg-darkBlue flex-col md:flex-row items-start justify-between"
+        class="flex px-16 py-9 text-center bg-darkBlue flex-col md:flex-row items-start justify-between"
       >
-        <h5 class="entry__meta text-white mt-6">© 2024 Juris Concept</h5>
+        <h5 class="text-white mt-6">© 2024 Juris Concept</h5>
         <ul
-          class="hidden md:flex md:flex-row justify-start md:justify-end gap-10 items-start md:items-end space-x-1 text-center text-gray-50 bg-darkBlue text-[24px]"
+          class="hidden flex-col md:flex md:flex-row justify-start md:justify-end gap-10 items-start md:items-end space-x-1 text-center text-gray-50 bg-darkBlue text-[24px]"
         >
           <li>
             <a
@@ -661,7 +664,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
     <script>
-      -->
       // Air
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {

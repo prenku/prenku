@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en" class="sm:scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juris Koncept</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
+  </head>
+
+  <body class="min-h-screen bg-slate-50 dark:bg-black dark:text-white">
+<header
+      class="top-0 z-30 bg-white text-darkBlue md:relative md:flex md:justify-between md:items-center md:transform md:transition-all md:duration-200 border-b-4 border-b-brand"
+    >
+      <div
+        class="hidden md:flex md:justify-between md:w-full"
+        :cLass="{'h-34 transform  transition-all duration-200': !scrolledFromTop, 'h-20 transform trasition-all duration-200': scrolledFromTop}"
+      >
+        <div
+          class="md:flex md:items-center"
+          :cLass="{'h-24 transform  transition-all duration-200': !scrolledFromTop, 'h-20 transform trasition-all duration-200': scrolledFromTop}"
+        >
+          <!-- Logo on the left -->
+          <a
+            class="md:block"
+            href="#"
+            :cLass="{'h-34 transform  transition-all duration-200': !scrolledFromTop, 'h-20 transform trasition-all duration-200': scrolledFromTop}"
+          >
+            <img src="public/images/top-logo.svg" class=" " alt="" srcset="" />
+          </a>
+        </div>
+
+        <!-- Navigation -->
+        <div class="flex flex-col justify-between items-end bottom-2">
+          <!-- Top  -->
+          <div
+            class="hidden md:block bg-lightPink h-54 rounded-bl-2xl px-4 py-2 mb-2"
+          >
+            <a
+              class="md:block bg-lightPink pl-4 pr-24 text-2xl text-darkBlue rounded-bl-lg w-full"
+              href="tel:+38349225567"
+              >Konsultohuni
+              <strong style="font-size: 34px"> +383 49 225 567 </strong>
+            </a>
+          </div>
+          <!-- Bottom Menu -->
+          <div class="px-4 py-4">
+            <!-- Content for bottom menu -->
+            <nav class="mt-[20px] z-40 align-bottom pr-1 items-end">
+              <button class="md:hidden" @click="navOpen = !navOpen">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-7 w-7 text-brand"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+              </button>
+              <ul
+                class="fixed left-0 top-[-1] px-4 pt-12 flex flex-col hidden md:flex-row justify-start items-center gap-2 space-y-1 bg-white text-darkBlue text-[24px] transform transition duration-300 translate-x-full md:items-center md:relative md:flex md:space-x-10 md:min-h-0 md:px-0 md:py-0 md:space-y-0 md:translate-x-0"
+                :class="{'translate-x-full': !navOpen}"
+                :class="{'translate-x-0': navOpen}"
+              >
+                <li class="">
+                  <a class="text-brand hover:text-brand" href="/index.html">
+                    Ballina</a
+                  >
+                </li>
+                 <li class="">
+                  <a href="praktika.html" class="hover:text-brand">Praktika</a>
+                </li> 
+                <li class="">
+                  <a href="ekipa.html" class="hover:text-brand">Ekipa</a>
+                </li>
+                <li>
+                  <a href="kontakto.html" class="hover:text-brand">Kontakto</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <section class="mx-auto flex max-w-4xl items-center justify-between p-4">
+        <h1 class="text-3xl font-medium">
+          <a
+            href="#"
+            :cass="{'h-34 transform md:hidden transition-all duration-200': !scrolledFromTop, 'h-20 transform trasition-all duration-200': scrolledFromTop}"
+          >
+            <img
+              src="public/images/top-logo.svg"
+              class="md:hidden"
+              alt=""
+              srcset=""
+            />
+          </a>
+        </h1>
+        <div>
+          <button
+            id="hamburger-button"
+            class="relative h-8 w-8 cursor-pointer text-brand text-3xl md:hidden"
+          >
+            <div
+              class="absolute top-4 -mt-0.5 h-1 w-8 rounded bg-brand transition-all duration-500 before:absolute before:h-1 before:w-8 before:-translate-x-4 before:-translate-y-3 before:rounded before:bg-brand before:transition-all before:duration-500 before:content-[''] after:absolute after:h-1 after:w-8 after:-translate-x-4 after:translate-y-3 after:rounded after:bg-brand after:transition-all after:duration-500 after:content-['']"
+            ></div>
+          </button>
+        </div>
+      </section>
+      <section
+        id="mobile-menu"
+        class="top-68 z-40 justify-center absolute hidden w-full origin-top animate-open-menu flex-col bg-darkBlue text-5xl"
+      >
+        <nav
+          class="flex min-h-screen text-white flex-col items-center py-8"
+          aria-label="mobile"
+        >
+	  <a href="index.html" class="w-full py-6 text-center hover:text-brand"
+	    >Ballina</a
+	  >
+          <a
+            href="praktika.html"
+            class="w-full py-6 text-center hover:text-brand"
+            >Praktika</a
+          >
+	 <a
+            href="ekipa.html"
+            class="w-full py-6 text-center hover:text-brand"
+            >Ekipa</a
+          >
+         <a href="kontakto.html" class="w-full py-6 text-center hover:text-brand"
+            >Kontakto</a
+          >
+        </nav>
+      </section>
+    </header> 
+    <section class=" bg-white min-h-screen w-full">
+      <div
+        style="color: #ffffff"
+        class="relative z-10   items-center flex-col text-white  border-t-50 border-solid border-gray-500 rounded-tl-3xl rounded-tr-3xl"
+      >
+<div class=" text-center flex items-center justify-center min-h-[250px] py-16 mb-10 bg-purple text-white">
+  <h1 class="text-4xl text-white text-[28px] md:text-[60px] font-regular"> Praktika </h1>
+</div>
+<div class="grid grid-cold-1 md:grid-cols-2 items-center py-16  w-full px-4 md:px-40 gap-4">
+  <!-- Column 1 -->
+  <div>
+    <ul class="list-disc space-y-2 text-[22px]">
+      <li class="flex bg-darkBlue hover:bg-brand w-full"><a href="#" class="w-full flex items-center justify-center  h-[90px]"> Kontesti Civil </a></li>
+      <li class="flex bg-darkBlue hover:bg-brand w-full"><a href="#" class="w-full flex items-center justify-center h-[90px]">Link 2</a></li>
+      <li class="flex bg-darkBlue hover:bg-brand w-full"><a href="#" class="w-full flex items-center justify-center h-[90px]">Link 2</a></li>
+      <li class="flex bg-darkBlue hover:bg-brand w-full"><a href="#" class="w-full flex items-center justify-center h-[90px]">Link 2</a></li>
+      <li class="flex bg-darkBlue hover:bg-brand w-full"><a href="#" class="w-full flex items-center justify-center h-[90px]">Link 2</a></li>
+      <li class="flex bg-darkBlue hover:bg-brand w-full"><a href="#" class="w-full flex items-center justify-center h-[90px]">Link 2</a></li>
+      <li class="flex bg-darkBlue hover:bg-brand w-full"><a href="#" class="w-full flex items-center justify-center h-[90px]">Link 2</a></li>
+      <li class="flex bg-darkBlue hover:bg-brand w-full"><a href="#" class="w-full flex items-center justify-center h-[90px]">Link 2</a></li>
+      <li class="flex bg-darkBlue hover:bg-brand w-full"><a href="#" class="w-full flex items-center justify-center h-[90px]">Link 2</a></li>
+      <li class="flex bg-darkBlue hover:bg-brand w-full"><a href="#" class="w-full flex items-center justify-center h-[90px]">Link 2</a></li>
+
+    </ul>
+  </div>
+
+  <!-- Column 2 -->
+  <div>
+    <ul class="list-disc space-y-2 text-[22px]">
+      <li class="flex bg-darkBlue hover:bg-brand w-full"><a href="#" class="w-full flex items-center justify-center h-[90px]">Link 2</a></li>
+      <li class="flex bg-darkBlue hover:bg-brand w-full"><a href="#" class="w-full flex items-center justify-center h-[90px]">Link 2</a></li>
+      <li class="flex bg-darkBlue hover:bg-brand w-full"><a href="#" class="w-full flex items-center justify-center h-[90px]">Link 2</a></li>
+      <li class="flex bg-darkBlue hover:bg-brand w-full"><a href="#" class="w-full flex items-center justify-center h-[90px]">Link 2</a></li>
+      <li class="flex bg-darkBlue hover:bg-brand w-full"><a href="#" class="w-full flex items-center justify-center h-[90px]">Link 2</a></li>
+      <li class="flex bg-darkBlue hover:bg-brand w-full"><a href="#" class="w-full flex items-center justify-center h-[90px]">Link 2</a></li>
+      <li class="flex bg-darkBlue hover:bg-brand w-full"><a href="#" class="w-full flex items-center justify-center h-[90px]">Link 2</a></li>
+      <li class="flex bg-darkBlue hover:bg-brand w-full"><a href="#" class="w-full flex items-center justify-center h-[90px]">Link 2</a></li>
+      <li class="flex bg-darkBlue hover:bg-brand w-full"><a href="#" class="w-full flex items-center justify-center h-[90px]">Link 2</a></li>
+      <li class="flex bg-darkBlue hover:bg-brand w-full"><a href="#" class="w-full flex items-center justify-center h-[90px]">Link 2</a></li>
+
+
+         </ul>
+  </div>
+</div>
+     </div>
+
+    </section>
+    <section class="mt-[-20px] w-full">
+      <div
+        style="color: #ffffff"
+        class="relative z-20 top[-20px] pt-[135px] flex justify-between items-start flex-col md:flex-row text-white px-16 py-9 bg-darkBlue border-t-50 border-solid border-gray-500 rounded-tl-3xl rounded-tr-3xl"
+      >
+        <div class="px-4 flex-1 order-2 md:order-1 py-2">
+          <h1 class="text-[40px] font-bold leading-[48px]">Office</h1>
+          <p class="leading-[32px] flex flex-col">
+            <span class="text-brand text-[28px] font-bold">
+              Juris Concept
+            </span>
+            <span class="text-white/50">
+              Rruga Garibaldi Hyrja 51 K-II /5 10000 Prishtine
+            </span>
+          </p>
+          <div class="mt-4 flex flex-col">
+            <h4 class="font-bold pt-3" style="font-size: 18px">Orari Punes</h4>
+            <span class="text-white/50">
+              E Hene - E Premte 8:30AM - 4:00PM
+            </span>
+          </div>
+        </div>
+        <div class="px-4 flex-1 order-3 py-2">
+          <h1 class="text-[40px] font-bold leading-[48px]">Phone</h1>
+          <p style="font-size: 18px; line-height: 32px">
+            <a href="tel:+38349225567" class="text-brand text-[28px] font-bold">
+              +383 49 225 567
+            </a>
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex px-16 py-9 text-center bg-darkBlue flex-col md:flex-row items-start justify-between"
+      >
+        <h5 class="text-white mt-6">© 2024 Juris Concept</h5>
+        <ul
+          class="hidden flex-col md:flex md:flex-row justify-start md:justify-end gap-10 items-start md:items-end space-x-1 text-center text-gray-50 bg-darkBlue text-[24px]"
+        >
+          <li>
+            <a
+              href="index.html"
+              class="flex justify-center text-brand rounded-full py-2"
+              >Ballina</a
+            >
+          </li>
+          <li>
+            <a
+              href="praktika.html"
+              class="flex justify-center text-white hover:text-brand rounded-full py-2"
+              >Praktika</a
+            >
+          </li>
+          <li>
+            <a
+              href="ekipa.html"
+              class="flex justify-center text-white hover:text-brand rounded-full py-2"
+              >Ekipa 
+            </a>
+          </li>
+          <li>
+            <a
+              href="kontakto.html"
+              class="flex justify-center text-white hover:text-brand rounded-full py-2"
+            >
+              Kontakto</a
+            >
+          </li>
+        </ul>
+      </div>
+    </section>
+    <a
+      class="bg-brand flex justify-center text-center text-darkBlue"
+      href="http://naxiadesign.com"
+      >Website Design By NAXIA Design
+    </a>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.4.0/cdn.js"></script>
+    <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+    <script>
+      // Air
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          console.log(entry);
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          } else {
+            entry.target.classList.remove("show");
+          }
+        });
+      });
+
+      const hideElements = document.querySelectorAll(".notVisible");
+      hideElements.forEach((el) => observer.observe(el));
+
+      gsap.registerPlugin(ScrollTrigger);
+
+      const lenis = new Lenis();
+      lenis.on("scroll", ScrollTrigger.update);
+      gsap.ticker.add((time) => {
+        lenis.raf(time * 1000);
+      });
+      gsap.ticker.lagSmoothing(0);
+
+      const entries = document.querySelectorAll(".entry");
+      entries.forEach((entry) => {
+        let entryMeta = entry.querySelector(".entry__meta");
+        let entryMedia = entry.querySelector(".entry__media");
+        gsap.set(entryMeta, {
+          x: -200,
+          opacity: 0,
+        });
+        gsap.set(entryMedia, {
+          x: 100,
+          opacity: 0,
+        });
+        gsap.to(entryMeta, {
+          scrollTrigger: {
+            trigger: entry,
+            start: "top bottom",
+            end: "bottom 90%",
+            markers: false,
+            scrub: true,
+          },
+          x: 0,
+          opacity: 1,
+        });
+        gsap.to(entryMedia, {
+          scrollTrigger: {
+            trigger: entry,
+            start: "top center",
+            end: "bottom center",
+            markers: false,
+            scrub: true,
+          },
+          x: 0,
+          opacity: 1,
+        });
+      });
+      const accordionHeader = document.querySelectorAll(".accordion-header");
+      accordionHeader.forEach((header) => {
+        header.addEventListener("click", function () {
+          const accordionContent =
+            header.parentElement.querySelector(".accordion-content");
+          let accordionMaxHeight = accordionContent.style.maxHeight;
+
+          // Condition handling
+          if (accordionMaxHeight == "0px" || accordionMaxHeight.length == 0) {
+            accordionContent.style.maxHeight = `${
+              accordionContent.scrollHeight + 32
+            }px`;
+            header.querySelector(".fas").classList.remove("fa-plus");
+            header.querySelector(".fas").classList.add("fa-minus");
+            header.parentElement.classList.add("bg-darkBlue");
+          } else {
+            accordionContent.style.maxHeight = `0px`;
+            header.querySelector(".fas").classList.add("fa-plus");
+            header.querySelector(".fas").classList.remove("fa-minus");
+            header.parentElement.classList.remove("bg-darkBlue");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
