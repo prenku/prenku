@@ -10,8 +10,8 @@
   </head>
 
   <body class="min-h-screen bg-slate-50 dark:bg-black dark:text-white">
-<header
-      class="top-0 z-30 bg-white text-darkBlue md:relative md:flex md:justify-between md:items-center md:transform md:transition-all md:duration-200 border-b-4 border-b-brand"
+    <header
+      class="top-0 bg-white text-darkBlue md:relative md:flex md:justify-between md:items-center md:transform md:transition-all md:duration-200 border-b-4 border-b-brand"
     >
       <div
         class="hidden md:flex md:justify-between md:w-full"
@@ -24,7 +24,7 @@
           <!-- Logo on the left -->
           <a
             class="md:block"
-            href="#"
+            href="index.html"
             :cLass="{'h-34 transform  transition-all duration-200': !scrolledFromTop, 'h-20 transform trasition-all duration-200': scrolledFromTop}"
           >
             <img src="public/images/top-logo.svg" class=" " alt="" srcset="" />
@@ -70,13 +70,13 @@
                 :class="{'translate-x-0': navOpen}"
               >
                 <li class="">
-                  <a class=" hover:text-brand" href="/index.html">
-                    Ballina</a
+                  <a class="hover:text-brand" href="index.html"> Ballina</a>
+                </li>
+                <li class="">
+                  <a href="praktika.html" class="text-brand hover:text-brand"
+                    >Praktika</a
                   >
                 </li>
-                 <li class="">
-                  <a href="praktika.html" class="text-brand hover:text-brand">Praktika</a>
-                </li> 
                 <li class="">
                   <a href="ekipa.html" class="hover:text-brand">Ekipa</a>
                 </li>
@@ -91,7 +91,7 @@
       <section class="mx-auto flex max-w-4xl items-center justify-between p-4">
         <h1 class="text-3xl font-medium">
           <a
-            href="#"
+            href="index.html"
             :cass="{'h-34 transform md:hidden transition-all duration-200': !scrolledFromTop, 'h-20 transform trasition-all duration-200': scrolledFromTop}"
           >
             <img
@@ -121,71 +121,202 @@
           class="flex min-h-screen text-white flex-col items-center py-8"
           aria-label="mobile"
         >
-	  <a href="index.html" class="w-full py-6 text-center hover:text-brand"
-	    >Ballina</a
-	  >
+          <a href="index.html" class="w-full py-6 text-center hover:text-brand"
+            >Ballina</a
+          >
           <a
             href="praktika.html"
             class="w-full py-6 text-center hover:text-brand"
             >Praktika</a
           >
-	 <a
-            href="ekipa.html"
-            class="w-full py-6 text-center hover:text-brand"
+          <a href="ekipa.html" class="w-full py-6 text-center hover:text-brand"
             >Ekipa</a
           >
-         <a href="kontakto.html" class="w-full py-6 text-center hover:text-brand"
+          <a
+            href="kontakto.html"
+            class="w-full py-6 text-center hover:text-brand"
             >Kontakto</a
           >
         </nav>
       </section>
-    </header> 
-    <section class=" bg-white min-h-screen w-full">
+    </header>
+    <section class="bg-purple w-full">
       <div
         style="color: #ffffff"
-        class="relative z-10   items-center flex-col text-white  border-t-50 border-solid border-gray-500 rounded-tl-3xl rounded-tr-3xl"
+        class="items-center flex-col text-white border-t-50 border-solid border-gray-500 rounded-tl-3xl rounded-tr-3xl"
       >
-<div class=" text-center flex items-center justify-center min-h-[250px] py-16 mb-10 bg-purple text-white">
-  <h1 class="text-4xl text-white text-[28px] md:text-[60px] font-regular"> Praktika </h1>
-</div>
-<div class="grid grid-cold-1 md:grid-cols-2 items-center py-16  w-full px-4 md:px-40 gap-4">
-  <!-- Column 1 -->
-  <div>
-    <ul class="list-disc space-y-2 text-[22px]">
-      <li class="flex bg-darkBlue hover:bg-brand w-full"><a href="#" class="w-full flex items-center justify-center  h-[90px]"> Kontesti Civil </a></li>
-      <li class="flex bg-darkBlue hover:bg-brand w-full"><a href="#" class="w-full flex items-center justify-center h-[90px]">Link 2</a></li>
-      <li class="flex bg-darkBlue hover:bg-brand w-full"><a href="#" class="w-full flex items-center justify-center h-[90px]">Link 2</a></li>
-      <li class="flex bg-darkBlue hover:bg-brand w-full"><a href="#" class="w-full flex items-center justify-center h-[90px]">Link 2</a></li>
-      <li class="flex bg-darkBlue hover:bg-brand w-full"><a href="#" class="w-full flex items-center justify-center h-[90px]">Link 2</a></li>
-      <li class="flex bg-darkBlue hover:bg-brand w-full"><a href="#" class="w-full flex items-center justify-center h-[90px]">Link 2</a></li>
-      <li class="flex bg-darkBlue hover:bg-brand w-full"><a href="#" class="w-full flex items-center justify-center h-[90px]">Link 2</a></li>
-      <li class="flex bg-darkBlue hover:bg-brand w-full"><a href="#" class="w-full flex items-center justify-center h-[90px]">Link 2</a></li>
-      <li class="flex bg-darkBlue hover:bg-brand w-full"><a href="#" class="w-full flex items-center justify-center h-[90px]">Link 2</a></li>
-      <li class="flex bg-darkBlue hover:bg-brand w-full"><a href="#" class="w-full flex items-center justify-center h-[90px]">Link 2</a></li>
+        <div
+          class="text-center flex items-center justify-center min-h-[250px] py-16 mb-10 bg-purple text-white"
+        >
+          <h1
+            class="text-4xl text-white text-[28px] md:text-[60px] font-regular"
+          >
+            Praktika
+          </h1>
+        </div>
+      </div>
+    </section>
+    <section class="mt-[-60px] w-full">
+      <div
+        class="relative z-20 top[-120px] flex justify-between items-start flex-col md:flex-row text-white bg-white border-t-50 border-solid border-gray-500 rounded-tl-3xl rounded-tr-3xl"
+      >
+        <div
+          class="grid grid-cold-1 md:grid-cols-2 items-center py-16 w-full px-4 md:px-40 gap-4"
+        >
+          <!-- Column 1 -->
+          <div>
+            <ul class="list-disc space-y-2 text-[22px]">
+              <li class="flex bg-darkBlue hover:bg-brand w-full">
+                <a
+                  href="#"
+                  class="w-full flex items-center justify-center h-[90px]"
+                >
+                  Kontesti Civil
+                </a>
+              </li>
+              <li class="flex bg-darkBlue hover:bg-brand w-full">
+                <a
+                  href="#"
+                  class="w-full flex items-center justify-center h-[90px]"
+                  >Link 2</a
+                >
+              </li>
+              <li class="flex bg-darkBlue hover:bg-brand w-full">
+                <a
+                  href="#"
+                  class="w-full flex items-center justify-center h-[90px]"
+                  >Link 2</a
+                >
+              </li>
+              <li class="flex bg-darkBlue hover:bg-brand w-full">
+                <a
+                  href="#"
+                  class="w-full flex items-center justify-center h-[90px]"
+                  >Link 2</a
+                >
+              </li>
+              <li class="flex bg-darkBlue hover:bg-brand w-full">
+                <a
+                  href="#"
+                  class="w-full flex items-center justify-center h-[90px]"
+                  >Link 2</a
+                >
+              </li>
+              <li class="flex bg-darkBlue hover:bg-brand w-full">
+                <a
+                  href="#"
+                  class="w-full flex items-center justify-center h-[90px]"
+                  >Link 2</a
+                >
+              </li>
+              <li class="flex bg-darkBlue hover:bg-brand w-full">
+                <a
+                  href="#"
+                  class="w-full flex items-center justify-center h-[90px]"
+                  >Link 2</a
+                >
+              </li>
+              <li class="flex bg-darkBlue hover:bg-brand w-full">
+                <a
+                  href="#"
+                  class="w-full flex items-center justify-center h-[90px]"
+                  >Link 2</a
+                >
+              </li>
+              <li class="flex bg-darkBlue hover:bg-brand w-full">
+                <a
+                  href="#"
+                  class="w-full flex items-center justify-center h-[90px]"
+                  >Link 2</a
+                >
+              </li>
+              <li class="flex bg-darkBlue hover:bg-brand w-full">
+                <a
+                  href="#"
+                  class="w-full flex items-center justify-center h-[90px]"
+                  >Link 2</a
+                >
+              </li>
+            </ul>
+          </div>
 
-    </ul>
-  </div>
-
-  <!-- Column 2 -->
-  <div>
-    <ul class="list-disc space-y-2 text-[22px]">
-      <li class="flex bg-darkBlue hover:bg-brand w-full"><a href="#" class="w-full flex items-center justify-center h-[90px]">Link 2</a></li>
-      <li class="flex bg-darkBlue hover:bg-brand w-full"><a href="#" class="w-full flex items-center justify-center h-[90px]">Link 2</a></li>
-      <li class="flex bg-darkBlue hover:bg-brand w-full"><a href="#" class="w-full flex items-center justify-center h-[90px]">Link 2</a></li>
-      <li class="flex bg-darkBlue hover:bg-brand w-full"><a href="#" class="w-full flex items-center justify-center h-[90px]">Link 2</a></li>
-      <li class="flex bg-darkBlue hover:bg-brand w-full"><a href="#" class="w-full flex items-center justify-center h-[90px]">Link 2</a></li>
-      <li class="flex bg-darkBlue hover:bg-brand w-full"><a href="#" class="w-full flex items-center justify-center h-[90px]">Link 2</a></li>
-      <li class="flex bg-darkBlue hover:bg-brand w-full"><a href="#" class="w-full flex items-center justify-center h-[90px]">Link 2</a></li>
-      <li class="flex bg-darkBlue hover:bg-brand w-full"><a href="#" class="w-full flex items-center justify-center h-[90px]">Link 2</a></li>
-      <li class="flex bg-darkBlue hover:bg-brand w-full"><a href="#" class="w-full flex items-center justify-center h-[90px]">Link 2</a></li>
-      <li class="flex bg-darkBlue hover:bg-brand w-full"><a href="#" class="w-full flex items-center justify-center h-[90px]">Link 2</a></li>
-
-
-         </ul>
-  </div>
-</div>
-     </div>
-
+          <!-- Column 2 -->
+          <div>
+            <ul class="list-disc space-y-2 text-[22px]">
+              <li class="flex bg-darkBlue hover:bg-brand w-full">
+                <a
+                  href="#"
+                  class="w-full flex items-center justify-center h-[90px]"
+                  >Link 2</a
+                >
+              </li>
+              <li class="flex bg-darkBlue hover:bg-brand w-full">
+                <a
+                  href="#"
+                  class="w-full flex items-center justify-center h-[90px]"
+                  >Link 2</a
+                >
+              </li>
+              <li class="flex bg-darkBlue hover:bg-brand w-full">
+                <a
+                  href="#"
+                  class="w-full flex items-center justify-center h-[90px]"
+                  >Link 2</a
+                >
+              </li>
+              <li class="flex bg-darkBlue hover:bg-brand w-full">
+                <a
+                  href="#"
+                  class="w-full flex items-center justify-center h-[90px]"
+                  >Link 2</a
+                >
+              </li>
+              <li class="flex bg-darkBlue hover:bg-brand w-full">
+                <a
+                  href="#"
+                  class="w-full flex items-center justify-center h-[90px]"
+                  >Link 2</a
+                >
+              </li>
+              <li class="flex bg-darkBlue hover:bg-brand w-full">
+                <a
+                  href="#"
+                  class="w-full flex items-center justify-center h-[90px]"
+                  >Link 2</a
+                >
+              </li>
+              <li class="flex bg-darkBlue hover:bg-brand w-full">
+                <a
+                  href="#"
+                  class="w-full flex items-center justify-center h-[90px]"
+                  >Link 2</a
+                >
+              </li>
+              <li class="flex bg-darkBlue hover:bg-brand w-full">
+                <a
+                  href="#"
+                  class="w-full flex items-center justify-center h-[90px]"
+                  >Link 2</a
+                >
+              </li>
+              <li class="flex bg-darkBlue hover:bg-brand w-full">
+                <a
+                  href="#"
+                  class="w-full flex items-center justify-center h-[90px]"
+                  >Link 2</a
+                >
+              </li>
+              <li class="flex bg-darkBlue hover:bg-brand w-full">
+                <a
+                  href="#"
+                  class="w-full flex items-center justify-center h-[90px]"
+                  >Link 2</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
     <section class="mt-[-20px] w-full">
       <div
@@ -243,7 +374,7 @@
             <a
               href="ekipa.html"
               class="flex justify-center text-white hover:text-brand rounded-full py-2"
-              >Ekipa 
+              >Ekipa
             </a>
           </li>
           <li>
