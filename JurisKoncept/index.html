@@ -5,16 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Juris Koncept</title>
+  <link
+      href="https://cdn.rawgit.com/michalsnik/aos/2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/main.js" defer></script>
   </head>
 
   <body class="min-h-screen bg-slate-50 dark:bg-black dark:text-white">
-    <header
-      class="top-0 z-30 bg-white text-darkBlue md:relative md:flex md:justify-between md:items-center md:transform md:transition-all md:duration-200 border-b-4 border-b-brand"
+     <header
+      class="top-0 z-30 border-b-4 border-b-brand bg-white text-darkBlue md:relative md:flex md:transform md:items-center md:justify-between md:transition-all md:duration-200"
     >
       <div
-        class="hidden md:flex md:justify-between md:w-full"
+        class="hidden md:flex md:w-full md:justify-between"
         :cLass="{'h-34 transform  transition-all duration-200': !scrolledFromTop, 'h-20 transform trasition-all duration-200': scrolledFromTop}"
       >
         <div
@@ -22,23 +27,24 @@
           :cLass="{'h-24 transform  transition-all duration-200': !scrolledFromTop, 'h-20 transform trasition-all duration-200': scrolledFromTop}"
         >
           <!-- Logo on the left -->
-          <a
+          <a data-aos="slide-right"  data-aos-delay="300" 
+
             class="md:block"
             href="#"
             :cLass="{'h-34 transform  transition-all duration-200': !scrolledFromTop, 'h-20 transform trasition-all duration-200': scrolledFromTop}"
           >
-            <img src="public/images/top-logo.svg" class=" " alt="" srcset="" />
+            <img src="public/images/top-logo.svg" />
           </a>
         </div>
 
         <!-- Navigation -->
-        <div class="flex flex-col justify-between items-end bottom-2">
+        <div class="bottom-2 flex flex-col items-end justify-between">
           <!-- Top  -->
-          <div
-            class="hidden md:block bg-lightPink h-54 rounded-bl-2xl px-4 py-2 mb-2"
+          <div data-aos="slide-down" data-aos-easing="ease-in" data-aos-duration="500" data-aos-delay="100" 
+            class="h-54 mb-2 hidden rounded-bl-2xl bg-lightPink px-4 py-2 md:block"
           >
             <a
-              class="md:block bg-lightPink pl-4 pr-24 text-2xl text-darkBlue rounded-bl-lg w-full"
+              class="w-full rounded-bl-lg bg-lightPink pl-4 pr-24 text-2xl text-darkBlue md:block"
               href="tel:+38349225567"
               >Konsultohuni
               <strong style="font-size: 34px"> +383 49 225 567 </strong>
@@ -47,7 +53,7 @@
           <!-- Bottom Menu -->
           <div class="px-4 py-4">
             <!-- Content for bottom menu -->
-            <nav class="mt-[20px] z-40 align-bottom pr-1 items-end">
+            <nav class="z-40 mt-[20px] items-end pr-1 align-bottom" data-aos="slide-left" data-aos-delay="200">
               <button class="md:hidden" @click="navOpen = !navOpen">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -64,21 +70,21 @@
                   />
                 </svg>
               </button>
-              <ul
-                class="fixed left-0 top-[-1] px-4 pt-12 flex flex-col hidden md:flex-row justify-start items-center gap-2 space-y-1 bg-white text-darkBlue text-[24px] transform transition duration-300 translate-x-full md:items-center md:relative md:flex md:space-x-10 md:min-h-0 md:px-0 md:py-0 md:space-y-0 md:translate-x-0"
+              <ul  
+                class="fixed left-0 top-[-1] flex hidden translate-x-full transform flex-col items-center justify-start gap-2 space-y-1 bg-white px-4 pt-12 text-[24px] text-darkBlue transition duration-300 md:relative md:flex md:min-h-0 md:translate-x-0 md:flex-row md:items-center md:space-x-10 md:space-y-0 md:px-0 md:py-0"
                 :class="{'translate-x-full': !navOpen}"
                 :class="{'translate-x-0': navOpen}"
               >
                 <li class="">
-                  <a class="text-brand hover:text-brand" href="index.html">
-                    Ballina</a
-                  >
+                  <a class="text-brand hover:text-brand" href="index.html"> Ballina</a>
                 </li>
                 <li class="">
                   <a href="praktika.html" class="hover:text-brand">Praktika</a>
                 </li>
                 <li class="">
-                  <a href="ekipa.html" class="hover:text-brand">Ekipa</a>
+                  <a href="ekipa.html" class=" hover:text-brand"
+                    >Ekipa</a
+                  >
                 </li>
                 <li>
                   <a href="kontakto.html" class="hover:text-brand">Kontakto</a>
@@ -105,7 +111,7 @@
         <div>
           <button
             id="hamburger-button"
-            class="relative h-8 w-8 cursor-pointer text-brand text-3xl md:hidden"
+            class="relative h-8 w-8 cursor-pointer text-3xl text-brand md:hidden"
           >
             <div
               class="absolute top-4 -mt-0.5 h-1 w-8 rounded bg-brand transition-all duration-500 before:absolute before:h-1 before:w-8 before:-translate-x-4 before:-translate-y-3 before:rounded before:bg-brand before:transition-all before:duration-500 before:content-[''] after:absolute after:h-1 after:w-8 after:-translate-x-4 after:translate-y-3 after:rounded after:bg-brand after:transition-all after:duration-500 after:content-['']"
@@ -115,10 +121,10 @@
       </section>
       <section
         id="mobile-menu"
-        class="top-68 z-40 justify-center absolute hidden w-full origin-top animate-open-menu flex-col bg-darkBlue text-5xl"
+        class="top-68 absolute z-40 hidden w-full origin-top animate-open-menu flex-col justify-center bg-darkBlue text-5xl"
       >
         <nav
-          class="flex min-h-screen text-white flex-col items-center py-8"
+          class="flex min-h-screen flex-col items-center py-8 text-white"
           aria-label="mobile"
         >
           <a href="index.html" class="w-full py-6 text-center hover:text-brand"
@@ -142,12 +148,12 @@
     </header>
     <section
       style="background-image: url('public/images/hero.jpg')"
-      class="relative bg-hero-svg z-10 animate slide delay-15 pb-16 px-8"
+      class="relative bg-hero-svg z-10 animate slide delay-15 pb-16 px-8" 
     >
       <div
         class="max-w-7xl mx-auto flex flex-col md:flex-row top-32 items-center md:h-[700px] justify-center"
       >
-        <div class="flex-1 justify-center items-center md:mr-6">
+        <div class="flex-1 justify-center items-center md:mr-6" data-aos="fade-right" data-aos-easing="ease-in" data-aos-delay="300">
           <h1
             class="reveal-type font-bold text-[40px] md:text-[60px] text-white mt-10 leading-tight"
           >
@@ -631,6 +637,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.4.0/cdn.js"></script>
     <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.3.4/dist/aos.js"></script>
 
     <script src="https://unpkg.com/split-type"></script>
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>

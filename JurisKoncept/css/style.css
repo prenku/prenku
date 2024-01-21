@@ -833,6 +833,10 @@ html {
   grid-column-end: 9;
 }
 
+.col-end-1 {
+  grid-column-end: 1;
+}
+
 .mx-4 {
   margin-left: 1rem;
   margin-right: 1rem;

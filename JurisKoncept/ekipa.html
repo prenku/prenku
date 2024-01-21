@@ -5,16 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Juris Koncept</title>
+    <link
+      href="https://cdn.rawgit.com/michalsnik/aos/2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/main.js" defer></script>
   </head>
 
   <body class="min-h-screen bg-slate-50 dark:bg-black dark:text-white">
     <header
-      class="top-0 z-30 bg-white text-darkBlue md:relative md:flex md:justify-between md:items-center md:transform md:transition-all md:duration-200 border-b-4 border-b-brand"
+      class="top-0 z-30 border-b-4 border-b-brand bg-white text-darkBlue md:relative md:flex md:transform md:items-center md:justify-between md:transition-all md:duration-200"
     >
       <div
-        class="hidden md:flex md:justify-between md:w-full"
+        class="hidden md:flex md:w-full md:justify-between"
         :cLass="{'h-34 transform  transition-all duration-200': !scrolledFromTop, 'h-20 transform trasition-all duration-200': scrolledFromTop}"
       >
         <div
@@ -22,23 +26,24 @@
           :cLass="{'h-24 transform  transition-all duration-200': !scrolledFromTop, 'h-20 transform trasition-all duration-200': scrolledFromTop}"
         >
           <!-- Logo on the left -->
-          <a
+          <a data-aos="slide-right"  data-aos-delay="300" 
+
             class="md:block"
             href="#"
             :cLass="{'h-34 transform  transition-all duration-200': !scrolledFromTop, 'h-20 transform trasition-all duration-200': scrolledFromTop}"
           >
-            <img src="public/images/top-logo.svg" class=" " alt="" srcset="" />
+            <img src="public/images/top-logo.svg" />
           </a>
         </div>
 
         <!-- Navigation -->
-        <div class="flex flex-col justify-between items-end bottom-2">
+        <div class="bottom-2 flex flex-col items-end justify-between">
           <!-- Top  -->
-          <div
-            class="hidden md:block bg-lightPink h-54 rounded-bl-2xl px-4 py-2 mb-2"
+          <div data-aos="slide-down" data-aos-delay="100" 
+            class="h-54 mb-2 hidden rounded-bl-2xl bg-lightPink px-4 py-2 md:block"
           >
             <a
-              class="md:block bg-lightPink pl-4 pr-24 text-2xl text-darkBlue rounded-bl-lg w-full"
+              class="w-full rounded-bl-lg bg-lightPink pl-4 pr-24 text-2xl text-darkBlue md:block"
               href="tel:+38349225567"
               >Konsultohuni
               <strong style="font-size: 34px"> +383 49 225 567 </strong>
@@ -47,7 +52,7 @@
           <!-- Bottom Menu -->
           <div class="px-4 py-4">
             <!-- Content for bottom menu -->
-            <nav class="mt-[20px] z-40 align-bottom pr-1 items-end">
+            <nav class="z-40 mt-[20px] items-end pr-1 align-bottom" data-aos="slide-left" data-aos-delay="200">
               <button class="md:hidden" @click="navOpen = !navOpen">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -64,8 +69,8 @@
                   />
                 </svg>
               </button>
-              <ul
-                class="fixed left-0 top-[-1] px-4 pt-12 flex flex-col hidden md:flex-row justify-start items-center gap-2 space-y-1 bg-white text-darkBlue text-[24px] transform transition duration-300 translate-x-full md:items-center md:relative md:flex md:space-x-10 md:min-h-0 md:px-0 md:py-0 md:space-y-0 md:translate-x-0"
+              <ul  
+                class="fixed left-0 top-[-1] flex hidden translate-x-full transform flex-col items-center justify-start gap-2 space-y-1 bg-white px-4 pt-12 text-[24px] text-darkBlue transition duration-300 md:relative md:flex md:min-h-0 md:translate-x-0 md:flex-row md:items-center md:space-x-10 md:space-y-0 md:px-0 md:py-0"
                 :class="{'translate-x-full': !navOpen}"
                 :class="{'translate-x-0': navOpen}"
               >
@@ -105,7 +110,7 @@
         <div>
           <button
             id="hamburger-button"
-            class="relative h-8 w-8 cursor-pointer text-brand text-3xl md:hidden"
+            class="relative h-8 w-8 cursor-pointer text-3xl text-brand md:hidden"
           >
             <div
               class="absolute top-4 -mt-0.5 h-1 w-8 rounded bg-brand transition-all duration-500 before:absolute before:h-1 before:w-8 before:-translate-x-4 before:-translate-y-3 before:rounded before:bg-brand before:transition-all before:duration-500 before:content-[''] after:absolute after:h-1 after:w-8 after:-translate-x-4 after:translate-y-3 after:rounded after:bg-brand after:transition-all after:duration-500 after:content-['']"
@@ -115,10 +120,10 @@
       </section>
       <section
         id="mobile-menu"
-        class="top-68 z-40 justify-center absolute hidden w-full origin-top animate-open-menu flex-col bg-darkBlue text-5xl"
+        class="top-68 absolute z-40 hidden w-full origin-top animate-open-menu flex-col justify-center bg-darkBlue text-5xl"
       >
         <nav
-          class="flex min-h-screen text-white flex-col items-center py-8"
+          class="flex min-h-screen flex-col items-center py-8 text-white"
           aria-label="mobile"
         >
           <a href="index.html" class="w-full py-6 text-center hover:text-brand"
@@ -153,26 +158,29 @@
           );
         "
       >
-        <div class="grid gird-cols-1 md:grid-cols-9 px-4 md:px-20 py-20 gap-8">
-          <aside class="md:col-start-1 md:col-end-2">
-            <div class="widget js-sticky-widget">
+        <div class="gird-cols-1 grid gap-8 px-4 py-20 md:grid-cols-9 md:px-20">
+          <aside class="col-start-1 col-end-1 md:col-start-1 md:col-end-2">
+            <div class="widget js-sticky-widget"><div data-aos="fade-up" data-aos-delay="400">
               <div class="md:w-[450px]">
                 <div
-                  class="bg-white relative rounded-lg shadow-md h-[218]"
+                  class="relative h-[218] rounded-lg bg-white shadow-md"
                   style="border-radius: 3rem"
                 >
+
+
                   <img
                     style="border-radius: 3rem"
                     src="public/images/profile.jpg"
                     alt="image"
-                    class="w-full sticky md:w-[650px] h-[300px] md:h-[575px] object-cover rounded-t-xl"
-                  />
+                    class="sticky h-[300px] w-full rounded-t-xl object-cover md:h-[575px] md:w-[650px]"
+                  />   </div>
+
                 </div>
               </div>
             </div>
           </aside>
-          <div class="md:col-start-4 md:col-end-8 container w-full px-8">
-            <div class="grid grid-cols-1 md:grid-cols-1 gap-8">
+          <div class="container w-full px-8 md:col-start-4 md:col-end-8">
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-1">
               <!-- Profile Image 
               <div class="md:col-span-1">
                 <img
@@ -182,7 +190,7 @@
                 />
               </div>-->
               <!-- Lawyer Information -->
-              <div class="md:col-span-2 text-white">
+              <div class="text-white md:col-span-2">
                 <p class="text-[48px] font-semibold">Kushtrim Prenku</p>
                 <p class="text-white/50">
                   Kushtrim Prenku is a lawyer at Juris Concept he advises,
@@ -235,7 +243,7 @@
                 firm specializes in whistleblower law. He became familiar with
                 whistleblower provisions in the 50 states and assisted in
                 bringing a qui tam action on behalf of the federal government.
-                <p class="text-lg text-white font-semibold mt-4">
+                <p class="mt-4 text-lg font-semibold text-white">
                   Contact Information
                 </p>
                 <ul class="list-disc pl-4">
@@ -258,157 +266,108 @@
             </div>
           </div>
           <div
-            class="md:col-start-8 md:col-end-10 grid grid-cold-1 md:grid-cols-1 items-center text-white w-full px-4 widget js-sticky-widget gap-4"
+            class="grid-cold-1 widget js-sticky-widget grid w-full items-center gap-4 px-4 text-white md:col-start-8 md:col-end-10 md:grid-cols-1"
           >
             <!-- Column 1 -->
             <div>
               <ul class="list-disc space-y-2 text-[22px]">
-                <li class="flex bg-darkBlue hover:bg-brand w-full">
+                <li data-aos="slide-up" data-duration="100" class="flex w-full bg-darkBlue hover:bg-brand">
                   <a
                     href="#"
-                    class="w-full flex items-center justify-center h-[90px]"
+                    class="flex h-[90px] w-full items-center justify-center"
                   >
                     Kontesti Civil
                   </a>
                 </li>
-                <li class="flex bg-darkBlue hover:bg-brand w-full">
+                <li  data-aos="slide-up"class="flex w-full bg-darkBlue hover:bg-brand">
                   <a
                     href="#"
-                    class="w-full flex items-center justify-center h-[90px]"
+                    class="flex h-[90px] w-full items-center justify-center"
                     >Link 2</a
                   >
                 </li>
-                <li class="flex bg-darkBlue hover:bg-brand w-full">
+                <li data-aos="slide-up"class="flex w-full bg-darkBlue hover:bg-brand">
                   <a
                     href="#"
-                    class="w-full flex items-center justify-center h-[90px]"
+                    class="flex h-[90px] w-full items-center justify-center"
                     >Link 2</a
                   >
                 </li>
-                <li class="flex bg-darkBlue hover:bg-brand w-full">
+                <li data-aos="slide-up"class="flex w-full bg-darkBlue hover:bg-brand">
                   <a
                     href="#"
-                    class="w-full flex items-center justify-center h-[90px]"
+                    class="flex h-[90px] w-full items-center justify-center"
                     >Link 2</a
                   >
                 </li>
-                <li class="flex bg-darkBlue hover:bg-brand w-full">
+                <li data-aos="slide-up"class="flex w-full bg-darkBlue hover:bg-brand">
                   <a
                     href="#"
-                    class="w-full flex items-center justify-center h-[90px]"
+                    class="flex h-[90px] w-full items-center justify-center"
                     >Link 2</a
                   >
                 </li>
-                <li class="flex bg-darkBlue hover:bg-brand w-full">
+                <li data-aos="slide-up"class="flex w-full bg-darkBlue hover:bg-brand">
                   <a
                     href="#"
-                    class="w-full flex items-center justify-center h-[90px]"
+                    class="flex h-[90px] w-full items-center justify-center"
                     >Link 2</a
                   >
                 </li>
-                <li class="flex bg-darkBlue hover:bg-brand w-full">
+                <li data-aos="slide-up"class="flex w-full bg-darkBlue hover:bg-brand">
                   <a
                     href="#"
-                    class="w-full flex items-center justify-center h-[90px]"
+                    class="flex h-[90px] w-full items-center justify-center"
                     >Link 2</a
                   >
                 </li>
-                <li class="flex bg-darkBlue hover:bg-brand w-full">
+                <li data-aos="slide-up"class="flex w-full bg-darkBlue hover:bg-brand">
                   <a
                     href="#"
-                    class="w-full flex items-center justify-center h-[90px]"
+                    class="flex h-[90px] w-full items-center justify-center"
                     >Link 2</a
                   >
                 </li>
-                <li class="flex bg-darkBlue hover:bg-brand w-full">
+                <li data-aos="slide-up"class="flex w-full bg-darkBlue hover:bg-brand">
                   <a
                     href="#"
-                    class="w-full flex items-center justify-center h-[90px]"
+                    class="flex h-[90px] w-full items-center justify-center"
                     >Link 2</a
                   >
                 </li>
-                <li class="flex bg-darkBlue hover:bg-brand w-full">
+                <li data-aos="slide-up"class="flex w-full bg-darkBlue hover:bg-brand">
                   <a
                     href="#"
-                    class="w-full flex items-center justify-center h-[90px]"
+                    class="flex h-[90px] w-full items-center justify-center"
+                    >Link 2</a
+                  >
+                <li data-aos="slide-up"class="flex w-full bg-darkBlue hover:bg-brand">
+                  <a
+                    href="#"
+                    class="flex h-[90px] w-full items-center justify-center"
                     >Link 2</a
                   >
                 </li>
-              </ul>
-            </div>
-
-            <!-- Column 2 -->
-            <div>
-              <ul class="list-disc space-y-2 text-[22px]">
-                <li class="flex bg-darkBlue hover:bg-brand w-full">
+                <li data-aos="slide-up"class="flex w-full bg-darkBlue hover:bg-brand">
                   <a
                     href="#"
-                    class="w-full flex items-center justify-center h-[90px]"
+                    class="flex h-[90px] w-full items-center justify-center"
                     >Link 2</a
                   >
                 </li>
-                <li class="flex bg-darkBlue hover:bg-brand w-full">
+                <li data-aos="slide-up"class="flex w-full bg-darkBlue hover:bg-brand">
                   <a
                     href="#"
-                    class="w-full flex items-center justify-center h-[90px]"
+                    class="flex h-[90px] w-full items-center justify-center"
                     >Link 2</a
                   >
                 </li>
-                <li class="flex bg-darkBlue hover:bg-brand w-full">
+                <li data-aos="slide-up"class="flex w-full bg-darkBlue hover:bg-brand">
                   <a
                     href="#"
-                    class="w-full flex items-center justify-center h-[90px]"
+                    class="flex h-[90px] w-full items-center justify-center"
                     >Link 2</a
-                  >
-                </li>
-                <li class="flex bg-darkBlue hover:bg-brand w-full">
-                  <a
-                    href="#"
-                    class="w-full flex items-center justify-center h-[90px]"
-                    >Link 2</a
-                  >
-                </li>
-                <li class="flex bg-darkBlue hover:bg-brand w-full">
-                  <a
-                    href="#"
-                    class="w-full flex items-center justify-center h-[90px]"
-                    >Link 2</a
-                  >
-                </li>
-                <li class="flex bg-darkBlue hover:bg-brand w-full">
-                  <a
-                    href="#"
-                    class="w-full flex items-center justify-center h-[90px]"
-                    >Link 2</a
-                  >
-                </li>
-                <li class="flex bg-darkBlue hover:bg-brand w-full">
-                  <a
-                    href="#"
-                    class="w-full flex items-center justify-center h-[90px]"
-                    >Link 2</a
-                  >
-                </li>
-                <li class="flex bg-darkBlue hover:bg-brand w-full">
-                  <a
-                    href="#"
-                    class="w-full flex items-center justify-center h-[90px]"
-                    >Link 2</a
-                  >
-                </li>
-                <li class="flex bg-darkBlue hover:bg-brand w-full">
-                  <a
-                    href="#"
-                    class="w-full flex items-center justify-center h-[90px]"
-                    >Link 2</a
-                  >
-                </li>
-                <li class="flex bg-darkBlue hover:bg-brand w-full">
-                  <a
-                    href="#"
-                    class="w-full flex items-center justify-center h-[90px]"
-                    >Link 2</a
-                  >
+                  >  
                 </li>
               </ul>
             </div>
@@ -419,12 +378,12 @@
     <section class="mt-[-20px] w-full">
       <div
         style="color: #ffffff"
-        class="relative z-20 top[-20px] pt-[135px] flex justify-between items-start flex-col md:flex-row text-white px-16 py-9 bg-darkBlue border-t-50 border-solid border-gray-500 rounded-tl-3xl rounded-tr-3xl"
+        class="top[-20px] border-t-50 relative z-20 flex flex-col items-start justify-between rounded-tl-3xl rounded-tr-3xl border-solid border-gray-500 bg-darkBlue px-16 py-9 pt-[135px] text-white md:flex-row"
       >
-        <div class="px-4 flex-1 order-2 md:order-1 py-2">
+        <div class="order-2 flex-1 px-4 py-2 md:order-1">
           <h1 class="text-[40px] font-bold leading-[48px]">Office</h1>
-          <p class="leading-[32px] flex flex-col">
-            <span class="text-brand text-[28px] font-bold">
+          <p class="flex flex-col leading-[32px]">
+            <span class="text-[28px] font-bold text-brand">
               Juris Concept
             </span>
             <span class="text-white/50">
@@ -432,53 +391,53 @@
             </span>
           </p>
           <div class="mt-4 flex flex-col">
-            <h4 class="font-bold pt-3" style="font-size: 18px">Orari Punes</h4>
+            <h4 class="pt-3 font-bold" style="font-size: 18px">Orari Punes</h4>
             <span class="text-white/50">
               E Hene - E Premte 8:30AM - 4:00PM
             </span>
           </div>
         </div>
-        <div class="px-4 flex-1 order-3 py-2">
+        <div class="order-3 flex-1 px-4 py-2">
           <h1 class="text-[40px] font-bold leading-[48px]">Phone</h1>
           <p style="font-size: 18px; line-height: 32px">
-            <a href="tel:+38349225567" class="text-brand text-[28px] font-bold">
+            <a href="tel:+38349225567" class="text-[28px] font-bold text-brand">
               +383 49 225 567
             </a>
           </p>
         </div>
       </div>
       <div
-        class="flex px-16 py-9 text-center bg-darkBlue flex-col md:flex-row items-start justify-between"
+        class="flex flex-col items-start justify-between bg-darkBlue px-16 py-9 text-center md:flex-row"
       >
-        <h5 class="text-white mt-6">© 2024 Juris Concept</h5>
+        <h5 class="mt-6 text-white">© 2024 Juris Concept</h5>
         <ul
-          class="hidden flex-col md:flex md:flex-row justify-start md:justify-end gap-10 items-start md:items-end space-x-1 text-center text-gray-50 bg-darkBlue text-[24px]"
+          class="hidden flex-col items-start justify-start gap-10 space-x-1 bg-darkBlue text-center text-[24px] text-gray-50 md:flex md:flex-row md:items-end md:justify-end"
         >
           <li>
             <a
               href="index.html"
-              class="flex justify-center text-brand rounded-full py-2"
+              class="flex justify-center rounded-full py-2 text-brand"
               >Ballina</a
             >
           </li>
           <li>
             <a
               href="praktika.html"
-              class="flex justify-center text-white hover:text-brand rounded-full py-2"
+              class="flex justify-center rounded-full py-2 text-white hover:text-brand"
               >Praktika</a
             >
           </li>
           <li>
             <a
               href="ekipa.html"
-              class="flex justify-center text-white hover:text-brand rounded-full py-2"
+              class="flex justify-center rounded-full py-2 text-white hover:text-brand"
               >Ekipa
             </a>
           </li>
           <li>
             <a
               href="kontakto.html"
-              class="flex justify-center text-white hover:text-brand rounded-full py-2"
+              class="flex justify-center rounded-full py-2 text-white hover:text-brand"
             >
               Kontakto</a
             >
@@ -486,6 +445,8 @@
         </ul>
       </div>
     </section>
+
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.3.4/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sticksy@0.2.0/dist/sticksy.min.js"></script>
     <script>
       var stickyEl = new Sticksy(".js-sticky-widget", {
