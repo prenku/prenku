@@ -11,10 +11,10 @@
 
   <body class="min-h-screen bg-slate-50 dark:bg-black dark:text-white">
     <header
-      class="top-0 bg-white text-darkBlue md:relative md:flex md:justify-between md:items-center md:transform md:transition-all md:duration-200 border-b-4 border-b-brand"
+      class="top-0 border-b-4 border-b-brand bg-white text-darkBlue md:relative md:flex md:transform md:items-center md:justify-between md:transition-all md:duration-200"
     >
       <div
-        class="hidden md:flex md:justify-between md:w-full"
+        class="hidden md:flex md:w-full md:justify-between"
         :cLass="{'h-34 transform  transition-all duration-200': !scrolledFromTop, 'h-20 transform trasition-all duration-200': scrolledFromTop}"
       >
         <div
@@ -32,13 +32,13 @@
         </div>
 
         <!-- Navigation -->
-        <div class="flex flex-col justify-between items-end bottom-2">
+        <div class="bottom-2 flex flex-col items-end justify-between">
           <!-- Top  -->
           <div
-            class="hidden md:block bg-lightPink h-54 rounded-bl-2xl px-4 py-2 mb-2"
+            class="h-54 mb-2 hidden rounded-bl-2xl bg-lightPink px-4 py-2 md:block"
           >
             <a
-              class="md:block bg-lightPink pl-4 pr-24 text-2xl text-darkBlue rounded-bl-lg w-full"
+              class="w-full rounded-bl-lg bg-lightPink pl-4 pr-24 text-2xl text-darkBlue md:block"
               href="tel:+38349225567"
               >Konsultohuni
               <strong style="font-size: 34px"> +383 49 225 567 </strong>
@@ -47,7 +47,7 @@
           <!-- Bottom Menu -->
           <div class="px-4 py-4">
             <!-- Content for bottom menu -->
-            <nav class="mt-[20px] z-40 align-bottom pr-1 items-end">
+            <nav class="z-40 mt-[20px] items-end pr-1 align-bottom">
               <button class="md:hidden" @click="navOpen = !navOpen">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -65,7 +65,7 @@
                 </svg>
               </button>
               <ul
-                class="fixed left-0 top-[-1] px-4 pt-12 flex flex-col hidden md:flex-row justify-start items-center gap-2 space-y-1 bg-white text-darkBlue text-[24px] transform transition duration-300 translate-x-full md:items-center md:relative md:flex md:space-x-10 md:min-h-0 md:px-0 md:py-0 md:space-y-0 md:translate-x-0"
+                class="fixed left-0 top-[-1] flex hidden translate-x-full transform flex-col items-center justify-start gap-2 space-y-1 bg-white px-4 pt-12 text-[24px] text-darkBlue transition duration-300 md:relative md:flex md:min-h-0 md:translate-x-0 md:flex-row md:items-center md:space-x-10 md:space-y-0 md:px-0 md:py-0"
                 :class="{'translate-x-full': !navOpen}"
                 :class="{'translate-x-0': navOpen}"
               >
@@ -105,7 +105,7 @@
         <div>
           <button
             id="hamburger-button"
-            class="relative h-8 w-8 cursor-pointer text-brand text-3xl md:hidden"
+            class="relative h-8 w-8 cursor-pointer text-3xl text-brand md:hidden"
           >
             <div
               class="absolute top-4 -mt-0.5 h-1 w-8 rounded bg-brand transition-all duration-500 before:absolute before:h-1 before:w-8 before:-translate-x-4 before:-translate-y-3 before:rounded before:bg-brand before:transition-all before:duration-500 before:content-[''] after:absolute after:h-1 after:w-8 after:-translate-x-4 after:translate-y-3 after:rounded after:bg-brand after:transition-all after:duration-500 after:content-['']"
@@ -115,10 +115,10 @@
       </section>
       <section
         id="mobile-menu"
-        class="top-68 z-40 justify-center absolute hidden w-full origin-top animate-open-menu flex-col bg-darkBlue text-5xl"
+        class="top-68 absolute z-40 hidden w-full origin-top animate-open-menu flex-col justify-center bg-darkBlue text-5xl"
       >
         <nav
-          class="flex min-h-screen text-white flex-col items-center py-8"
+          class="flex min-h-screen flex-col items-center py-8 text-white"
           aria-label="mobile"
         >
           <a href="index.html" class="w-full py-6 text-center hover:text-brand"
@@ -140,16 +140,16 @@
         </nav>
       </section>
     </header>
-    <section class="bg-purple w-full">
+    <section class="w-full bg-purple">
       <div
         style="color: #ffffff"
-        class="items-center flex-col text-white border-t-50 border-solid border-gray-500 rounded-tl-3xl rounded-tr-3xl"
+        class="border-t-50 flex-col items-center rounded-tl-3xl rounded-tr-3xl border-solid border-gray-500 text-white"
       >
         <div
-          class="text-center flex items-center justify-center min-h-[250px] py-16 mb-10 bg-purple text-white"
+          class="mb-10 flex min-h-[250px] items-center justify-center bg-purple py-16 text-center text-white"
         >
           <h1
-            class="text-4xl text-white text-[28px] md:text-[60px] font-regular"
+            class="font-regular text-4xl text-[28px] text-white md:text-[60px]"
           >
             Praktika
           </h1>
@@ -158,84 +158,74 @@
     </section>
     <section class="mt-[-60px] w-full">
       <div
-        class="relative z-20 top[-120px] flex justify-between items-start flex-col md:flex-row text-white bg-white border-t-50 border-solid border-gray-500 rounded-tl-3xl rounded-tr-3xl"
+        class="top[-120px] border-t-50 relative z-20 flex flex-col items-start justify-between rounded-tl-3xl rounded-tr-3xl border-solid border-gray-500 bg-white text-white md:flex-row"
       >
         <div
-          class="grid grid-cold-1 md:grid-cols-2 items-center py-16 w-full px-4 md:px-40 gap-4"
+          class="grid-cold-1 grid w-full items-start gap-4 py-16 px-4 md:grid-cols-2 md:px-40"
         >
           <!-- Column 1 -->
           <div>
             <ul class="list-disc space-y-2 text-[22px]">
-              <li class="flex bg-darkBlue hover:bg-brand w-full">
-                <a
-                  href="#"
-                  class="w-full flex items-center justify-center h-[90px]"
-                >
-                  Kontesti Civil
-                </a>
+              <li class="flex w-full rounded-lg bg-darkBlue hover:bg-brand">
+                <div>
+                  <a
+                    href="#"
+                    class="flex h-[90px] w-full items-center justify-center text-[24px]"
+                  >
+                    E Drejta Penale
+                  </a>
+                  <h5 class="p-8 text-[18px] text-white/60">
+                    “Juris Concept” Law Firm, në ofrimin e shërbimeve nga fusha
+                    e të drejtës penale, jemi ekip që garanton profesionalizëm e
+                    siguri, maksimalisht e fokusuar në mbrojtjen ligjore, duke
+                    punuar në pajtim me rregullat ligjore e morale, këshillojmë
+                    dhe përfaqësojmë klientët në mbrojtjen e të drejtave, në të
+                    gjitha shkallët e gjykimit, duke synuar proces të drejtë dhe
+                    të ligjshëm.
+                  </h5>
+                </div>
               </li>
-              <li class="flex bg-darkBlue hover:bg-brand w-full">
-                <a
-                  href="#"
-                  class="w-full flex items-center justify-center h-[90px]"
-                  >Link 2</a
-                >
+              <li class="flex w-full bg-darkBlue hover:bg-brand">
+                <div>
+                  <a
+                    href="#"
+                    class="flex h-[90px] w-full items-center justify-center text-[24px]"
+                    >E Drejta Civile
+                  </a>
+                  <h5 class="p-8 text-[18px] text-white/60">
+                    “Juris Concept” Law Firm, në ofrimin e shërbimeve nga fusha
+                    e të drejtës penale, jemi ekip që garanton profesionalizëm e
+                    siguri, maksimalisht e fokusuar në mbrojtjen ligjore, duke
+                    punuar në pajtim me rregullat ligjore e morale, këshillojmë
+                    dhe përfaqësojmë klientët në mbrojtjen e të drejtave, në të
+                    gjitha shkallët e gjykimit, duke synuar proces të drejtë dhe
+                    të ligjshëm.
+                  </h5>
+                </div>
               </li>
-              <li class="flex bg-darkBlue hover:bg-brand w-full">
-                <a
-                  href="#"
-                  class="w-full flex items-center justify-center h-[90px]"
-                  >Link 2</a
-                >
-              </li>
-              <li class="flex bg-darkBlue hover:bg-brand w-full">
-                <a
-                  href="#"
-                  class="w-full flex items-center justify-center h-[90px]"
-                  >Link 2</a
-                >
-              </li>
-              <li class="flex bg-darkBlue hover:bg-brand w-full">
-                <a
-                  href="#"
-                  class="w-full flex items-center justify-center h-[90px]"
-                  >Link 2</a
-                >
-              </li>
-              <li class="flex bg-darkBlue hover:bg-brand w-full">
-                <a
-                  href="#"
-                  class="w-full flex items-center justify-center h-[90px]"
-                  >Link 2</a
-                >
-              </li>
-              <li class="flex bg-darkBlue hover:bg-brand w-full">
-                <a
-                  href="#"
-                  class="w-full flex items-center justify-center h-[90px]"
-                  >Link 2</a
-                >
-              </li>
-              <li class="flex bg-darkBlue hover:bg-brand w-full">
-                <a
-                  href="#"
-                  class="w-full flex items-center justify-center h-[90px]"
-                  >Link 2</a
-                >
-              </li>
-              <li class="flex bg-darkBlue hover:bg-brand w-full">
-                <a
-                  href="#"
-                  class="w-full flex items-center justify-center h-[90px]"
-                  >Link 2</a
-                >
-              </li>
-              <li class="flex bg-darkBlue hover:bg-brand w-full">
-                <a
-                  href="#"
-                  class="w-full flex items-center justify-center h-[90px]"
-                  >Link 2</a
-                >
+              <li class="flex w-full bg-darkBlue hover:bg-brand">
+                <div>
+                  <a
+                    href="#"
+                    class="flex h-[90px] w-full items-center justify-center"
+                  >
+                    E Drejta Familjare
+                  </a>
+                  <h5 class="p-8 text-[18px] text-white/60">
+                    Firma ligjore “Juris Concept”, ofron asistencë dhe konsulecë
+                    ligjore në proceduart që duhen ndjekur për zgjidhjen e
+                    martesës, përgatitjen e kontratave që rregullojnë statutin
+                    pasuror martesor, përcaktimin e përgjegjësisë prindërore,
+                    kujdestarisë, etj. Ekipa jonë ofron konsulecë ligjore dhe
+                    përfaqësim përpara të gjitha gjykatave në të gjitha shkallët
+                    e gjykimit, në përpilimin e akt marrëveshjeve për zgjidhjen
+                    me mirëkuptim të martesës, apo çështje të tjera familjare që
+                    kanë të bëjnë me: * Zgjidhje martese dhe përfaqësim përpara
+                    organeve gjyqësore; * Ndarjen e pasurisë së përbashkët,
+                    pjestim pasurie. * Si dhe çdo problem tjetër që ka lidhje me
+                    çështjet familjare.
+                  </h5>
+                </div>
               </li>
             </ul>
           </div>
@@ -243,75 +233,65 @@
           <!-- Column 2 -->
           <div>
             <ul class="list-disc space-y-2 text-[22px]">
-              <li class="flex bg-darkBlue hover:bg-brand w-full">
-                <a
-                  href="#"
-                  class="w-full flex items-center justify-center h-[90px]"
-                  >Link 2</a
-                >
+              <li class="flex w-full bg-darkBlue hover:bg-brand">
+                <div>
+                  <a
+                    href="#"
+                    class="flex h-[90px] w-full items-center justify-center"
+                    >E Drejta e Pronësisë Intelektuale
+                  </a>
+                  <h5 class="p-8 text-[18px] text-white/60">
+                    Juris Concept, ofron shërbime në mbrojtjen e të drejtave të
+                    autorëve dhe realizimin e tyre mbi pronësinë e tyre
+                    intelektuale dhe industriale.
+                  </h5>
+                </div>
               </li>
-              <li class="flex bg-darkBlue hover:bg-brand w-full">
-                <a
-                  href="#"
-                  class="w-full flex items-center justify-center h-[90px]"
-                  >Link 2</a
-                >
+              <li class="flex w-full bg-darkBlue hover:bg-brand">
+                <div>
+                  <a
+                    href="#"
+                    class="flex h-[90px] w-full items-center justify-center"
+                    >E Drejta Administrative
+                  </a>
+                  <h5 class="p-8 text-[18px] text-white/60">
+                    Në lëmin e të drejtës administrative klientëve iu ofrojmë
+                    shërbime në këshillimin dhe përfaqësimin në mbrojtjen dhe
+                    realizimin e të drejtave të njohura me të drejtën pozitive
+                    në këtë fushë.
+                  </h5>
+                </div>
               </li>
-              <li class="flex bg-darkBlue hover:bg-brand w-full">
-                <a
-                  href="#"
-                  class="w-full flex items-center justify-center h-[90px]"
-                  >Link 2</a
-                >
+              <li class="flex w-full bg-darkBlue hover:bg-brand">
+                <div>
+                  <a
+                    href="#"
+                    class="flex h-[90px] w-full items-center justify-center"
+                  >
+                    Prokurimi publik
+                  </a>
+                  <h5 class="p-8 text-[18px] text-white/60">
+                    Ekipa ligjore, mbështesin autoritetet kontraktuese po ashtu
+                    edhe operatorët ekonomik në procedurat e prokurimit. Ne
+                    këshillojmë e përfaqësojmë klientë në sektorin publik dhe
+                    privat në çështjet e prokurimit.
+                  </h5>
+                </div>
               </li>
-              <li class="flex bg-darkBlue hover:bg-brand w-full">
-                <a
-                  href="#"
-                  class="w-full flex items-center justify-center h-[90px]"
-                  >Link 2</a
-                >
-              </li>
-              <li class="flex bg-darkBlue hover:bg-brand w-full">
-                <a
-                  href="#"
-                  class="w-full flex items-center justify-center h-[90px]"
-                  >Link 2</a
-                >
-              </li>
-              <li class="flex bg-darkBlue hover:bg-brand w-full">
-                <a
-                  href="#"
-                  class="w-full flex items-center justify-center h-[90px]"
-                  >Link 2</a
-                >
-              </li>
-              <li class="flex bg-darkBlue hover:bg-brand w-full">
-                <a
-                  href="#"
-                  class="w-full flex items-center justify-center h-[90px]"
-                  >Link 2</a
-                >
-              </li>
-              <li class="flex bg-darkBlue hover:bg-brand w-full">
-                <a
-                  href="#"
-                  class="w-full flex items-center justify-center h-[90px]"
-                  >Link 2</a
-                >
-              </li>
-              <li class="flex bg-darkBlue hover:bg-brand w-full">
-                <a
-                  href="#"
-                  class="w-full flex items-center justify-center h-[90px]"
-                  >Link 2</a
-                >
-              </li>
-              <li class="flex bg-darkBlue hover:bg-brand w-full">
-                <a
-                  href="#"
-                  class="w-full flex items-center justify-center h-[90px]"
-                  >Link 2</a
-                >
+              <li class="flex w-full bg-darkBlue hover:bg-brand">
+                <div>
+                  <a
+                    href="#"
+                    class="flex h-[90px] w-full items-center justify-center"
+                    >E Drejta Tregtare
+                  </a>
+                  <h5 class="p-8 text-[18px] text-white/60">
+                    Në fushën e së drejtës tregtare, që kompanitë të fillojnë
+                    dhe zhvillohen duke pasur siguri ne aspektin ligjor, ofrojmë
+                    mbështetje profesionale në këshillim dhe përfaqësim në të
+                    gjitha nivelet!
+                  </h5>
+                </div>
               </li>
             </ul>
           </div>
@@ -321,12 +301,12 @@
     <section class="mt-[-20px] w-full">
       <div
         style="color: #ffffff"
-        class="relative z-20 top[-20px] pt-[135px] flex justify-between items-start flex-col md:flex-row text-white px-16 py-9 bg-darkBlue border-t-50 border-solid border-gray-500 rounded-tl-3xl rounded-tr-3xl"
+        class="top[-20px] border-t-50 relative z-20 flex flex-col items-start justify-between rounded-tl-3xl rounded-tr-3xl border-solid border-gray-500 bg-darkBlue px-16 py-9 pt-[135px] text-white md:flex-row"
       >
-        <div class="px-4 flex-1 order-2 md:order-1 py-2">
+        <div class="order-2 flex-1 px-4 py-2 md:order-1">
           <h1 class="text-[40px] font-bold leading-[48px]">Office</h1>
-          <p class="leading-[32px] flex flex-col">
-            <span class="text-brand text-[28px] font-bold">
+          <p class="flex flex-col leading-[32px]">
+            <span class="text-[28px] font-bold text-brand">
               Juris Concept
             </span>
             <span class="text-white/50">
@@ -334,53 +314,53 @@
             </span>
           </p>
           <div class="mt-4 flex flex-col">
-            <h4 class="font-bold pt-3" style="font-size: 18px">Orari Punes</h4>
+            <h4 class="pt-3 font-bold" style="font-size: 18px">Orari Punes</h4>
             <span class="text-white/50">
               E Hene - E Premte 8:30AM - 4:00PM
             </span>
           </div>
         </div>
-        <div class="px-4 flex-1 order-3 py-2">
+        <div class="order-3 flex-1 px-4 py-2">
           <h1 class="text-[40px] font-bold leading-[48px]">Phone</h1>
           <p style="font-size: 18px; line-height: 32px">
-            <a href="tel:+38349225567" class="text-brand text-[28px] font-bold">
+            <a href="tel:+38349225567" class="text-[28px] font-bold text-brand">
               +383 49 225 567
             </a>
           </p>
         </div>
       </div>
       <div
-        class="flex px-16 py-9 text-center bg-darkBlue flex-col md:flex-row items-start justify-between"
+        class="flex flex-col items-start justify-between bg-darkBlue px-16 py-9 text-center md:flex-row"
       >
-        <h5 class="text-white mt-6">© 2024 Juris Concept</h5>
+        <h5 class="mt-6 text-white">© 2024 Juris Concept</h5>
         <ul
-          class="hidden flex-col md:flex md:flex-row justify-start md:justify-end gap-10 items-start md:items-end space-x-1 text-center text-gray-50 bg-darkBlue text-[24px]"
+          class="hidden flex-col items-start justify-start gap-10 space-x-1 bg-darkBlue text-center text-[24px] text-gray-50 md:flex md:flex-row md:items-end md:justify-end"
         >
           <li>
             <a
               href="index.html"
-              class="flex justify-center text-brand rounded-full py-2"
+              class="flex justify-center rounded-full py-2 text-brand"
               >Ballina</a
             >
           </li>
           <li>
             <a
               href="praktika.html"
-              class="flex justify-center text-white hover:text-brand rounded-full py-2"
+              class="flex justify-center rounded-full py-2 text-white hover:text-brand"
               >Praktika</a
             >
           </li>
           <li>
             <a
               href="ekipa.html"
-              class="flex justify-center text-white hover:text-brand rounded-full py-2"
+              class="flex justify-center rounded-full py-2 text-white hover:text-brand"
               >Ekipa
             </a>
           </li>
           <li>
             <a
               href="kontakto.html"
-              class="flex justify-center text-white hover:text-brand rounded-full py-2"
+              class="flex justify-center rounded-full py-2 text-white hover:text-brand"
             >
               Kontakto</a
             >
@@ -389,7 +369,7 @@
       </div>
     </section>
     <a
-      class="bg-brand flex justify-center text-center text-darkBlue"
+      class="flex justify-center bg-brand text-center text-darkBlue"
       href="http://naxiadesign.com"
       >Website Design By NAXIA Design
     </a>
