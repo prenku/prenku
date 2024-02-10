@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Juris Koncept</title>
-  <link
+    <link
       href="https://cdn.rawgit.com/michalsnik/aos/2.3.4/dist/aos.css"
       rel="stylesheet"
     />
@@ -15,7 +15,7 @@
   </head>
 
   <body class="min-h-screen bg-slate-50 dark:bg-black dark:text-white">
-     <header
+    <header
       class="top-0 z-30 border-b-4 border-b-brand bg-white text-darkBlue md:relative md:flex md:transform md:items-center md:justify-between md:transition-all md:duration-200"
     >
       <div
@@ -27,8 +27,9 @@
           :cLass="{'h-24 transform  transition-all duration-200': !scrolledFromTop, 'h-20 transform trasition-all duration-200': scrolledFromTop}"
         >
           <!-- Logo on the left -->
-          <a data-aos="slide-right"  data-aos-delay="300" 
-
+          <a
+            data-aos="slide-right"
+            data-aos-delay="300"
             class="md:block"
             href="#"
             :cLass="{'h-34 transform  transition-all duration-200': !scrolledFromTop, 'h-20 transform trasition-all duration-200': scrolledFromTop}"
@@ -40,7 +41,11 @@
         <!-- Navigation -->
         <div class="bottom-2 flex flex-col items-end justify-between">
           <!-- Top  -->
-          <div data-aos="slide-down" data-aos-easing="ease-in" data-aos-duration="500" data-aos-delay="100" 
+          <div
+            data-aos="slide-down"
+            data-aos-easing="ease-in"
+            data-aos-duration="500"
+            data-aos-delay="100"
             class="h-54 mb-2 hidden rounded-bl-2xl bg-lightPink px-4 py-2 md:block"
           >
             <a
@@ -53,7 +58,11 @@
           <!-- Bottom Menu -->
           <div class="px-4 py-4">
             <!-- Content for bottom menu -->
-            <nav class="z-40 mt-[20px] items-end pr-1 align-bottom" data-aos="slide-left" data-aos-delay="200">
+            <nav
+              class="z-40 mt-[20px] items-end pr-1 align-bottom"
+              data-aos="slide-left"
+              data-aos-delay="200"
+            >
               <button class="md:hidden" @click="navOpen = !navOpen">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -70,21 +79,21 @@
                   />
                 </svg>
               </button>
-              <ul  
+              <ul
                 class="fixed left-0 top-[-1] flex hidden translate-x-full transform flex-col items-center justify-start gap-2 space-y-1 bg-white px-4 pt-12 text-[24px] text-darkBlue transition duration-300 md:relative md:flex md:min-h-0 md:translate-x-0 md:flex-row md:items-center md:space-x-10 md:space-y-0 md:px-0 md:py-0"
                 :class="{'translate-x-full': !navOpen}"
                 :class="{'translate-x-0': navOpen}"
               >
                 <li class="">
-                  <a class="text-brand hover:text-brand" href="index.html"> Ballina</a>
+                  <a class="text-brand hover:text-brand" href="index.html">
+                    Ballina</a
+                  >
                 </li>
                 <li class="">
                   <a href="praktika.html" class="hover:text-brand">Praktika</a>
                 </li>
                 <li class="">
-                  <a href="ekipa.html" class=" hover:text-brand"
-                    >Ekipa</a
-                  >
+                  <a href="ekipa.html" class="hover:text-brand">Ekipa</a>
                 </li>
                 <li>
                   <a href="kontakto.html" class="hover:text-brand">Kontakto</a>
@@ -148,27 +157,38 @@
     </header>
     <section
       style="background-image: url('public/images/hero.jpg')"
-      class="relative bg-hero-svg z-10 animate slide delay-15 pb-16 px-8" 
+      class="bg-hero-svg animate slide delay-15 relative z-10 px-8 pb-16"
     >
       <div
-        class="max-w-7xl mx-auto flex flex-col md:flex-row top-32 items-center md:h-[700px] justify-center"
+        class="top-32 mx-auto flex max-w-7xl flex-col items-center justify-center md:h-[700px] md:flex-row"
       >
-        <div class="flex-1 justify-center items-center md:mr-6" data-aos="fade-right" data-aos-easing="ease-in" data-aos-delay="300">
+        <div
+          class="flex-1 items-center justify-center md:mr-6"
+          data-aos="fade-right"
+          data-aos-easing="ease-in"
+          data-aos-delay="300"
+        >
           <h1
-            class="reveal-type font-bold text-[40px] md:text-[60px] text-white mt-10 leading-tight"
+            class="reveal-type mt-10 text-[40px] font-bold leading-tight text-white md:text-[60px]"
           >
             Kur bëhet fjalë për Të drejten Familjare
           </h1>
           <p class="my-4 text-lg text-white">
-            Save your time increase your productivity and improve your house
-            appearance with the convinence of our superior cleaning services
+            “Juris Concept” Law Firm, është ekip profesionale dhe e përkushtuar
+            të ofrojë ndihmë të plotë për të gjitha kërkesat ligjore. Ne secilën
+            sfidë tuajen, ne shohim dhe kuptojmë qartë aspektin e çështjeve
+            ligjore dhe jemi për të bërë përfaqësimin në mënyrë të dinjitetshme
+            dhe profesionale. Avokatët dhe bashkëpunëtorët e zyres sonë ligjore,
+            janë me integritet, kredibilitet, guxim e profesionalizëm që është
+            dëshmuar në kohë!
           </p>
           <button
-            class="p-3 md:p-6 bg-purple text-white text-[26px] font-semibold md:text-3xl rounded-2xl"
+            onclick="callNumber(+38349225567)"
+            class="rounded-2xl bg-purple p-3 text-[26px] font-semibold text-white md:p-6 md:text-3xl"
           >
             Telefono tani
           </button>
-          <p class="text-white/70 md:text-[18px] py-3">
+          <p class="py-3 text-white/70 md:text-[18px]">
             Thirrni per tu konsultuar
           </p>
         </div>
@@ -182,9 +202,9 @@
     </section>
     <section class="mt-[-20px] w-full">
       <div
-        class="relative grid grid-cols-1 md:h-[500px] items-center md:grid-cols-2 md:gap-2 z-20 top[-20px] text-white px-8 md:px-16 py-9 bg-brand border-t-50 border-solid border-gray-500 rounded-tl-3xl rounded-tr-3xl"
+        class="top[-20px] border-t-50 relative z-20 grid grid-cols-1 items-center rounded-tl-3xl rounded-tr-3xl border-solid border-gray-500 bg-brand px-8 py-9 text-white md:h-[500px] md:grid-cols-2 md:gap-2 md:px-16"
       >
-        <div class="col-start-1 md:col-end-2 py-2">
+        <div class="col-start-1 py-2 md:col-end-2">
           <h1 class="text-[34px] font-bold md:text-[48px] md:leading-[52px]">
             Çdo familje përballet me pjesën e saj të
             <span class="text-darkBlue">vështirësive</span> dhe
@@ -197,7 +217,7 @@
             sigurojnë të ardhmen tuaj dhe të ardhmen e të dashurve tuaj..
           </p>
         </div>
-        <div class="col-start-1 md:col-start-2 md:px-4 py-2">
+        <div class="col-start-1 py-2 md:col-start-2 md:px-4">
           <p style="font-size: 18px; line-height: 32px">
             Nëse jeni duke u përballur me një ndarje, divorc, betejë për
             kujdestarinë, mosmarrëveshje shtëpiake ose çështje të tjera të
@@ -215,12 +235,12 @@
 
     <section class="mt-[-20px] w-full">
       <div
-        class="grid grid-cols-1 px-4 md:grid-cols-3 grid-flow-col md:gird-flow-row relative z-20 min-h-[800px] items-center text-white md:px-16 py-9 bg-darkBlue border-t-50 border-solid border-gray-500 rounded-tl-3xl rounded-tr-3xl"
+        class="md:gird-flow-row border-t-50 relative z-20 grid min-h-[800px] grid-flow-col grid-cols-1 items-center rounded-tl-3xl rounded-tr-3xl border-solid border-gray-500 bg-darkBlue px-4 py-9 text-white md:grid-cols-3 md:px-16"
       >
         <div
-          class="hidden md:block col-start-1 col-end-2 md:col-end-2 px-4 py-2"
+          class="col-start-1 col-end-2 hidden px-4 py-2 md:col-end-2 md:block"
         >
-          <h1 class="text-[40px] font-bold md:text-[48px] leading-[48px] mb-10">
+          <h1 class="mb-10 text-[40px] font-bold leading-[48px] md:text-[48px]">
             Shërbime ligjore të veçuara
           </h1>
           <img
@@ -230,43 +250,43 @@
           />
         </div>
 
-        <div class="col-start-2 col-end-4 md:col-end-4 px-4 py-2">
+        <div class="col-start-2 col-end-4 px-4 py-2 md:col-end-4">
           <ul
-            class="flex flex-row justify-end gap-10 items-end space-x-1 text-center rounded-lg p-1 mb-12"
+            class="mb-12 flex flex-row items-end justify-end gap-10 space-x-1 rounded-lg p-1 text-center"
           >
             <li>
               <a
                 href="#page1"
-                class="flex justify-center text-brand rounded-full py-2"
-                >Pilot Training</a
+                class="flex justify-center rounded-full py-2 text-brand hover:text-brand"
+                >Kontesti Civil</a
               >
             </li>
             <li>
               <a
                 href="#page1"
-                class="flex justify-center text-white rounded-full py-2"
-                >Pilot Training</a
-              >
+                class="flex justify-center rounded-full py-2 text-white hover:text-brand"
+                >E Drejta Penale
+              </a>
             </li>
             <li>
               <a
                 href="#page1"
-                class="flex justify-center text-white rounded-full py-2"
-                >Pilot Training</a
-              >
+                class="flex justify-center rounded-full py-2 text-white hover:text-brand"
+                >E Drejta Familjare
+              </a>
             </li>
             <li>
               <a
                 href="#page1"
-                class="flex justify-center text-white rounded-full py-2"
-                >Pilot Training</a
-              >
+                class="flex justify-center rounded-full py-2 text-white hover:text-brand"
+                >E Drejta Tregtare
+              </a>
             </li>
           </ul>
-          <h1 class="text-brand font-bold pb-4 leading-8 text-[40px]">
+          <h1 class="pb-4 text-[40px] font-bold leading-8 text-brand">
             Kontesti Civil
           </h1>
-          <p class="leading-8 text-[18px] text-white/50 mb-5">
+          <p class="mb-5 text-[18px] leading-8 text-white/50">
             Kur lindin mosmarrëveshje ligjore, është e rëndësishme që të keni
             një ekip me përvojë gjyqësore civile në anën tuaj. Në firmën ligjore
             Juris Concept, ne jemi të përkushtuar të mbrojmë të drejtat dhe
@@ -278,55 +298,60 @@
             çështjen tuaj.
           </p>
           <ul
-            class="grid grid-flow-row font-bold text-brand rounded-lg p-1 mb-12 list-disc list-inside"
+            class="mb-12 grid list-inside list-disc grid-flow-row rounded-lg p-1 font-bold text-brand"
           >
             <li>
-              <a href="#page1" class="text-brand font-bold py-2"
-                >Kontesti Juridik</a
-              >
-            </li>
-            <li>
-              <a href="#page1" class="text-white font-bold py-2"
-                >Kontesti Korporativ</a
-              >
-            </li>
-            <li>
-              <a href="#page1" class="text-white font-bold py-2">
-                Demet E Punes
+              <a
+                href="#page1"
+                class="py-2 font-bold text-white hover:text-brand"
+                >E Drejta e Pronësisë Intelektuale
               </a>
             </li>
             <li>
-              <a href="#page1" class="text-white font-bold py-2"> Prokurimi</a>
+              <a
+                href="#page1"
+                class="py-2 font-bold text-white hover:text-brand"
+              >
+                E Drejta Administrative
+              </a>
+            </li>
+            <li>
+              <a
+                href="#page1"
+                class="py-2 font-bold text-white hover:text-brand"
+              >
+                Prokurimi publik
+              </a>
             </li>
           </ul>
-          <a href="/sherbimet"
+          <a href="praktika.html"
             >Të gjitha Shërbimet e Kontestit Civil
-            <span class="text-brand font-bold">Juris Concept</span>
+            <span class="font-bold text-brand">Juris Concept</span>
           </a>
         </div>
       </div>
     </section>
     <section class="mt-[-20px] w-full">
       <div
-        class="relative z-20 top[-20px] min-h-screen items-center flex text-white px-8 py-9 md:px-16 md:py-16 bg-black brand border-t-50 border-solid border-gray-500 rounded-tl-3xl rounded-tr-3xl"
+        class="top[-20px] brand border-t-50 relative z-20 flex min-h-screen items-center rounded-tl-3xl rounded-tr-3xl border-solid border-gray-500 bg-black px-8 py-9 text-white md:px-16 md:py-16"
       >
         <div class="w-full">
-          <h1 class="text-start w-full text-[40px] py-4 font-bold">Ekipa</h1>
-          <h3 class="text-start text-white/50 w-full mb-10">
+          <h1 class="text-start w-full py-4 text-[40px] font-bold">Ekipa</h1>
+          <h3 class="text-start mb-10 w-full text-white/50">
             Treshja me e persosur ne Prishtinë
           </h3>
 
-          <div class="flex flex-col md:flex-row justify-between gap-8">
+          <div class="flex flex-col justify-between gap-8 md:flex-row">
             <div class="w-full md:w-1/3">
-              <div class="bg-black rounded-lg shadow-md h-[218]">
+              <div class="h-[218] rounded-lg bg-black shadow-md">
                 <img
                   src="public/images/profile.jpg"
                   alt="image"
-                  class="w-full h-[300px] md:h-[475px] object-cover rounded-t-lg"
+                  class="h-[300px] w-full rounded-t-lg object-cover md:h-[475px]"
                 />
                 <div class="mt-4">
-                  <h2 class="text-2xl font-bold mb-2">Kushtrim Prenku</h2>
-                  <p class="text-white/50 font-bold mb-4">
+                  <h2 class="mb-2 text-2xl font-bold">Kushtrim Prenku</h2>
+                  <p class="mb-4 font-bold text-white/50">
                     "Avokat i sapo licencuar i përkushtuar ndaj ofrimit të
                     ekselencës ligjore: i apasionuar pas avokimit për të drejtat
                     e klientëve dhe ofrimit të zgjidhjeve strategjike ligjore. I
@@ -334,7 +359,7 @@
                     së drejtësisë."
                   </p>
                   <button
-                    class="bg-purple text-white text-[26px] md:text-[34px] font-bold px-4 py-2 rounded-md"
+                    class="rounded-md bg-purple px-4 py-2 text-[26px] font-bold text-white md:text-[34px]"
                   >
                     Shiko Profilin
                   </button>
@@ -342,15 +367,15 @@
               </div>
             </div>
             <div class="w-full md:w-1/3">
-              <div class="bg-black rounded-lg shadow-md h-[218]">
+              <div class="h-[218] rounded-lg bg-black shadow-md">
                 <img
                   src="public/images/profile.jpg"
                   alt="image"
-                  class="w-full h-[300px] md:h-[475px] object-cover rounded-t-lg"
+                  class="h-[300px] w-full rounded-t-lg object-cover md:h-[475px]"
                 />
                 <div class="mt-4">
-                  <h2 class="text-2xl font-bold mb-2">Bledar Gashi</h2>
-                  <p class="text-white/50 font-bold mb-4">
+                  <h2 class="mb-2 text-2xl font-bold">Bledar Gashi</h2>
+                  <p class="mb-4 font-bold text-white/50">
                     "Avokat i sapo licencuar i përkushtuar ndaj ofrimit të
                     ekselencës ligjore: i apasionuar pas avokimit për të drejtat
                     e klientëve dhe ofrimit të zgjidhjeve strategjike ligjore. I
@@ -358,7 +383,7 @@
                     së drejtësisë."
                   </p>
                   <button
-                    class="bg-purple text-white text-[26px] md:text-[34px] font-bold px-4 py-2 rounded-md"
+                    class="rounded-md bg-purple px-4 py-2 text-[26px] font-bold text-white md:text-[34px]"
                   >
                     Shiko Profilin
                   </button>
@@ -366,15 +391,15 @@
               </div>
             </div>
             <div class="w-full md:w-1/3">
-              <div class="bg-black rounded-lg shadow-md h-[218]">
+              <div class="h-[218] rounded-lg bg-black shadow-md">
                 <img
                   src="public/images/profile.jpg"
                   alt="image"
-                  class="w-full h-[300px] md:h-[475px] object-cover rounded-t-lg"
+                  class="h-[300px] w-full rounded-t-lg object-cover md:h-[475px]"
                 />
                 <div class="mt-4">
-                  <h2 class="text-2xl font-bold mb-2">Adnan Thaqi</h2>
-                  <p class="text-white/50 font-bold mb-6">
+                  <h2 class="mb-2 text-2xl font-bold">Adnan Thaqi</h2>
+                  <p class="mb-6 font-bold text-white/50">
                     "Avokat i sapo licencuar i përkushtuar ndaj ofrimit të
                     ekselencës ligjore: i apasionuar pas avokimit për të drejtat
                     e klientëve dhe ofrimit të zgjidhjeve strategjike ligjore. I
@@ -382,7 +407,7 @@
                     së drejtësisë."
                   </p>
                   <button
-                    class="bg-purple text-white text-[26px] md:text-[34px] font-bold px-4 py-2 rounded-md"
+                    class="rounded-md bg-purple px-4 py-2 text-[26px] font-bold text-white md:text-[34px]"
                   >
                     Shiko Profilin
                   </button>
@@ -395,13 +420,13 @@
     </section>
 
     <section
-      class="mt-[-20px] w-full relative z-20 top[-20px] px-8 py-4 md:px-16 md:py-20 bg-white border-t-50 border-solid border-gray-500 rounded-tl-3xl mb-10 rounded-tr-3xl"
+      class="top[-20px] border-t-50 relative z-20 mt-[-20px] mb-10 w-full rounded-tl-3xl rounded-tr-3xl border-solid border-gray-500 bg-white px-8 py-4 md:px-16 md:py-20"
     >
-      <div class="flex flex-row md:flex-row justify-between items-center my-9">
-        <h1 class="text-darkBlue text-[40px] font-bold mb-2">Lajme</h1>
+      <div class="my-9 flex flex-row items-center justify-between md:flex-row">
+        <h1 class="mb-2 text-[40px] font-bold text-darkBlue">Lajme</h1>
         <a
           href="lajme.html"
-          class="get-started self-center rounded-xl p-2 font-semibold bg-yellowgood text-white bg-brand"
+          class="get-started bg-yellowgood self-center rounded-xl bg-brand p-2 font-semibold text-white"
         >
           Shiko te gjitha lajmet
         </a>
@@ -412,30 +437,30 @@
         <div class="col-start-1 col-end-3 md:col-end-2">
           <!-- Content in the first column of the outer grid -->
           <div
-            class="entry border border-solid border-black rounded-lg overflow-hidden mb-4"
+            class="entry mb-4 overflow-hidden rounded-lg border border-solid border-black"
           >
             <div class="entry__meta">
               <img
                 src="public/images/blog-sample.jpg"
                 alt="image"
-                class="w-full md:h-[80%] object-cover rounded-t-lg"
+                class="w-full rounded-t-lg object-cover md:h-[80%]"
               />
               <div class="p-4 md:h-[150px]">
                 <button
-                  class="bg-brand text-white text-sm px-2 py-1 rounded-md"
+                  class="rounded-md bg-brand px-2 py-1 text-sm text-white"
                 >
                   10 nentor 2023
                 </button>
 
-                <p class="text-black my-2">
+                <p class="my-2 text-black">
                   Betohen 52 avokatë të rinjë dhe 48 praktikantë para kryetarit
                   të Odës, z. Behar Ejupi
                 </p>
-                <p class="text-black my-2">
+                <p class="my-2 text-black">
                   Betohen 52 avokatë të rinjë dhe 48 praktikantë para kryetarit
                   të Odës, z. Behar Ejupi
                 </p>
-                <p class="text-black my-2">
+                <p class="my-2 text-black">
                   Betohen 52 avokatë të rinjë dhe 48 praktikantë para kryetarit
                   të Odës, z. Behar Ejupi
                 </p>
@@ -443,30 +468,30 @@
             </div>
           </div>
         </div>
-        <div class="col-start-1 md:col-start-2 col-end-3 grid gap-4 bg-white">
+        <div class="col-start-1 col-end-3 grid gap-4 bg-white md:col-start-2">
           <!-- Content in the second column of the outer grid -->
 
           <div
-            class="grid grid-cols-1 mb-10 md:mb-0 md:grid-cols-4 max-h-[218px]"
+            class="mb-10 grid max-h-[218px] grid-cols-1 md:mb-0 md:grid-cols-4"
           >
-            <div class="col-start-1 col-end-3 md:col-end-2 flex flex-col">
+            <div class="col-start-1 col-end-3 flex flex-col md:col-end-2">
               <img
                 src="public/images/blog-sample-1.jpg"
                 alt="image"
-                class="w-full h-[142px] object-cover rounded-t-lg"
+                class="h-[142px] w-full rounded-t-lg object-cover"
               />
             </div>
             <div
-              class="col-start-1 md:col-start-2 border border-solid border-black col-end-5 flex flex-col"
+              class="col-start-1 col-end-5 flex flex-col border border-solid border-black md:col-start-2"
             >
               <div class="flex-grow">
                 <div class="p-4">
                   <button
-                    class="bg-brand text-white text-[14px] px-4 py-1 rounded-md"
+                    class="rounded-md bg-brand px-4 py-1 text-[14px] text-white"
                   >
                     10 nentor 2023
                   </button>
-                  <p class="text-black mb-4">
+                  <p class="mb-4 text-black">
                     Betohen 52 avokatë të rinjë dhe të Odës, z. Behar Ejupi
                   </p>
                 </div>
@@ -475,26 +500,26 @@
           </div>
 
           <div
-            class="grid grid-cols-1 mb-10 md:mb-0 md:grid-cols-4 max-h-[218px]"
+            class="mb-10 grid max-h-[218px] grid-cols-1 md:mb-0 md:grid-cols-4"
           >
-            <div class="col-start-1 col-end-3 md:col-end-2 flex flex-col">
+            <div class="col-start-1 col-end-3 flex flex-col md:col-end-2">
               <img
                 src="public/images/blog-sample-1.jpg"
                 alt="image"
-                class="w-full h-[142px] object-cover rounded-t-lg"
+                class="h-[142px] w-full rounded-t-lg object-cover"
               />
             </div>
             <div
-              class="col-start-1 md:col-start-2 border border-solid border-black col-end-5 flex flex-col"
+              class="col-start-1 col-end-5 flex flex-col border border-solid border-black md:col-start-2"
             >
               <div class="flex-grow">
                 <div class="p-4">
                   <button
-                    class="bg-brand text-white text-[14px] px-4 py-1 rounded-md"
+                    class="rounded-md bg-brand px-4 py-1 text-[14px] text-white"
                   >
                     10 nentor 2023
                   </button>
-                  <p class="text-black mb-4">
+                  <p class="mb-4 text-black">
                     Betohen 52 avokatë të rinjë dhe të Odës, z. Behar Ejupi
                   </p>
                 </div>
@@ -502,26 +527,26 @@
             </div>
           </div>
           <div
-            class="grid grid-cols-1 mb-10 md:mb-0 md:grid-cols-4 max-h-[218px]"
+            class="mb-10 grid max-h-[218px] grid-cols-1 md:mb-0 md:grid-cols-4"
           >
-            <div class="col-start-1 col-end-3 md:col-end-2 flex flex-col">
+            <div class="col-start-1 col-end-3 flex flex-col md:col-end-2">
               <img
                 src="public/images/blog-sample-1.jpg"
                 alt="image"
-                class="w-full h-[142px] object-cover rounded-t-lg"
+                class="h-[142px] w-full rounded-t-lg object-cover"
               />
             </div>
             <div
-              class="col-start-1 md:col-start-2 border border-solid border-black col-end-5 flex flex-col"
+              class="col-start-1 col-end-5 flex flex-col border border-solid border-black md:col-start-2"
             >
               <div class="flex-grow">
                 <div class="p-4">
                   <button
-                    class="bg-brand text-white text-[14px] px-4 py-1 rounded-md"
+                    class="rounded-md bg-brand px-4 py-1 text-[14px] text-white"
                   >
                     10 nentor 2023
                   </button>
-                  <p class="text-black mb-4">
+                  <p class="mb-4 text-black">
                     Betohen 52 avokatë të rinjë dhe të Odës, z. Behar Ejupi
                   </p>
                 </div>
@@ -529,26 +554,26 @@
             </div>
           </div>
           <div
-            class="grid grid-cols-1 mb-10 md:mb-0 md:grid-cols-4 max-h-[218px]"
+            class="mb-10 grid max-h-[218px] grid-cols-1 md:mb-0 md:grid-cols-4"
           >
-            <div class="col-start-1 col-end-3 md:col-end-2 flex flex-col">
+            <div class="col-start-1 col-end-3 flex flex-col md:col-end-2">
               <img
                 src="public/images/blog-sample-1.jpg"
                 alt="image"
-                class="w-full h-[142px] object-cover rounded-t-lg"
+                class="h-[142px] w-full rounded-t-lg object-cover"
               />
             </div>
             <div
-              class="col-start-1 md:col-start-2 border border-solid border-black col-end-5 flex flex-col"
+              class="col-start-1 col-end-5 flex flex-col border border-solid border-black md:col-start-2"
             >
               <div class="flex-grow">
                 <div class="p-4">
                   <button
-                    class="bg-brand text-white text-[14px] px-4 py-1 rounded-md"
+                    class="rounded-md bg-brand px-4 py-1 text-[14px] text-white"
                   >
                     10 nentor 2023
                   </button>
-                  <p class="text-black mb-4">
+                  <p class="mb-4 text-black">
                     Betohen 52 avokatë të rinjë dhe të Odës, z. Behar Ejupi
                   </p>
                 </div>
@@ -561,12 +586,12 @@
     <section class="mt-[-20px] w-full">
       <div
         style="color: #ffffff"
-        class="relative z-20 top[-20px] pt-[135px] flex justify-between items-start flex-col md:flex-row text-white px-16 py-9 bg-darkBlue border-t-50 border-solid border-gray-500 rounded-tl-3xl rounded-tr-3xl"
+        class="top[-20px] border-t-50 relative z-20 flex flex-col items-start justify-between rounded-tl-3xl rounded-tr-3xl border-solid border-gray-500 bg-darkBlue px-16 py-9 pt-[135px] text-white md:flex-row"
       >
-        <div class="px-4 flex-1 order-2 md:order-1 py-2">
+        <div class="order-2 flex-1 px-4 py-2 md:order-1">
           <h1 class="text-[40px] font-bold leading-[48px]">Office</h1>
-          <p class="leading-[32px] flex flex-col">
-            <span class="text-brand text-[28px] font-bold">
+          <p class="flex flex-col leading-[32px]">
+            <span class="text-[28px] font-bold text-brand">
               Juris Concept
             </span>
             <span class="text-white/50">
@@ -574,53 +599,53 @@
             </span>
           </p>
           <div class="mt-4 flex flex-col">
-            <h4 class="font-bold pt-3" style="font-size: 18px">Orari Punes</h4>
+            <h4 class="pt-3 font-bold" style="font-size: 18px">Orari Punes</h4>
             <span class="text-white/50">
               E Hene - E Premte 8:30AM - 4:00PM
             </span>
           </div>
         </div>
-        <div class="px-4 flex-1 order-3 py-2">
+        <div class="order-3 flex-1 px-4 py-2">
           <h1 class="text-[40px] font-bold leading-[48px]">Phone</h1>
           <p style="font-size: 18px; line-height: 32px">
-            <a href="tel:+38349225567" class="text-brand text-[28px] font-bold">
+            <a href="tel:+38349225567" class="text-[28px] font-bold text-brand">
               +383 49 225 567
             </a>
           </p>
         </div>
       </div>
       <div
-        class="flex px-16 py-9 text-center bg-darkBlue flex-col md:flex-row items-start justify-between"
+        class="flex flex-col items-start justify-between bg-darkBlue px-16 py-9 text-center md:flex-row"
       >
-        <h5 class="text-white mt-6">© 2024 Juris Concept</h5>
+        <h5 class="mt-6 text-white">© 2024 Juris Concept</h5>
         <ul
-          class="hidden flex-col md:flex md:flex-row justify-start md:justify-end gap-10 items-start md:items-end space-x-1 text-center text-gray-50 bg-darkBlue text-[24px]"
+          class="hidden flex-col items-start justify-start gap-10 space-x-1 bg-darkBlue text-center text-[24px] text-gray-50 md:flex md:flex-row md:items-end md:justify-end"
         >
           <li>
             <a
               href="index.html"
-              class="flex justify-center text-brand rounded-full py-2"
+              class="flex justify-center rounded-full py-2 text-brand"
               >Ballina</a
             >
           </li>
           <li>
             <a
               href="praktika.html"
-              class="flex justify-center text-white hover:text-brand rounded-full py-2"
+              class="flex justify-center rounded-full py-2 text-white hover:text-brand"
               >Praktika</a
             >
           </li>
           <li>
             <a
               href="ekipa.html"
-              class="flex justify-center text-white hover:text-brand rounded-full py-2"
+              class="flex justify-center rounded-full py-2 text-white hover:text-brand"
               >Ekipa
             </a>
           </li>
           <li>
             <a
               href="kontakto.html"
-              class="flex justify-center text-white hover:text-brand rounded-full py-2"
+              class="flex justify-center rounded-full py-2 text-white hover:text-brand"
             >
               Kontakto</a
             >
@@ -630,7 +655,7 @@
     </section>
 
     <a
-      class="bg-brand flex justify-center text-center text-darkBlue"
+      class="flex justify-center bg-brand text-center text-darkBlue"
       href="http://naxiadesign.com"
       >Website Design By NAXIA Design
     </a>
@@ -704,6 +729,10 @@
           opacity: 1,
         });
       });
+
+      function callNumber(phoneNumber) {
+        window.location.href = "tel:" + phoneNumber;
+      }
     </script>
   </body>
 </html>
