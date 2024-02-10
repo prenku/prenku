@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en" class="sm:scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juris Koncept</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
+  </head>
+
+  <body class="min-h-screen bg-slate-50 dark:bg-black dark:text-white">
+        <header
+      class="top-0 z-30 border-b-4 border-b-brand bg-white text-darkBlue md:relative md:flex md:transform md:items-center md:justify-between md:transition-all md:duration-200"
+    >
+      <div
+        class="hidden md:flex md:w-full md:justify-between"
+        :cLass="{'h-34 transform  transition-all duration-200': !scrolledFromTop, 'h-20 transform trasition-all duration-200': scrolledFromTop}"
+      >
+        <div
+          class="md:flex md:items-center"
+          :cLass="{'h-24 transform  transition-all duration-200': !scrolledFromTop, 'h-20 transform trasition-all duration-200': scrolledFromTop}"
+        >
+          <!-- Logo on the left -->
+          <a
+            data-aos="slide-right"
+            data-aos-delay="300"
+            class="md:block"
+            href="#"
+            :cLass="{'h-34 transform  transition-all duration-200': !scrolledFromTop, 'h-20 transform trasition-all duration-200': scrolledFromTop}"
+          >
+            <img src="public/images/top-logo.svg" />
+          </a>
+        </div>
+
+        <!-- Navigation -->
+        <div class="bottom-2 flex flex-col items-end justify-between">
+          <!-- Top  -->
+          <div
+            data-aos="slide-down"
+            data-aos-easing="ease-in"
+            data-aos-duration="500"
+            data-aos-delay="100"
+            class="h-54 mb-2 hidden rounded-bl-2xl bg-lightPink px-4 py-2 md:block"
+          >
+            <a
+              class="w-full rounded-bl-lg bg-lightPink pl-4 pr-24 text-2xl text-darkBlue md:block"
+              href="tel:+38349225567"
+              >Konsultohuni
+              <strong style="font-size: 34px"> +383 49 225 567 </strong>
+            </a>
+          </div>
+          <!-- Bottom Menu -->
+          <div class="px-4 py-4">
+            <!-- Content for bottom menu -->
+            <nav
+              class="z-40 mt-[20px] items-end pr-1 align-bottom"
+              data-aos="slide-left"
+              data-aos-delay="200"
+            >
+              <button class="md:hidden" @click="navOpen = !navOpen">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-7 w-7 text-brand"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+              </button>
+              <ul
+                class="fixed left-0 top-[-1] flex hidden translate-x-full transform flex-col items-center justify-start gap-2 space-y-1 bg-white px-4 pt-12 text-[24px] text-darkBlue transition duration-300 md:relative md:flex md:min-h-0 md:translate-x-0 md:flex-row md:items-center md:space-x-10 md:space-y-0 md:px-0 md:py-0"
+                :class="{'translate-x-full': !navOpen}"
+                :class="{'translate-x-0': navOpen}"
+              >
+                <li class="">
+                  <a class="text-brand hover:text-brand" href="index.html">
+                    Ballina</a
+                  >
+                </li>
+                <li class="">
+                  <a href="sherbimet.html" class="hover:text-brand"
+                    >Sherbimet</a
+                  >
+                </li>
+                <li class="">
+                  <a href="ekipa.html" class="hover:text-brand">Ekipa</a>
+                </li>
+                <li>
+                  <a href="kontakto.html" class="hover:text-brand">Kontakto</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <section class="mx-auto flex max-w-4xl items-center justify-between p-4">
+        <h1 class="text-3xl font-medium">
+          <a
+            href="#"
+            :cass="{'h-34 transform md:hidden transition-all duration-200': !scrolledFromTop, 'h-20 transform trasition-all duration-200': scrolledFromTop}"
+          >
+            <img
+              src="public/images/top-logo.svg"
+              class="md:hidden"
+              alt=""
+              srcset=""
+            />
+          </a>
+        </h1>
+        <div>
+          <button
+            id="hamburger-button"
+            class="relative h-8 w-8 cursor-pointer text-3xl text-brand md:hidden"
+          >
+            <div
+              class="absolute top-4 -mt-0.5 h-1 w-8 rounded bg-brand transition-all duration-500 before:absolute before:h-1 before:w-8 before:-translate-x-4 before:-translate-y-3 before:rounded before:bg-brand before:transition-all before:duration-500 before:content-[''] after:absolute after:h-1 after:w-8 after:-translate-x-4 after:translate-y-3 after:rounded after:bg-brand after:transition-all after:duration-500 after:content-['']"
+            ></div>
+          </button>
+        </div>
+      </section>
+      <section
+        id="mobile-menu"
+        class="top-68 absolute z-40 hidden w-full origin-top animate-open-menu flex-col justify-center bg-darkBlue text-5xl"
+      >
+        <nav
+          class="flex min-h-screen flex-col items-center py-8 text-white"
+          aria-label="mobile"
+        >
+          <a href="index.html" class="w-full py-6 text-center hover:text-brand"
+            >Ballina</a
+          >
+          <a
+            href="sherbimet.html"
+            class="w-full py-6 text-center hover:text-brand"
+            >Sherbimet</a
+          >
+          <a href="ekipa.html" class="w-full py-6 text-center hover:text-brand"
+            >Ekipa</a
+          >
+          <a
+            href="kontakto.html"
+            class="w-full py-6 text-center hover:text-brand"
+            >Kontakto</a
+          >
+        </nav>
+      </section>
+    </header>
+    <section class="w-full bg-purple">
+      <div
+        style="color: #ffffff"
+        class="border-t-50 flex-col items-center rounded-tl-3xl rounded-tr-3xl border-solid border-gray-500 text-white"
+      >
+        <div
+          class="mb-10 flex min-h-[250px] items-center justify-center bg-purple py-16 text-center text-white"
+        >
+          <h1
+            class="font-regular text-4xl text-[28px] text-white md:text-[60px]"
+          >
+            Sherbimet
+          </h1>
+        </div>
+      </div>
+    </section>
+    <section class="mt-[-60px] w-full">
+      <div
+        class="top[-120px] border-t-50 relative z-20 flex flex-col items-start justify-between rounded-tl-3xl rounded-tr-3xl border-solid border-gray-500 bg-white text-white md:flex-row"
+      >
+        <div
+          class="grid-cold-1 grid w-full items-start gap-4 py-16 px-4 md:grid-cols-2 md:px-40"
+        >
+          <!-- Column 1 -->
+          <div class="flex flex-col gap-10">
+           
+               <div class='flex items-center justify-center min-h-scre' x-data="{ reportsOpen: false }">
+    <div class='w-full max-w-lg px-10 py-8 mx-auto bg-darkBlue rounded-lg shadow-xl'>
+        <div class='max-w-md mx-auto space-y-6'>
+            <div @click="reportsOpen = !reportsOpen" class='flex items-center w-full border-b overflow-hidden mt-32 md:mt-0 mb-5 mx-auto'>
+            <div class='w-10 border-r px-2 transform transition duration-300 ease-in-out' :class="{'rotate-90': reportsOpen,' -translate-y-0.0': !reportsOpen }">
+            <svg class="bg-brand" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+            </svg>          
+            </div>
+            <div class='flex items-center px-2 py-3'>
+            <div class='mx-3'>
+                <button class="flex w-full items-center justify-center text-[24px] hover:underline">E Drejta Penale</button>
+            </div>
+            </div>
+            </div>
+
+            <div class="flex p-5 md:p-0 w-full transform transition duration-300 ease-in-out border-b pb-10"
+            x-cloak x-show="reportsOpen" x-collapse x-collapse.duration.500ms >
+           <p class="px-8 text-[18px] text-white/60">
+   “Juris Concept” Law Firm, në ofrimin e shërbimeve nga fusha
+                    e të drejtës penale, jemi ekip që garanton profesionalizëm e
+                    siguri, maksimalisht e fokusuar në mbrojtjen ligjore, duke
+                    punuar në pajtim me rregullat ligjore e morale, këshillojmë
+                    dhe përfaqësojmë klientët në mbrojtjen e të drejtave, në të
+                    gjitha shkallët e gjykimit, duke synuar proces të drejtë dhe
+                    të ligjshëm.
+
+           </p>
+            </div>
+        </div>
+    </div>
+  </div>
+                    <div class='flex items-center justify-center min-h-scre' x-data="{ reportsOpen: false }">
+    <div class='w-full max-w-lg px-10 py-8 mx-auto bg-darkBlue rounded-lg shadow-xl'>
+        <div class='max-w-md mx-auto space-y-6'>
+            <div @click="reportsOpen = !reportsOpen" class='flex items-center w-full border-b overflow-hidden mt-32 md:mt-0 mb-5 mx-auto'>
+            <div class='w-10 border-r px-2 transform transition duration-300 ease-in-out' :class="{'rotate-90': reportsOpen,' -translate-y-0.0': !reportsOpen }">
+            <svg class="bg-brand" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+            </svg>          
+            </div>
+            <div class='flex items-center px-2 py-3'>
+            <div class='mx-3'>
+                <button class="flex w-full items-center justify-center text-[24px] hover:underline"> E Drejta Civile</button>
+            </div>
+            </div>
+            </div>
+
+            <div class="flex p-5 md:p-0 w-full transform transition duration-300 ease-in-out border-b pb-10"
+            x-cloak x-show="reportsOpen" x-collapse x-collapse.duration.500ms >
+           <p class="px-8 text-[18px] text-white/60">
+     “Juris Concept” Law Firm, në ofrimin e shërbimeve nga fusha
+                    e të drejtës penale, jemi ekip që garanton profesionalizëm e
+                    siguri, maksimalisht e fokusuar në mbrojtjen ligjore, duke
+                    punuar në pajtim me rregullat ligjore e morale, këshillojmë
+                    dhe përfaqësojmë klientët në mbrojtjen e të drejtave, në të
+                    gjitha shkallët e gjykimit, duke synuar proces të drejtë dhe
+                    të ligjshëm.</p>
+            </div>
+        </div>
+    </div>
+  </div>
+            
+            <div class='flex items-center justify-center min-h-scre' x-data="{ reportsOpen: false }">
+    <div class='w-full max-w-lg px-10 py-8 mx-auto bg-darkBlue rounded-lg shadow-xl'>
+        <div class='max-w-md mx-auto space-y-6'>
+            <div @click="reportsOpen = !reportsOpen" class='flex items-center w-full border-b overflow-hidden mt-32 md:mt-0 mb-5 mx-auto'>
+            <div class='w-10 border-r px-2 transform transition duration-300 ease-in-out' :class="{'rotate-90': reportsOpen,' -translate-y-0.0': !reportsOpen }">
+            <svg class="bg-brand" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+            </svg>          
+            </div>
+            <div class='flex items-center px-2 py-3'>
+            <div class='mx-3'>
+                <button class="flex w-full items-center justify-center text-[24px] hover:underline"> E Drejta Familjare</button>
+            </div>
+            </div>
+            </div>
+
+            <div class="flex p-5 md:p-0 w-full transform transition duration-300 ease-in-out border-b pb-10"
+            x-cloak x-show="reportsOpen" x-collapse x-collapse.duration.500ms >
+           <p class="px-8 text-[18px] text-white/60">
+    Firma ligjore “Juris Concept”, ofron asistencë dhe konsulecë
+                    ligjore në proceduart që duhen ndjekur për zgjidhjen e
+                    martesës, përgatitjen e kontratave që rregullojnë statutin
+                    pasuror martesor, përcaktimin e përgjegjësisë prindërore,
+                    kujdestarisë, etj. Ekipa jonë ofron konsulecë ligjore dhe
+                    përfaqësim përpara të gjitha gjykatave në të gjitha shkallët
+                    e gjykimit, në përpilimin e akt marrëveshjeve për zgjidhjen
+                    me mirëkuptim të martesës, apo çështje të tjera familjare që
+                    kanë të bëjnë me: * Zgjidhje martese dhe përfaqësim përpara
+                    organeve gjyqësore; * Ndarjen e pasurisë së përbashkët,
+                    pjestim pasurie. * Si dhe çdo problem tjetër që ka lidhje me
+                    çështjet familjare.   </p>
+            </div>
+        </div>
+    </div>
+  </div>
+          </div>
+
+          <!-- Column 2 -->
+          <div class="flex flex-col gap-10">
+<div class='flex items-center justify-center min-h-scre' x-data="{ reportsOpen: false }">
+    <div class='w-full max-w-lg px-10 py-8 mx-auto bg-darkBlue rounded-lg shadow-xl'>
+        <div class='max-w-md mx-auto space-y-6'>
+            <div @click="reportsOpen = !reportsOpen" class='flex items-center w-full border-b overflow-hidden mt-32 md:mt-0 mb-5 mx-auto'>
+            <div class='w-10 border-r px-2 transform transition duration-300 ease-in-out' :class="{'rotate-90': reportsOpen,' -translate-y-0.0': !reportsOpen }">
+            <svg  xmlns="http://www.w3.org/2000/svg" fill="#ffffff"  viewBox="0 0 24 24" stroke-width="1.5"  stroke="currentColor" class="w-6 h-6">
+                <path fill="#ffffff" stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+            </svg>    
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="33" height="24" fill="none" viewBox="0 0 33 24">
+  <path fill="#fff" d="M16.5 15.273 29.333 0 33 4.364 16.5 24 0 4.364 3.667 0 16.5 15.273Z"/>
+</svg>       -->
+            </div>
+            <div class='flex items-center px-2 py-3'>
+            <div class='mx-3'>
+                <button class="flex w-full items-center justify-center text-[24px] hover:underline">E Drejta e Pronësisë Intelektuale</button>
+            </div>
+            </div>
+            </div>
+
+            <div class="flex p-5 md:p-0 w-full transform transition duration-300 ease-in-out border-b pb-10"
+            x-cloak x-show="reportsOpen" x-collapse x-collapse.duration.500ms >
+           <p class="px-8 text-[18px] text-white/60">
+ Juris Concept, ofron shërbime në mbrojtjen e të drejtave të
+                    autorëve dhe realizimin e tyre mbi pronësinë e tyre
+                    intelektuale dhe industriale.
+
+           </p>
+            </div>
+        </div>
+    </div>
+  </div>
+<div class='flex items-center justify-center min-h-scre' x-data="{ reportsOpen: false }">
+    <div class='w-full max-w-lg px-10 py-8 mx-auto bg-darkBlue rounded-lg shadow-xl'>
+        <div class='max-w-md mx-auto space-y-6'>
+            <div @click="reportsOpen = !reportsOpen" class='flex items-center w-full border-b overflow-hidden mt-32 md:mt-0 mb-5 mx-auto'>
+            <div class='w-10 border-r px-2 transform transition duration-300 ease-in-out' :class="{'rotate-90': reportsOpen,' -translate-y-0.0': !reportsOpen }">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+            </svg>          
+            </div>
+            <div class='flex items-center px-2 py-3'>
+            <div class='mx-3'>
+                <button class="flex w-full items-center justify-center text-[24px] hover:underline">E Drejta Administrative</button>
+            </div>
+            </div>
+            </div>
+
+            <div class="flex p-5 md:p-0 w-full transform transition duration-300 ease-in-out border-b pb-10"
+            x-cloak x-show="reportsOpen" x-collapse x-collapse.duration.500ms >
+           <p class="px-8 text-[18px] text-white/60">
+ Në lëmin e të drejtës administrative klientëve iu ofrojmë
+                    shërbime në këshillimin dhe përfaqësimin në mbrojtjen dhe
+                    realizimin e të drejtave të njohura me të drejtën pozitive
+                    në këtë fushë.
+
+           </p>
+            </div>
+        </div>
+    </div>
+  </div>
+<div class='flex items-center justify-center min-h-scre' x-data="{ reportsOpen: false }">
+    <div class='w-full max-w-lg px-10 py-8 mx-auto bg-darkBlue rounded-lg shadow-xl'>
+        <div class='max-w-md mx-auto space-y-6'>
+            <div @click="reportsOpen = !reportsOpen" class='flex items-center w-full border-b overflow-hidden mt-32 md:mt-0 mb-5 mx-auto'>
+            <div class='w-10 border-r px-2 transform transition duration-300 ease-in-out' :class="{'rotate-90': reportsOpen,' -translate-y-0.0': !reportsOpen }">
+            <svg class="bg-brand" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+            </svg>          
+            </div>
+            <div class='flex items-center px-2 py-3'>
+            <div class='mx-3'>
+                <button class="flex w-full items-center justify-center text-[24px] hover:underline">Prokurimi publik</button>
+            </div>
+            </div>
+            </div>
+
+            <div class="flex p-5 md:p-0 w-full transform transition duration-300 ease-in-out border-b pb-10"
+            x-cloak x-show="reportsOpen" x-collapse x-collapse.duration.500ms >
+           <p class="px-8 text-[18px] text-white/60">
+ Ekipa ligjore, mbështesin autoritetet kontraktuese po ashtu
+                    edhe operatorët ekonomik në procedurat e prokurimit.Ne
+                    këshillojmë e përfaqësojmë klientë në sektorin publik dhe
+                    privat në çështjet e prokurimit.
+
+           </p>
+            </div>
+        </div>
+    </div>
+  </div>
+<div class='flex items-center justify-center min-h-scre' x-data="{ reportsOpen: false }">
+    <div class='w-full max-w-lg px-10 py-8 mx-auto bg-darkBlue rounded-lg shadow-xl'>
+        <div class='max-w-md mx-auto space-y-6'>
+            <div @click="reportsOpen = !reportsOpen" class='flex items-center w-full border-b overflow-hidden mt-32 md:mt-0 mb-5 mx-auto'>
+            <div class='w-10 border-r px-2 transform transition duration-300 ease-in-out' :class="{'rotate-90': reportsOpen,' -translate-y-0.0': !reportsOpen }">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+            </svg>          
+            </div>
+            <div class='flex items-center px-2 py-3'>
+            <div class='mx-3'>
+                <button class="flex w-full items-center justify-center text-[24px] hover:underline">E Drejta Tregtare</button>
+            </div>
+            </div>
+            </div>
+
+            <div class="flex p-5 md:p-0 w-full transform transition duration-300 ease-in-out border-b pb-10"
+            x-cloak x-show="reportsOpen" x-collapse x-collapse.duration.500ms >
+           <p class="px-8 text-[18px] text-white/60">
+             This is a very simple dropdown/accordion/collapse (whatever you call it) using Tailwind, Alpine.js, and the Alpine.js plugin "Collapse" to enable smoother open/collapse transitions than what comes out of the box with Alpine.js
+
+           </p>
+            </div>
+        </div>
+    </div>
+  </div>
+        </div>
+        
+      </div>
+    </section>
+    <section class="mt-[-20px] w-full">
+      <div
+        style="color: #ffffff"
+        class="top[-20px] border-t-50 relative z-20 flex flex-col items-start justify-between rounded-tl-3xl rounded-tr-3xl border-solid border-gray-500 bg-darkBlue px-16 py-9 pt-[135px] text-white md:flex-row"
+      >
+        <div class="order-2 flex-1 px-4 py-2 md:order-1">
+          <h1 class="text-[40px] font-bold leading-[48px]">Office</h1>
+          <p class="flex flex-col leading-[32px]">
+            <span class="text-[28px] font-bold text-brand">
+              Juris Concept
+            </span>
+            <span class="text-white/50">
+              Rruga Garibaldi Hyrja 51 K-II /5 10000 Prishtine
+            </span>
+          </p>
+          <div class="mt-4 flex flex-col">
+            <h4 class="pt-3 font-bold" style="font-size: 18px">Orari Punes</h4>
+            <span class="text-white/50">
+              E Hene - E Premte 8:30AM - 4:00PM
+            </span>
+          </div>
+        </div>
+        <div class="order-3 flex-1 px-4 py-2">
+          <h1 class="text-[40px] font-bold leading-[48px]">Phone</h1>
+          <p style="font-size: 18px; line-height: 32px">
+            <a href="tel:+38349225567" class="text-[28px] font-bold text-brand">
+              +383 49 225 567
+            </a>
+          </p>
+        </div>
+      </div>
+      <div
+        class="flex flex-col items-start justify-between bg-darkBlue px-16 py-9 text-center md:flex-row"
+      >
+        <h5 class="mt-6 text-white">© 2024 Juris Concept</h5>
+        <ul
+          class="hidden flex-col items-start justify-start gap-10 space-x-1 bg-darkBlue text-center text-[24px] text-gray-50 md:flex md:flex-row md:items-end md:justify-end"
+        >
+          <li>
+            <a
+              href="index.html"
+              class="flex justify-center rounded-full py-2 text-brand"
+              >Ballina</a
+            >
+          </li>
+          <li>
+            <a
+              href="sherbimet.html"
+              class="flex justify-center rounded-full py-2 text-white hover:text-brand"
+              >Sherbimet</a
+            >
+          </li>
+          <li>
+            <a
+              href="ekipa.html"
+              class="flex justify-center rounded-full py-2 text-white hover:text-brand"
+              >Ekipa
+            </a>
+          </li>
+          <li>
+            <a
+              href="kontakto.html"
+              class="flex justify-center rounded-full py-2 text-white hover:text-brand"
+            >
+              Kontakto</a
+            >
+          </li>
+
+        </ul>
+      </div>
+    </section>
+    <a
+      class="flex justify-center bg-brand text-center text-darkBlue"
+      href="http://naxiadesign.com"
+      >Website Design By NAXIA Design
+    </a>
+
+    <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.4.0/cdn.js"></script>
+    <!-- <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script> -->
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.3.4/dist/aos.js"></script>
+
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+    <script>
+      // Air
+    </script>
+  </body>
+</html>

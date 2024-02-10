@@ -26,8 +26,9 @@
           :cLass="{'h-24 transform  transition-all duration-200': !scrolledFromTop, 'h-20 transform trasition-all duration-200': scrolledFromTop}"
         >
           <!-- Logo on the left -->
-          <a data-aos="slide-right"  data-aos-delay="300" 
-
+          <a
+            data-aos="slide-right"
+            data-aos-delay="300"
             class="md:block"
             href="#"
             :cLass="{'h-34 transform  transition-all duration-200': !scrolledFromTop, 'h-20 transform trasition-all duration-200': scrolledFromTop}"
@@ -39,7 +40,9 @@
         <!-- Navigation -->
         <div class="bottom-2 flex flex-col items-end justify-between">
           <!-- Top  -->
-          <div data-aos="slide-down" data-aos-delay="100" 
+          <div
+            data-aos="slide-down"
+            data-aos-delay="100"
             class="h-54 mb-2 hidden rounded-bl-2xl bg-lightPink px-4 py-2 md:block"
           >
             <a
@@ -52,7 +55,11 @@
           <!-- Bottom Menu -->
           <div class="px-4 py-4">
             <!-- Content for bottom menu -->
-            <nav class="z-40 mt-[20px] items-end pr-1 align-bottom" data-aos="slide-left" data-aos-delay="200">
+            <nav
+              class="z-40 mt-[20px] items-end pr-1 align-bottom"
+              data-aos="slide-left"
+              data-aos-delay="200"
+            >
               <button class="md:hidden" @click="navOpen = !navOpen">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -69,7 +76,7 @@
                   />
                 </svg>
               </button>
-              <ul  
+              <ul
                 class="fixed left-0 top-[-1] flex hidden translate-x-full transform flex-col items-center justify-start gap-2 space-y-1 bg-white px-4 pt-12 text-[24px] text-darkBlue transition duration-300 md:relative md:flex md:min-h-0 md:translate-x-0 md:flex-row md:items-center md:space-x-10 md:space-y-0 md:px-0 md:py-0"
                 :class="{'translate-x-full': !navOpen}"
                 :class="{'translate-x-0': navOpen}"
@@ -78,7 +85,9 @@
                   <a class="hover:text-brand" href="index.html"> Ballina</a>
                 </li>
                 <li class="">
-                  <a href="praktika.html" class="hover:text-brand">Praktika</a>
+                  <a href="sherbimet.html" class="hover:text-brand"
+                    >Sherbimet</a
+                  >
                 </li>
                 <li class="">
                   <a href="ekipa.html" class="text-brand hover:text-brand"
@@ -130,9 +139,9 @@
             >Ballina</a
           >
           <a
-            href="praktika.html"
+            href="sherbimet.html"
             class="w-full py-6 text-center hover:text-brand"
-            >Praktika</a
+            >Sherbimet</a
           >
           <a href="ekipa.html" class="w-full py-6 text-center hover:text-brand"
             >Ekipa</a
@@ -160,21 +169,20 @@
       >
         <div class="gird-cols-1 grid gap-8 px-4 py-20 md:grid-cols-9 md:px-20">
           <aside class="col-start-1 col-end-1 md:col-start-1 md:col-end-2">
-            <div class="widget js-sticky-widget"><div data-aos="fade-up" data-aos-delay="400">
-              <div class="md:w-[450px]">
-                <div
-                  class="relative h-[218] rounded-lg bg-white shadow-md"
-                  style="border-radius: 3rem"
-                >
-
-
-                  <img
+            <div class="widget js-sticky-widget">
+              <div data-aos="fade-up" data-aos-delay="400">
+                <div class="md:w-[450px]">
+                  <div
+                    class="relative h-[218] rounded-lg bg-white shadow-md"
                     style="border-radius: 3rem"
-                    src="public/images/profile.jpg"
-                    alt="image"
-                    class="sticky h-[300px] w-full rounded-t-xl object-cover md:h-[575px] md:w-[650px]"
-                  />   </div>
-
+                  >
+                    <img
+                      style="border-radius: 3rem"
+                      src="public/images/profile.jpg"
+                      alt="image"
+                      class="sticky h-[300px] w-full rounded-t-xl object-cover md:h-[575px] md:w-[650px]"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -271,7 +279,11 @@
             <!-- Column 1 -->
             <div>
               <ul class="list-disc space-y-2 text-[22px]">
-                <li data-aos="slide-up" data-duration="100" class="flex w-full bg-darkBlue hover:bg-brand">
+                <li
+                  data-aos="slide-up"
+                  data-duration="100"
+                  class="flex w-full bg-darkBlue hover:bg-brand"
+                >
                   <a
                     href="#"
                     class="flex h-[90px] w-full items-center justify-center"
@@ -279,95 +291,136 @@
                     Kontesti Civil
                   </a>
                 </li>
-                <li  data-aos="slide-up"class="flex w-full bg-darkBlue hover:bg-brand">
+                <li
+                  data-aos="slide-up"
+                  class="flex w-full bg-darkBlue hover:bg-brand"
+                >
                   <a
                     href="#"
                     class="flex h-[90px] w-full items-center justify-center"
                     >Link 2</a
                   >
                 </li>
-                <li data-aos="slide-up"class="flex w-full bg-darkBlue hover:bg-brand">
+                <li
+                  data-aos="slide-up"
+                  class="flex w-full bg-darkBlue hover:bg-brand"
+                >
                   <a
                     href="#"
                     class="flex h-[90px] w-full items-center justify-center"
                     >Link 2</a
                   >
                 </li>
-                <li data-aos="slide-up"class="flex w-full bg-darkBlue hover:bg-brand">
+                <li
+                  data-aos="slide-up"
+                  class="flex w-full bg-darkBlue hover:bg-brand"
+                >
                   <a
                     href="#"
                     class="flex h-[90px] w-full items-center justify-center"
                     >Link 2</a
                   >
                 </li>
-                <li data-aos="slide-up"class="flex w-full bg-darkBlue hover:bg-brand">
+                <li
+                  data-aos="slide-up"
+                  class="flex w-full bg-darkBlue hover:bg-brand"
+                >
                   <a
                     href="#"
                     class="flex h-[90px] w-full items-center justify-center"
                     >Link 2</a
                   >
                 </li>
-                <li data-aos="slide-up"class="flex w-full bg-darkBlue hover:bg-brand">
+                <li
+                  data-aos="slide-up"
+                  class="flex w-full bg-darkBlue hover:bg-brand"
+                >
                   <a
                     href="#"
                     class="flex h-[90px] w-full items-center justify-center"
                     >Link 2</a
                   >
                 </li>
-                <li data-aos="slide-up"class="flex w-full bg-darkBlue hover:bg-brand">
+                <li
+                  data-aos="slide-up"
+                  class="flex w-full bg-darkBlue hover:bg-brand"
+                >
                   <a
                     href="#"
                     class="flex h-[90px] w-full items-center justify-center"
                     >Link 2</a
                   >
                 </li>
-                <li data-aos="slide-up"class="flex w-full bg-darkBlue hover:bg-brand">
+                <li
+                  data-aos="slide-up"
+                  class="flex w-full bg-darkBlue hover:bg-brand"
+                >
                   <a
                     href="#"
                     class="flex h-[90px] w-full items-center justify-center"
                     >Link 2</a
                   >
                 </li>
-                <li data-aos="slide-up"class="flex w-full bg-darkBlue hover:bg-brand">
+                <li
+                  data-aos="slide-up"
+                  class="flex w-full bg-darkBlue hover:bg-brand"
+                >
                   <a
                     href="#"
                     class="flex h-[90px] w-full items-center justify-center"
                     >Link 2</a
                   >
                 </li>
-                <li data-aos="slide-up"class="flex w-full bg-darkBlue hover:bg-brand">
-                  <a
-                    href="#"
-                    class="flex h-[90px] w-full items-center justify-center"
-                    >Link 2</a
-                  >
-                <li data-aos="slide-up"class="flex w-full bg-darkBlue hover:bg-brand">
-                  <a
-                    href="#"
-                    class="flex h-[90px] w-full items-center justify-center"
-                    >Link 2</a
-                  >
-                </li>
-                <li data-aos="slide-up"class="flex w-full bg-darkBlue hover:bg-brand">
+                <li
+                  data-aos="slide-up"
+                  class="flex w-full bg-darkBlue hover:bg-brand"
+                >
                   <a
                     href="#"
                     class="flex h-[90px] w-full items-center justify-center"
                     >Link 2</a
                   >
                 </li>
-                <li data-aos="slide-up"class="flex w-full bg-darkBlue hover:bg-brand">
+
+                <li
+                  data-aos="slide-up"
+                  class="flex w-full bg-darkBlue hover:bg-brand"
+                >
                   <a
                     href="#"
                     class="flex h-[90px] w-full items-center justify-center"
                     >Link 2</a
                   >
                 </li>
-                <li data-aos="slide-up"class="flex w-full bg-darkBlue hover:bg-brand">
+                <li
+                  data-aos="slide-up"
+                  class="flex w-full bg-darkBlue hover:bg-brand"
+                >
                   <a
                     href="#"
                     class="flex h-[90px] w-full items-center justify-center"
                     >Link 2</a
-                  >  
+                  >
+                </li>
+                <li
+                  data-aos="slide-up"
+                  class="flex w-full bg-darkBlue hover:bg-brand"
+                >
+                  <a
+                    href="#"
+                    class="flex h-[90px] w-full items-center justify-center"
+                    >Link 2</a
+                  >
+                </li>
+                <li
+                  data-aos="slide-up"
+                  class="flex w-full bg-darkBlue hover:bg-brand"
+                >
+                  <a
+                    href="#"
+                    class="flex h-[90px] w-full items-center justify-center"
+                    >Link 2</a
+                  >
                 </li>
               </ul>
             </div>
@@ -422,9 +475,9 @@
           </li>
           <li>
             <a
-              href="praktika.html"
+              href="sherbimet.html"
               class="flex justify-center rounded-full py-2 text-white hover:text-brand"
-              >Praktika</a
+              >Sherbimet</a
             >
           </li>
           <li>
