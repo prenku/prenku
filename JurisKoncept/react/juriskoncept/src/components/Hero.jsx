@@ -5,7 +5,7 @@ export default function Hero() {
     <>
       <section
         style={{ backgroundImage: `url(${heroBgImage})` }}
-        className="bg-hero-svg animate slide delay-15 relative z-10 px-8 pb-16"
+        className="bg-hero animate slide delay-15 relative z-10 px-8 pb-16"
       >
         <div className="top-32 mx-auto flex max-w-7xl flex-col items-center justify-center md:h-[700px] md:flex-row">
           <div
